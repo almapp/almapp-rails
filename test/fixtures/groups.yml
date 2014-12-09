@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: groups
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  email           :string(255)      not null
+#  url             :string(255)
+#  facebook        :string(255)
+#  twitter         :string(255)
+#  information     :text
+#  expiration      :date
+#  organization_id :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  url: MyString
+  facebook: MyString
+  twitter: MyString
+  information: MyString
+  expiration: 2014-10-20
+  organization_id: 
+
+two:
+  name: MyString
+  email: MyString
+  url: MyString
+  facebook: MyString
+  twitter: MyString
+  information: MyString
+  expiration: 2014-10-20
+  organization_id: 

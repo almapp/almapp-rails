@@ -1,0 +1,15 @@
+<%= bootstrap_form_for(@group, layout: :horizontal) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.email_field :email %>
+  <%= f.url_field :url %>
+  <%= f.url_field :facebook %>
+  <%= f.url_field :twitter %>
+  <%= f.text_area :information %>
+  <%= f.date_field :expiration %>
+  <%= f.collection_select :organization_id, Organization.all, :id, :name, include_blank: true %>
+
+  <%= f.form_group do %>
+      <%= f.submit %>
+  <% end %>
+
+<% end %>

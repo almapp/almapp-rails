@@ -1,0 +1,51 @@
+<%- model_class = Faculty -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:fid) %>:</strong></dt>
+  <dd><%= @faculty.fid %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @faculty.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:organization) %>:</strong></dt>
+  <dd><%= link_to @faculty.organization.name, organization_path(@organization) %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:camp) %>:</strong></dt>
+  <dd><%= link_to @faculty.camp.name, organization_camp_path(@organization, @faculty.camp) %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @faculty.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
+  <dd><%= @faculty.url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:facebook) %>:</strong></dt>
+  <dd><%= @faculty.facebook %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:twitter) %>:</strong></dt>
+  <dd><%= @faculty.twitter %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone) %>:</strong></dt>
+  <dd><%= @faculty.phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @faculty.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @faculty.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:latitude) %>:</strong></dt>
+  <dd><%= @faculty.latitude %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:longitude) %>:</strong></dt>
+  <dd><%= @faculty.longitude %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:icon) %>:</strong></dt>
+  <dd><%= @faculty.icon %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zoom) %>:</strong></dt>
+  <dd><%= @faculty.zoom %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:angle) %>:</strong></dt>
+  <dd><%= @faculty.angle %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tilt) %>:</strong></dt>
+  <dd><%= @faculty.tilt %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              organization_faculties_path(@organization), :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_organization_faculty_path(@organization, @faculty), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+            organization_faculty_path(@organization, @faculty),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,11 @@
+<%= bootstrap_form_for(@organization, layout: :horizontal) do |f| %>
+    <%=f.text_field :name %>
+    <%=f.url_field :url %>
+    <%=f.url_field :facebook %>
+    <%=f.url_field :twitter %>
+    <%=f.text_area :information %>
+
+    <%= f.form_group do %>
+        <%= f.submit %>
+    <% end %>
+<% end %>

@@ -1,0 +1,8 @@
+<div class="infowindow">
+  <img src="http://dummyimage.com/50x50/ffffff/000000.png"/>
+  <div class="content">
+      <div class="title"><%= @place.name %></div>
+      <div class="subtitle"><%=  link_to @place.faculty.name.concat(', '), organization_faculty_path(@place.organization, @place.faculty) if @place.faculty.present? && @place.faculty.name.present? %><%= link_to @place.camp.name, organization_camp_path(@place.organization ,@place.camp) %></div>
+      <div class="floor">Piso: <%= @place.floor %></div>
+  </div>
+</div>

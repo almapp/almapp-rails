@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: teachers
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  email       :string(255)
+#  information :text
+#  url         :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  faculty_id  :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  information: MyText
+  url: MyString
+
+two:
+  name: MyString
+  email: MyString
+  information: MyText
+  url: MyString

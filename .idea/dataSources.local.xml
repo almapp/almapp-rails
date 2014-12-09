@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails am: development" uuid="4d7a24a8-713f-40d1-8d8e-e31cdd5c0656">
+      <user-name>almapp</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+    </data-source>
+    <data-source name="Rails am: test" uuid="ed180993-26b3-4959-b2ac-0ac8da9aee58">
+      <user-name>almapp</user-name>
+      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+    </data-source>
+    <data-source name="Rails am: production" uuid="c923d121-f6ae-48ab-86f1-b84a5556cdce">
+      <user-name>almapp</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfebdfe6dfe7dfebdffadffadff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>

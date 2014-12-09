@@ -1,0 +1,17 @@
+<%= bootstrap_form_for([@organization, @camp], layout: :horizontal) do |f| %>
+    <%= f.text_field :cid %>
+    <%= f.text_field :name %>
+    <%= f.text_field :address %>
+    <%= f.url_field :url %>
+    <%= f.text_area :description %>
+    <%= f.number_field :latitude %>
+    <%= f.number_field :longitude %>
+    <%= f.text_field :icon %>
+    <%= f.number_field :zoom %>
+    <%= f.number_field :angle %>
+    <%= f.number_field :tilt %>
+
+    <%= f.form_group do %>
+        <%= f.submit %>
+    <% end %>
+<% end %>

@@ -1,0 +1,22 @@
+<%= bootstrap_form_for([@organization, @faculty], layout: :horizontal) do |f| %>
+    <%= f.text_field :fid %>
+    <%= f.text_field :name %>
+    <%= f.collection_select :camp_id, @organization.camps, :id, :name%>
+    <%= f.text_field :address %>
+    <%= f.url_field :url %>
+    <%= f.url_field :facebook %>
+    <%= f.url_field :twitter %>
+    <%= f.phone_field :phone %>
+    <%= f.email_field :email %>
+    <%= f.text_area :description %>
+    <%= f.text_field :latitude %>
+    <%= f.text_field :longitude %>
+    <%= f.text_field :icon %>
+    <%= f.number_field :zoom %>
+    <%= f.number_field :angle %>
+    <%= f.number_field :tilt %>
+
+    <%= f.form_group do %>
+        <%= f.submit %>
+    <% end %>
+<% end %>
