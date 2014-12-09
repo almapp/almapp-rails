@@ -88,4 +88,4 @@ production:
   host: localhost
   password: <%= ENV['ALMAPP_DATABASE_PASSWORD'] %>
   pool: 5
-  database: almapp_production
+  database: almapp
