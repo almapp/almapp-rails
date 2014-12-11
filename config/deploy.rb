@@ -12,7 +12,7 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 set :domain,      'almapp.me'
 set :deploy_to,   '/home/deploy/almapp'
-set :repository,  'git@github.com:almapp/almapp-rails.git'
+set :repository,  'https://github.com/almapp/almapp-rails.git'
 set :branch,      'master'
 set :user,        'deploy'
 set :port,        '1813'
