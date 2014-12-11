@@ -29,6 +29,11 @@ set :shared_paths, ['config/database.yml', 'log']
 #   set :port, '30000'     # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
 
+task :logs do
+  queue 'echo "Contents of the log file are as follows:"'
+  queue "tail -f /var/log/apache.log"
+end
+
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
 task :environment do
@@ -79,6 +84,13 @@ task :deploy => :environment do
       queue "touch #{deploy_to}/#{current_path}/tmp/restart.txt"
     end
   end
+end
+
+desc "Seed data to the database"
+task :seed => :environment do
+  queue "cd #{deploy_to}/#{current_path}/"
+  queue "bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  queue  %[echo "-----> Rake Seeding Completed."]
 end
 
 set :term_mode, nil
