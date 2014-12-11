@@ -84,7 +84,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  username: almapp
+  username: postgres
   host: localhost
   password: <%= ENV['ALMAPP_DATABASE_PASSWORD'] %>
   pool: 5
