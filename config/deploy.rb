@@ -2,7 +2,7 @@ require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
 # require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
-# require 'mina/rvm'    # for rvm support. (http://rvm.io)
+require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
@@ -10,7 +10,7 @@ require 'mina/git'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain,      'almapp.com'
+set :domain,      'almapp.me'
 set :deploy_to,   '/home/deploy/almapp'
 set :repository,  'git@github.com:almapp/almapp-rails.git'
 set :branch,      'master'
@@ -80,6 +80,8 @@ task :deploy => :environment do
     end
   end
 end
+
+set :term_mode, nil
 
 # For help in making your deploy script, see the Mina documentation:
 #
