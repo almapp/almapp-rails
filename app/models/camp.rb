@@ -32,4 +32,5 @@ class Camp < ActiveRecord::Base
   has_many :faculties
   has_many :places
 
+  has_many :careers, through: :faculties
 end

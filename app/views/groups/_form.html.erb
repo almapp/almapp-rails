@@ -1,15 +1,15 @@
 <%= bootstrap_form_for(@group, layout: :horizontal) do |f| %>
-  <%= f.text_field :name %>
-  <%= f.email_field :email %>
-  <%= f.url_field :url %>
-  <%= f.url_field :facebook %>
-  <%= f.url_field :twitter %>
-  <%= f.text_area :information %>
-  <%= f.date_field :expiration %>
-  <%= f.collection_select :organization_id, Organization.all, :id, :name, include_blank: true %>
+    <%= f.text_field :name %>
+    <%= f.email_field :email %>
+    <%= f.url_field :url %>
+    <%= f.url_field :facebook %>
+    <%= f.url_field :twitter %>
+    <%= f.text_area :information %>
+    <%= f.date_field :expiration %>
+    <%= f.select :organization_id, options_for_select(Organization.all.order('name').map{ |c| [c.name, c.id]}, selected_key = f.object.organization_id)%>
+    <%= f.select :faculty_id, options_for_select(Faculty.all.order('nick').map{ |c| [c.nick, c.id]}, selected_key = f.object.faculty_id), include_blank: '-- Select a Faculty --' %>
 
-  <%= f.form_group do %>
-      <%= f.submit %>
-  <% end %>
-
+    <%= f.form_group do %>
+        <%= f.submit %>
+    <% end %>
 <% end %>

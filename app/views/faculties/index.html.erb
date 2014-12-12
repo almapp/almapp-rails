@@ -17,21 +17,17 @@
   <tbody>
     <% @faculties.each do |faculty| %>
       <tr>
-        <td><%= link_to faculty.id, organization_faculty_path(@organization, faculty) %></td>
-        <td><%= link_to faculty.fid, organization_faculty_path(@organization, faculty) %></td>
-        <td><%= link_to faculty.name, organization_faculty_path(@organization, faculty) %></td>
-        <td><%= link_to faculty.camp.name, organization_camp_path(@organization, faculty.camp) %></td>
+        <td><%= link_to faculty.id, faculty %></td>
+        <td><%= link_to faculty.fid, faculty %></td>
+        <td><%= link_to faculty.name, faculty %></td>
+        <td><%= link_to faculty.camp.name, camp_path(faculty.camp) %></td>
         <td><%= faculty.address %></td>
-        <% if faculty.url.present? && faculty.url.length != 0 %>
-            <td><%= link_to faculty.url, faculty.url %></td>
-        <% else %>
-            <td><%= puts('') %></td>
-        <% end %>
+        <td><%= link_to faculty.url, faculty.url.to_s %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_organization_faculty_path(@organization, faculty), :class => 'btn btn-default btn-xs' %>
+                      edit_faculty_path(faculty), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      organization_faculty_path(@organization, faculty),
+                      faculty,
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -42,5 +38,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_organization_faculty_path(@organization),
+            new_faculty_path,
             :class => 'btn btn-primary' %>

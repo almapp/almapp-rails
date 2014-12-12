@@ -36,11 +36,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 gem 'bcrypt', '~> 3.1.7'
-gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
-gem "nested_form"
+gem 'nested_form'
 gem 'simple_form'
 
 gem 'will_paginate'

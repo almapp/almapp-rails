@@ -1,11 +1,11 @@
 class CoursesController < ApplicationController
-  before_action :set_organization
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :set_faculty, only: [:index, :new, :create]
 
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    @courses = @faculty.courses
   end
 
   # GET /courses/1
@@ -15,21 +15,24 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-    @course = Course.new
+    @course = @faculty.courses.new
+    @path = [@faculty, @course]
   end
 
   # GET /courses/1/edit
   def edit
+    @path = @course
   end
 
   # POST /courses
   # POST /courses.json
   def create
     @course = Course.new(course_params)
+    @course.faculty = @faculty
 
     respond_to do |format|
       if @course.save
-        format.html { redirect_to @course, notice: 'Course was successfully created.' }
+        format.html { redirect_to course_path(@course), notice: 'Course was successfully created.' }
         format.json { render :show, status: :created, location: @course }
       else
         format.html { render :new }
@@ -55,16 +58,17 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
+    faculty = @course.faculty
     @course.destroy
     respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
+      format.html { redirect_to faculty_courses_path(faculty), notice: 'Course was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    def set_organization
-      @organization = Organization.find(params[:organization_id])
+    def set_faculty
+      @faculty = Faculty.find(params[:faculty_id])
     end
 
     # Use callbacks to share common setup or constraints between actions.

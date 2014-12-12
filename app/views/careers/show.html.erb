@@ -11,11 +11,11 @@
   <dt><strong><%= model_class.human_attribute_name(:information) %>:</strong></dt>
   <dd><%= @career.information %></dd>
   <dt><strong><%= model_class.human_attribute_name(:faculty_id) %>:</strong></dt>
-  <dd><%= @career.faculty_id %></dd>
+  <dd><%= @career.faculty.name if @career.faculty_id.present? %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              careers_path, :class => 'btn btn-default'  %>
+              faculty_careers_path(@career.faculty), :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_career_path(@career), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

@@ -19,9 +19,12 @@ class Group < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true, format: /\A[a-z0-9]+[a-z0-9\._-]*@[a-z0-9\.]+\.[a-z]{2,5}\z/i
   validates :name, presence: true
   validates :expiration, presence: true
-  validates :organization_id, presence: true
+  validates :organization, presence: true
+  validates :faculty, inclusion: { in: ->(record) { record.organization.faculty } } #TODO Testing
 
   belongs_to :organization
+  belongs_to :faculty
+
 
   has_many :groups_admins
   has_many :admins, through: :groups_admins, :source => :user # class: User

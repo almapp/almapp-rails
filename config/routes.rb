@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
 
-
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'organizations#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,17 +12,36 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):  resources :groups
-  resources :organizations do
-    resources :faculties
+  # resources :organizations do
+  #   constraints(Subdomain) do
+  #     root 'organizations#show'
+  #   end
+  # end
+
+  constraints subdomain: 'dev' do
+    get "/" => redirect { |params| "almapp.github.io" } #TODO redirect to github
+  end
+
+  constraints(Subdomain) do
+    get '/' => 'organizations#show'
+
+    resources :faculties, shallow: true do
+      # Shallow: [:index, :new, :create]
+      resources :careers
+      resources :courses
+      resources :teachers
+    end
+
     resources :camps do
       resources :places
     end
     resources :places
 
-    resources :teachers
-    resources :courses
-    resources :careers
+
   end
+
+  resources :organizations
+
 
  #  get 'organizations/:organization_id/places' => 'places#showall'
 
@@ -35,7 +50,8 @@ Rails.application.routes.draw do
   resources :users
   resources :groups
 
-
+ # You can have the root of your site routed with "root"
+  root 'posts#index'
 
   # Example resource route with options:
   #   resources :products do

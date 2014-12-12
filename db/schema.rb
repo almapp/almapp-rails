@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127105126) do
+ActiveRecord::Schema.define(version: 20141212000533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,12 +53,13 @@ ActiveRecord::Schema.define(version: 20141127105126) do
   add_index "camps", ["organization_id"], name: "index_camps_on_organization_id", using: :btree
 
   create_table "careers", force: true do |t|
-    t.string   "name",        null: false
+    t.string   "name",           null: false
     t.string   "url"
     t.text     "information"
     t.integer  "faculty_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "curriculum_url"
   end
 
   add_index "careers", ["faculty_id"], name: "index_careers_on_faculty_id", using: :btree
@@ -129,8 +130,10 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "faculty_id"
   end
 
+  add_index "groups", ["faculty_id"], name: "index_groups_on_faculty_id", using: :btree
   add_index "groups", ["organization_id"], name: "index_groups_on_organization_id", using: :btree
 
   create_table "groups_admins", force: true do |t|
@@ -164,6 +167,7 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.datetime "updated_at"
     t.string   "facebook"
     t.string   "twitter"
+    t.string   "slug",        null: false
   end
 
   create_table "places", force: true do |t|

@@ -11,6 +11,7 @@
 #  updated_at  :datetime
 #  facebook    :string(255)
 #  twitter     :string(255)
+#  slug        :string(255)      not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

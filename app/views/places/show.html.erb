@@ -12,9 +12,9 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @place.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:camp) %>:</strong></dt>
-  <dd><%= link_to @place.camp.name, organization_camp_path(@place.organization, @place.camp) %></dd>
+  <dd><%= link_to @place.camp.name, camp_path(@place.camp) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:faculty) %>:</strong></dt>
-  <dd><%= link_to @place.faculty.name, organization_faculty_path(@place.organization, @place.faculty) if @place.faculty%></dd>
+  <dd><%= link_to @place.faculty.name, faculty_path(@place.faculty) if @place.faculty%></dd>
   <dt><strong><%= model_class.human_attribute_name(:latitude) %>:</strong></dt>
   <dd><%= @place.latitude %></dd>
   <dt><strong><%= model_class.human_attribute_name(:longitude) %>:</strong></dt>
@@ -40,11 +40,11 @@
 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              organization_places_path(@place.organization), :class => 'btn btn-default'  %>
+              places_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_organization_place_path(@place.organization, @place), :class => 'btn btn-default' %>
+              edit_place_path(@place), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              organization_place_path(@place.organization, @place),
+              place_path(@place),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

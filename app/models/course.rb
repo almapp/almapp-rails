@@ -18,8 +18,13 @@
 class Course < ActiveRecord::Base
   validates :initials, presence: true, uniqueness: true
 
+  # Causes error if left empty
+  # validates :capacity, numericality: {greater_than_or_equal_to: 0}
+  # validates :credits, numericality: {greater_than_or_equal_to: 0}
+  # validates :enrolled, numericality: {greater_than_or_equal_to: 0}
+
   has_many :sections
   belongs_to :faculty
 
-  # has_many :teachers, through: :sections
+  has_many :teachers, through: :sections # TODO Teacher on course
 end

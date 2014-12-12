@@ -47,7 +47,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to organization_place_path(@organization, @place), notice: 'Place was successfully created.' }
+        format.html { redirect_to organization_place_path(current_organization, @place), notice: 'Place was successfully created.' }
         format.json { render :show, status: :created, location: @place }
       else
         format.html { render :new }
@@ -61,7 +61,7 @@ class PlacesController < ApplicationController
   def update
     respond_to do |format|
       if @place.update(place_params)
-        format.html { redirect_to organization_place_path(@organization, @place), notice: 'Place was successfully updated.' }
+        format.html { redirect_to organization_place_path(current_organization, @place), notice: 'Place was successfully updated.' }
         format.json { render :show, status: :ok, location: @place }
       else
         format.html { render :edit }
@@ -75,30 +75,25 @@ class PlacesController < ApplicationController
   def destroy
     @place.destroy
     respond_to do |format|
-      format.html { redirect_to organization_places_url(@organization), notice: 'Place was successfully destroyed.' }
+      format.html { redirect_to organization_places_url(current_organization), notice: 'Place was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   protected
     def determine_scope
-      set_organization
       if params[:camp_id]
-        @camp = @organization.camps.find(params[:camp_id])
+        @camp = current_organization.camps.find(params[:camp_id])
         @scope = @camp.places
       else
-        @scope = @organization.places
+        @scope = current_organization.places
       end
     end
 
   private
-    def set_organization
-      @organization = Organization.find(params[:organization_id])
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_place
-      @place = @organization.places.find(params[:id])
+      @place = current_organization.places.find(params[:id])
     end
 
     def set_map_hash
