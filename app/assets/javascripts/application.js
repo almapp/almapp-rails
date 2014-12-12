@@ -17,5 +17,6 @@
 //= require jquery_nested_form
 //= require underscore-min
 //= require gmaps/google
+//= require bootstrap
 //= require_tree .
 
