@@ -1,0 +1,50 @@
+<div class="page-header">
+  <%= link_to events_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_event_path(@event), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show event</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @event.title %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @event.description %></dd>
+
+  <dt>Publish date:</dt>
+  <dd><%= @event.publish_date %></dd>
+
+  <dt>Place:</dt>
+  <dd><%= @event.place %></dd>
+
+  <dt>From date:</dt>
+  <dd><%= @event.from_date %></dd>
+
+  <dt>To date:</dt>
+  <dd><%= @event.to_date %></dd>
+
+  <dt>Slug:</dt>
+  <dd><%= @event.slug %></dd>
+
+  <dt>User:</dt>
+  <dd><%= @event.user %></dd>
+
+  <dt>Group:</dt>
+  <dd><%= @event.group %></dd>
+
+  <dt>Facebook url:</dt>
+  <dd><%= @event.facebook_url %></dd>
+
+  <dt>External url:</dt>
+  <dd><%= @event.external_url %></dd>
+
+  <dt>Private:</dt>
+  <dd><%= @event.private %></dd>
+
+</dl>

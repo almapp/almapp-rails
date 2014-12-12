@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  publish_date: 2014-12-12 20:27:56
+  place_id: 
+  from_date: 2014-12-12 20:27:56
+  to_date: 2014-12-12 20:27:56
+  slug: MyString
+  user_id: 
+  group_id: 
+  facebook_url: MyString
+  external_url: MyString
+  private: false
+
+two:
+  title: MyString
+  description: MyText
+  publish_date: 2014-12-12 20:27:56
+  place_id: 
+  from_date: 2014-12-12 20:27:56
+  to_date: 2014-12-12 20:27:56
+  slug: MyString
+  user_id: 
+  group_id: 
+  facebook_url: MyString
+  external_url: MyString
+  private: false

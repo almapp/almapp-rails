@@ -1,0 +1,51 @@
+<div class="page-header">
+  <%= link_to new_event_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Event
+  <% end %>
+  <h1>Listing events</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Publish date</th>
+            <th>Place</th>
+            <th>From date</th>
+            <th>To date</th>
+            <th>Slug</th>
+            <th>User</th>
+            <th>Group</th>
+            <th>Facebook url</th>
+            <th>External url</th>
+            <th>Private</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @events) do |event| %>
+            <td><%= event.title %></td>
+            <td><%= event.description %></td>
+            <td><%= event.publish_date %></td>
+            <td><%= event.place %></td>
+            <td><%= event.from_date %></td>
+            <td><%= event.to_date %></td>
+            <td><%= event.slug %></td>
+            <td><%= event.user %></td>
+            <td><%= event.group %></td>
+            <td><%= event.facebook_url %></td>
+            <td><%= event.external_url %></td>
+            <td><%= event.private %></td>
+            <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

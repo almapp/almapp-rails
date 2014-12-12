@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :events
+
   constraints subdomain: 'dev' do
     get '/' => redirect { |params| "almapp.github.io" } #TODO redirect to github
   end
