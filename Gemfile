@@ -42,6 +42,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'nested_form'
 gem 'simple_form'
+gem 'cocoon'
 
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
