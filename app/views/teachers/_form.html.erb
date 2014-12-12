@@ -1,8 +1,7 @@
-<%= bootstrap_form_for([@organization, @teacher], layout: :horizontal) do |f| %>
+<%= bootstrap_form_for(@teacher, url: [@faculty, @teacher],  layout: :horizontal, label_errors: true, inline_errors: true) do |f| %>
     <%= f.text_field :name %>
     <%= f.text_field :email %>
     <%= f.text_field :url %>
-    <%= f.select :faculty_id, options_for_select(@organization.faculties.all.order('nick').map{ |c| [c.nick, c.id]}, selected_key = f.object.faculty_id), include_blank: '-- Select a Faculty --' %>
     <%= f.text_area :information %>
 
     <%= f.form_group do %>

@@ -16,12 +16,10 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = @faculty.courses.new
-    @path = [@faculty, @course]
   end
 
   # GET /courses/1/edit
   def edit
-    @path = @course
   end
 
   # POST /courses
@@ -58,10 +56,11 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
-    faculty = @course.faculty
+    redirection = faculty_path(@course.faculty)
     @course.destroy
+
     respond_to do |format|
-      format.html { redirect_to faculty_courses_path(faculty), notice: 'Course was successfully destroyed.' }
+      format.html { redirect_to redirection, notice: 'Course was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -13,6 +13,8 @@
 #
 
 class Career < ActiveRecord::Base
+  validates :name, presence: true, uniqueness: true
+
   belongs_to :faculty
 
   has_many :enrolled_careers

@@ -1,11 +1,11 @@
 class TeachersController < ApplicationController
-  before_action :set_organization
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
+  before_action :set_faculty, only: [:index, :new, :create]
 
   # GET /teachers
   # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = @faculty.teachers
   end
 
   # GET /teachers/1
@@ -15,7 +15,7 @@ class TeachersController < ApplicationController
 
   # GET /teachers/new
   def new
-    @teacher = Teacher.new
+    @teacher = @faculty.teachers.new
   end
 
   # GET /teachers/1/edit
@@ -26,10 +26,11 @@ class TeachersController < ApplicationController
   # POST /teachers.json
   def create
     @teacher = Teacher.new(teacher_params)
+    @teacher.faculty = @faculty
 
     respond_to do |format|
       if @teacher.save
-        format.html { redirect_to organization_teacher_url(@organization, @teacher), notice: 'Teacher was successfully created.' }
+        format.html { redirect_to teacher_url(@teacher), notice: 'Teacher was successfully created.' }
         format.json { render :show, status: :created, location: @teacher }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class TeachersController < ApplicationController
   def update
     respond_to do |format|
       if @teacher.update(teacher_params)
-        format.html { redirect_to organization_teacher_url(@organization, @teacher), notice: 'Teacher was successfully updated.' }
+        format.html { redirect_to teacher_path(@teacher), notice: 'Teacher was successfully updated.' }
         format.json { render :show, status: :ok, location: @teacher }
       else
         format.html { render :edit }
@@ -55,16 +56,18 @@ class TeachersController < ApplicationController
   # DELETE /teachers/1
   # DELETE /teachers/1.json
   def destroy
+    redirection = faculty_teachers_path(@teacher.faculty)
     @teacher.destroy
+
     respond_to do |format|
-      format.html { redirect_to organization_teachers_url(@organization), notice: 'Teacher was successfully destroyed.' }
+      format.html { redirect_to redirection, notice: 'Teacher was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    def set_organization
-      @organization = Organization.find(params[:organization_id])
+    def set_faculty
+      @faculty = Faculty.find(params[:faculty_id])
     end
 
     # Use callbacks to share common setup or constraints between actions.
@@ -74,6 +77,6 @@ class TeachersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def teacher_params
-      params.require(:teacher).permit(:name, :faculty_id, :email, :information, :url)
+      params.require(:teacher).permit(:name, :email, :information, :url)
     end
 end

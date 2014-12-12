@@ -17,10 +17,11 @@
 
 class Course < ActiveRecord::Base
   validates :initials, presence: true, uniqueness: true
+  validates :faculty_id, presence: true
 
   # Causes error if left empty
   # validates :capacity, numericality: {greater_than_or_equal_to: 0}
-  # validates :credits, numericality: {greater_than_or_equal_to: 0}
+  validates :credits, numericality: {greater_than_or_equal_to: 0}
   # validates :enrolled, numericality: {greater_than_or_equal_to: 0}
 
   has_many :sections

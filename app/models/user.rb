@@ -15,7 +15,7 @@
 class User < ActiveRecord::Base
   PRIVILEGES = [PRIVILEGE_DEFAULT = 'default', PRIVILEGE_ADMIN = 'admin']
 
-  validates :privilege, inclusion: {in: PRIVILEGES}
+  validates :privilege, presence: true, inclusion: {in: PRIVILEGES}
   validates :organization_id, presence: true
   validates :email, presence: true, uniqueness: true, format: /\A[a-z0-9]+[a-z0-9\._-]*@[a-z0-9\.]+\.[a-z]{2,5}\z/i
   # validates :password_digest, presence: true

@@ -16,12 +16,10 @@ class CareersController < ApplicationController
   # GET /careers/new
   def new
     @career = @faculty.careers.new
-    @path = [@faculty, @career]
   end
 
   # GET /careers/1/edit
   def edit
-    @path = @career
   end
 
   # POST /careers
@@ -58,10 +56,11 @@ class CareersController < ApplicationController
   # DELETE /careers/1
   # DELETE /careers/1.json
   def destroy
-    faculty = @career.faculty
+    redirection = faculty_courses_path(@career.faculty)
     @career.destroy
+
     respond_to do |format|
-      format.html { redirect_to faculty_courses_path(faculty), notice: 'Career was successfully destroyed.' }
+      format.html { redirect_to redirection, notice: 'Career was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

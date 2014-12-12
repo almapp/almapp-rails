@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@path, layout: :horizontal) do |f| %>
+<%= bootstrap_form_for(@career, url: [@faculty, @career], layout: :horizontal) do |f| %>
     <%= f.text_field :name %>
     <%= f.url_field :url %>
     <%= f.text_area :information %>
