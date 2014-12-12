@@ -48,6 +48,7 @@ gem 'bootstrap_form'
 gem 'bootstrap-will_paginate'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-generators', '~> 3.3.1'
+gem 'bootstrap-sass', '3.2.0.2'
 
 gem 'gmaps4rails'
 gem 'geocoder'

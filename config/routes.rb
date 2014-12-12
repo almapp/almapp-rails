@@ -35,7 +35,8 @@ Rails.application.routes.draw do
     resources :camps
     resources :places
 
-    get '/maps' => 'places#maps', as: 'camp_maps'
+
+    get 'maps', controller: 'places', action: 'maps'
   end
 
   resources :organizations
