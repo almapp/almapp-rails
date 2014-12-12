@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  layout :get_layout
+
   def current_organization
     current_organization ||= Organization.find_with_subdomain(request.subdomain)
   end
@@ -12,4 +14,15 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_organization, :get_subdomain
+
+  private
+    def get_layout
+      if current_organization.present?
+        uri = current_organization.slug + '_layout'
+        uri.to_s.downcase
+      else
+        'application'
+      end
+    end
+
 end

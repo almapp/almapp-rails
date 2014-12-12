@@ -31,11 +31,8 @@ class Organization < ActiveRecord::Base
   has_many :places, through: :camps
   has_many :careers, through: :faculties
 
-  # Source: http://billpatrianakos.me/blog/2013/10/19/case-insensitive-finder-methods-in-rails/
-  scope :ci_find, lambda { |attribute, value| where("lower(#{attribute}) = ?", value.downcase).first }
-
   def self.find_with_subdomain(subdomain)
-    self.ci_find('slug', subdomain)
+    self.where("lower(slug) = ?", subdomain.downcase).first if (subdomain.present? && subdomain.size != 0)
   end
 
 end

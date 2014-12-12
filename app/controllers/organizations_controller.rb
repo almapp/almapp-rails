@@ -56,7 +56,7 @@ class OrganizationsController < ApplicationController
   def destroy
     @organization.destroy
     respond_to do |format|
-      format.html { redirect_to organizations_url, notice: 'Organization was successfully destroyed.' }
+      format.html { redirect_to organizations_path, notice: 'Organization was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,10 +64,16 @@ class OrganizationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_organization
-      if(params[:id])
+      if params[:id]
         @organization = Organization.find(params[:id])
       else
         @organization = current_organization
+      end
+
+      if @organization.present?
+        @organization
+      else
+        redirect_to root_url(subdomain: '')
       end
     end
 
