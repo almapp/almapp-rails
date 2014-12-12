@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # end
 
   constraints subdomain: 'dev' do
-    get "/" => redirect { |params| "almapp.github.io" } #TODO redirect to github
+    get '/' => redirect { |params| "almapp.github.io" } #TODO redirect to github
   end
 
   constraints(Subdomain) do
@@ -32,12 +32,10 @@ Rails.application.routes.draw do
       resources :teachers
     end
 
-    resources :camps do
-      resources :places
-    end
+    resources :camps
     resources :places
 
-
+    get '/maps' => 'places#maps', as: 'camp_maps'
   end
 
   resources :organizations
@@ -51,7 +49,7 @@ Rails.application.routes.draw do
   resources :groups
 
  # You can have the root of your site routed with "root"
-  root 'posts#index'
+  root 'organizations#index'
 
   # Example resource route with options:
   #   resources :products do
