@@ -38,19 +38,19 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'therubyracer'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
-gem 'bootstrap_form'
+
 gem 'nested_form'
 gem 'simple_form'
 gem 'cocoon'
-
 gem 'will_paginate'
+
+gem 'bootstrap_form'
 gem 'bootstrap-will_paginate'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-generators', '~> 3.3.1'
 
 gem 'gmaps4rails'
 gem 'geocoder'
-
-
 
 group :development, :test do
   # gem 'debugger'
