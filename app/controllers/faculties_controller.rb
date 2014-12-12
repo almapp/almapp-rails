@@ -25,6 +25,7 @@ class FacultiesController < ApplicationController
   # POST /faculties.json
   def create
     @faculty = Faculty.new(faculty_params)
+    @faculty.organization = current_organization
 
     respond_to do |format|
       if @faculty.save
@@ -56,7 +57,7 @@ class FacultiesController < ApplicationController
   def destroy
     @faculty.destroy
     respond_to do |format|
-      format.html { redirect_to faculties_url, notice: 'Faculty was successfully destroyed.' }
+      format.html { redirect_to faculties_path, notice: 'Faculty was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +65,11 @@ class FacultiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_faculty
-      @faculty = Faculty.find(params[:id])
+      @faculty = current_organization.faculties.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def faculty_params
-      params.require(:faculty).permit(:fid, :name, :camp_id, :address, :url, :description, :latitude, :longitude, :icon, :zoom, :angle, :tilt)
+      params.require(:faculty).permit(:fid, :name, :camp_id, :address, :url, :short_name, :description, :latitude, :longitude, :icon, :zoom, :angle, :tilt)
     end
 end

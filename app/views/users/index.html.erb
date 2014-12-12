@@ -8,8 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:privilege) %></th>
-      <th><%= model_class.human_attribute_name(:password_digest) %></th>
+      <th><%= model_class.human_attribute_name(:slug) %></th>
       <th><%= model_class.human_attribute_name(:organization_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -19,10 +18,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= link_to user.id, user_path(user) %></td>
-        <td><%= user.name %></td>
+        <td><%= link_to user.name, user_path(user) %></td>
         <td><%= user.email %></td>
-        <td><%= user.privilege %></td>
-        <td><%= user.password_digest %></td>
+        <td><%= link_to user.slug, user_path(user) %></td>
         <td><%= user.organization_id %></td>
         <td><%=l user.created_at %></td>
         <td>

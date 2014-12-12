@@ -14,18 +14,18 @@ Rails.application.routes.draw do
       resources :teachers
     end
 
-    resources :camps
-    resources :places
+    resources :camps do
+      resources :places, except: [:maps]
+    end
+    resources :places, only: [:maps]
 
+    resources :users
 
     get 'maps', controller: 'places', action: 'maps'
   end
 
-  resources :organizations
-
-  # http://guides.rubyonrails.org/routing.html TODO VER ESTO
-  resources :users
   resources :groups
+  resources :organizations
 
   # You can have the root of your site routed with "root"
   root 'organizations#index'

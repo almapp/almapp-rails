@@ -22,7 +22,7 @@ class Organization < ActiveRecord::Base
             exclusion: { in: %w(www mail ftp dev help), message: '%{value} is reserved.' },
             format: { with: /\A(?=.*[a-z])[a-z\d]+\Z/i, message: 'incorrect format' }
 
-  has_many :users
+  has_many :users, class_name: 'User'
   has_many :groups
 
   has_many :camps
@@ -30,6 +30,8 @@ class Organization < ActiveRecord::Base
 
   has_many :places, through: :camps
   has_many :careers, through: :faculties
+  has_many :courses, through: :faculties
+  has_many :teachers, through: :faculties
 
   def self.find_with_subdomain(subdomain)
     self.where("lower(slug) = ?", subdomain.downcase).first if (subdomain.present? && subdomain.size != 0)

@@ -13,6 +13,8 @@
 #  organization_id :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  faculty_id      :integer
+#  slug            :string(255)
 #
 
 class Group < ActiveRecord::Base
@@ -20,7 +22,7 @@ class Group < ActiveRecord::Base
   validates :name, presence: true
   validates :expiration, presence: true
   validates :organization, presence: true
-  validates :faculty, inclusion: { in: ->(record) { record.organization.faculty } } #TODO Testing
+  validates :faculty_id, inclusion: { in: ->(record) { record.organization.faculties } } #TODO Testing
 
   belongs_to :organization
   belongs_to :faculty
@@ -31,5 +33,17 @@ class Group < ActiveRecord::Base
 
   has_many :groups_subscribers
   has_many :subscribers, through: :groups_subscribers, :source => :user
+
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged # you must do User.friendly.find('foo')
+
+  # Try building a slug based on the following fields in
+  # increasing order of specificity.
+  def slug_candidates
+    [
+    :name,
+    [:name, :id],
+    ]
+  end
 
 end

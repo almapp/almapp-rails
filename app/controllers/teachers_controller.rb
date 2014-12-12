@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
-  before_action :set_teacher, only: [:show, :edit, :update, :destroy]
   before_action :set_faculty, only: [:index, :new, :create]
+  before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   # GET /teachers
   # GET /teachers.json
@@ -44,7 +44,7 @@ class TeachersController < ApplicationController
   def update
     respond_to do |format|
       if @teacher.update(teacher_params)
-        format.html { redirect_to teacher_path(@teacher), notice: 'Teacher was successfully updated.' }
+        format.html { redirect_to @teacher, notice: 'Teacher was successfully updated.' }
         format.json { render :show, status: :ok, location: @teacher }
       else
         format.html { render :edit }
@@ -67,12 +67,12 @@ class TeachersController < ApplicationController
 
   private
     def set_faculty
-      @faculty = Faculty.find(params[:faculty_id])
+      @faculty = Faculty.friendly.find(params[:faculty_id])
     end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_teacher
-      @teacher = Teacher.find(params[:id])
+      @teacher = current_organization.teachers.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

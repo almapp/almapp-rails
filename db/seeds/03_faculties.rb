@@ -6,7 +6,7 @@ puts('Creating faculties')
 # Faculty.create(
 #     fid: '',
 #     name: '',
-#     nick: '',
+#     short_name: '',
 #     camp_id: nil,
 #     address: '',
 #     url: nil,
@@ -26,7 +26,7 @@ puts('Creating faculties')
 Faculty.create(
     fid: 'AGC',
     name: 'Facultad de Agronomía e Ingeniería Forestal',
-    nick: 'Agronomía e Ingeniería Forestal',
+    short_name: 'Agronomía e Ingeniería Forestal',
     camp_id: @sj.id,
     address: '',
     url: 'http://agronomia.uc.cl/',
@@ -46,7 +46,7 @@ Faculty.create(
 Faculty.create(
     fid: 'FADEU',
     name: 'Facultad de Arquitectura, Diseño y Estudios Urbanos',
-    nick: 'Arquitectura, Diseño y Estudios Urbanos',
+    short_name: 'Arquitectura, Diseño y Estudios Urbanos',
     camp_id: @lc.id,
     address: '',
     url: 'http://fadeu.puc.cl/',
@@ -66,7 +66,7 @@ Faculty.create(
 Faculty.create(
     fid: 'ART',
     name: 'Facultad de Artes',
-    nick: 'Artes',
+    short_name: 'Artes',
     camp_id: @co.id,
     address: 'Avda. Jaime Guzmán Errázuriz 3300, Providencia, Santiago, Chile.',
     url: 'http://artes.uc.cl/',
@@ -86,7 +86,7 @@ Faculty.create(
 Faculty.create(
     fid: 'BIO',
     name: 'Facultad de Ciencias Biológicas',
-    nick: 'Ciencias Biológicas',
+    short_name: 'Ciencias Biológicas',
     camp_id: @cc.id,
     address: '',
     url: 'http://biologia.uc.cl/es/',
@@ -106,7 +106,7 @@ Faculty.create(
 Faculty.create(
     fid: 'ECO',
     name: 'Facultad de Ciencias Económicas y Administrativas',
-    nick: 'Ciencias Económicas y Administrativas',
+    short_name: 'Ciencias Económicas y Administrativas',
     camp_id: @sj.id,
     address: '',
     url: 'http://economiayadministracion.uc.cl/',
@@ -126,7 +126,7 @@ Faculty.create(
 Faculty.create(
     fid: 'SOC',
     name: 'Facultad de Ciencias Sociales',
-    nick: 'Ciencias Sociales',
+    short_name: 'Ciencias Sociales',
     camp_id: @sj.id,
     address: '',
     url: nil,
@@ -146,7 +146,7 @@ Faculty.create(
 Faculty.create(
     fid: 'COM',
     name: 'Facultad de Comunicaciones',
-    nick: 'Comunicaciones',
+    short_name: 'Comunicaciones',
     camp_id: @cc.id,
     address: '',
     url: 'http://comunicaciones.uc.cl/',
@@ -166,7 +166,7 @@ Faculty.create(
 Faculty.create(
     fid: 'LET',
     name: 'Facultad de Letras',
-    nick: 'Letras',
+    short_name: 'Letras',
     camp_id: @sj.id,
     address: '',
     url: 'http://www7.uc.cl/letras/',
@@ -186,7 +186,7 @@ Faculty.create(
 Faculty.create(
     fid: 'DEC',
     name: 'Facultad de Derecho',
-    nick: 'Derecho',
+    short_name: 'Derecho',
     camp_id: @cc.id,
     address: '',
     url: 'http://derecho.uc.cl/',
@@ -206,7 +206,7 @@ Faculty.create(
 Faculty.create(
     fid: 'EDU',
     name: 'Facultad de Educación',
-    nick: 'Educación',
+    short_name: 'Educación',
     camp_id: @sj.id,
     address: '',
     url: 'http://educacion.uc.cl/',
@@ -226,7 +226,7 @@ Faculty.create(
 Faculty.create(
     fid: 'FIL',
     name: 'Facultad de Filosofía',
-    nick: 'Filosofía',
+    short_name: 'Filosofía',
     camp_id: @sj.id,
     address: '',
     url: nil,
@@ -246,7 +246,7 @@ Faculty.create(
 Faculty.create(
     fid: 'FIS',
     name: 'Facultad de Física',
-    nick: 'Física',
+    short_name: 'Física',
     camp_id: @sj.id,
     address: '',
     url: 'http://fisica.uc.cl/',
@@ -266,7 +266,7 @@ Faculty.create(
 Faculty.create(
     fid: 'HIS',
     name: 'Facultad de Historia, Geografía y Ciencia Política',
-    nick: 'Historia, Geografía y Ciencia Política',
+    short_name: 'Historia, Geografía y Ciencia Política',
     camp_id: @sj.id,
     address: '',
     url: 'http://www7.uc.cl/historiageografiaycienciapolitica/',
@@ -286,7 +286,7 @@ Faculty.create(
 Faculty.create(
     fid: 'CCL',
     name: 'Escuela de Construcción Civil',
-    nick: 'Construcción Civil',
+    short_name: 'Construcción Civil',
     camp_id: @sj.id,
     address: '',
     url: 'http://www7.uc.cl/construc_civil',
@@ -306,7 +306,7 @@ Faculty.create(
 Faculty.create(
     fid: 'ING',
     name: 'Escuela de Ingeniería',
-    nick: 'Ingeniería',
+    short_name: 'Ingeniería',
     camp_id: @sj.id,
     address: '',
     url: 'http://www.ing.puc.cl/',
@@ -326,7 +326,7 @@ Faculty.create(
 Faculty.create(
     fid: 'MAT',
     name: 'Facultad de Matemática',
-    nick: 'Matemática',
+    short_name: 'Matemática',
     camp_id: @sj.id,
     address: 'Edificio Rolando Chuaqui. Facultad de Matemáticas. Avda. Vicuña Mackenna #4860. Macul, Santiago. Chile.',
     url: 'http://www.mat.uc.cl/',
@@ -346,7 +346,7 @@ Faculty.create(
 Faculty.create(
     fid: 'ENF',
     name: 'Escuela de Enfermería',
-    nick: 'Enfermería',
+    short_name: 'Enfermería',
     camp_id: @sj.id,
     address: '',
     url: nil,
@@ -366,7 +366,7 @@ Faculty.create(
 Faculty.create(
     fid: 'MED',
     name: 'Escuela de Medicina',
-    nick: 'Medicina',
+    short_name: 'Medicina',
     camp_id: @cc.id,
     address: 'Alameda Libertador Bernardo O´Higgins 340, 8331150 Santiago de Chile',
     url: 'http://medicina.uc.cl/',
@@ -386,7 +386,7 @@ Faculty.create(
 Faculty.create(
     fid: 'QIM',
     name: 'Facultad de Química',
-    nick: 'Química',
+    short_name: 'Química',
     camp_id: @sj.id,
     address: '',
     url: 'http://www.quimica.uc.cl/',
@@ -406,7 +406,7 @@ Faculty.create(
 Faculty.create(
     fid: 'TTF',
     name: 'Facultad de Teología',
-    nick: 'Teología',
+    short_name: 'Teología',
     camp_id: @sj.id,
     address: '',
     url: 'http://teologia.uc.cl/',
@@ -426,7 +426,7 @@ Faculty.create(
 Faculty.create(
     fid: 'VR',
     name: 'Campus Villarrica',
-    nick: 'Villarrica',
+    short_name: 'Villarrica',
     camp_id: @vr.id,
     address: 'Pontificia Universidad Católica de Chile - Bernardo OHiggins 501 - Villarrica - Chile',
     url: 'http://villarrica.uc.cl/',
@@ -446,7 +446,7 @@ Faculty.create(
 Faculty.create(
     fid: 'D',
     name: 'College',
-    nick: 'College',
+    short_name: 'College',
     camp_id: @sj.id,
     address: '',
     url: 'http://college.uc.cl/',

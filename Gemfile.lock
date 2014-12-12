@@ -60,6 +60,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     geocoder (1.2.6)
     gmaps4rails (2.1.2)
     hike (1.2.3)
@@ -168,6 +170,7 @@ DEPENDENCIES
   bootstrap_form
   cocoon
   coffee-rails (~> 4.0.0)
+  friendly_id (~> 5.0.0)
   geocoder
   gmaps4rails
   jbuilder (~> 2.0)

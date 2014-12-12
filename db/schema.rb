@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212145706) do
+ActiveRecord::Schema.define(version: 20141212230004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.string   "email"
     t.float    "latitude",        default: 0.0
     t.float    "longitude",       default: 0.0
+    t.string   "slug"
   end
 
   add_index "camps", ["cid"], name: "index_camps_on_cid", unique: true, using: :btree
@@ -58,12 +59,13 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "curriculum_url"
+    t.string   "slug"
   end
 
   add_index "careers", ["faculty_id"], name: "index_careers_on_faculty_id", using: :btree
 
   create_table "courses", force: true do |t|
-    t.string   "initials"
+    t.string   "initials",                    null: false
     t.string   "name"
     t.integer  "credits"
     t.boolean  "availability", default: true
@@ -73,6 +75,7 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "faculty_id"
+    t.string   "slug"
   end
 
   add_index "courses", ["faculty_id"], name: "index_courses_on_faculty_id", using: :btree
@@ -110,12 +113,26 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.string   "floor"
     t.float    "latitude",    default: 0.0
     t.float    "longitude",   default: 0.0
-    t.string   "nick"
+    t.string   "slug"
+    t.string   "short_name",                null: false
   end
 
   add_index "faculties", ["camp_id"], name: "index_faculties_on_camp_id", using: :btree
   add_index "faculties", ["fid"], name: "index_faculties_on_fid", unique: true, using: :btree
   add_index "faculties", ["name"], name: "index_faculties_on_name", using: :btree
+
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "groups", force: true do |t|
     t.string   "name"
@@ -129,6 +146,7 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "faculty_id"
+    t.string   "slug"
   end
 
   add_index "groups", ["faculty_id"], name: "index_groups_on_faculty_id", using: :btree
@@ -184,6 +202,7 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.float    "latitude",    default: 0.0
     t.float    "longitude",   default: 0.0
     t.boolean  "gmaps",       default: true
+    t.string   "slug"
   end
 
   add_index "places", ["camp_id"], name: "index_places_on_camp_id", using: :btree
@@ -248,18 +267,21 @@ ActiveRecord::Schema.define(version: 20141212145706) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "faculty_id"
+    t.string   "slug"
+    t.string   "username",    null: false
   end
 
   add_index "teachers", ["faculty_id"], name: "index_teachers_on_faculty_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "email",                               null: false
-    t.string   "privilege",       default: "default"
+    t.string   "email",           null: false
     t.string   "password_digest"
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "username",        null: false
   end
 
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree

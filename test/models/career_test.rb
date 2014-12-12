@@ -10,6 +10,7 @@
 #  created_at     :datetime
 #  updated_at     :datetime
 #  curriculum_url :string(255)
+#  slug           :string(255)
 #
 
 require 'test_helper'

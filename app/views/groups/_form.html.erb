@@ -7,7 +7,7 @@
     <%= f.text_area :information %>
     <%= f.date_field :expiration %>
     <%= f.select :organization_id, options_for_select(Organization.all.order('name').map{ |c| [c.name, c.id]}, selected_key = f.object.organization_id)%>
-    <%= f.select :faculty_id, options_for_select(Faculty.all.order('nick').map{ |c| [c.nick, c.id]}, selected_key = f.object.faculty_id), include_blank: '-- Select a Faculty --' %>
+    <%= f.select :faculty_id, options_for_select(Faculty.all.order('short_name').map{ |c| [c.short_name, c.id]}, selected_key = f.object.faculty_id), include_blank: '-- Select a Faculty --' %>
 
     <%= f.form_group do %>
         <%= f.submit %>

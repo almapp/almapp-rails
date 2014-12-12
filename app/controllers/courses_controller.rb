@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_action :set_faculty, only: [:index, :new, :create]
+  before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   # GET /courses
   # GET /courses.json
@@ -56,7 +56,7 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
-    redirection = faculty_path(@course.faculty)
+    redirection = faculty_courses_path(@course.faculty)
     @course.destroy
 
     respond_to do |format|
@@ -67,12 +67,12 @@ class CoursesController < ApplicationController
 
   private
     def set_faculty
-      @faculty = Faculty.find(params[:faculty_id])
+      @faculty = Faculty.friendly.find(params[:faculty_id])
     end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_course
-      @course = Course.find(params[:id])
+      @course = current_organization.courses.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

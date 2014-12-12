@@ -43,6 +43,7 @@ gem 'nested_form'
 gem 'simple_form'
 gem 'cocoon'
 gem 'will_paginate'
+gem 'friendly_id', '~> 5.0.0'
 
 gem 'bootstrap_form'
 gem 'bootstrap-will_paginate'

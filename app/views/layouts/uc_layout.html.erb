@@ -19,48 +19,33 @@
 </head>
 <body>
 
-<%= nav_bar :fixed => :top, :brand => 'Almapp ' + current_organization.slug, :responsive => true do %>
+<!-- https://github.com/seyhunak/twitter-bootstrap-rails -->
+<%= nav_bar :fixed => :top, :brand => 'Almapp ' + current_organization.slug, :responsive => true, :brand_link => root_url(subdomain: '') do %>
     <%= menu_group do %>
         <%= menu_item 'Home', root_path %>
         <%= menu_divider %>
-        <%= drop_down 'Faculties' do %>
-            <% current_organization.faculties.order(:nick).each do |faculty| %>
-                <%= menu_item faculty.nick, faculty_path(faculty) %>
-            <% end %>
-        <% end %>
         <%= drop_down 'Campus' do %>
             <% current_organization.camps.order(:name).each do |camp| %>
                 <%= menu_item camp.name, camp_path(camp) %>
             <% end %>
         <% end %>
+        <%= drop_down 'Faculties' do %>
+            <% current_organization.faculties.order(:short_name).each do |faculty| %>
+                <%= menu_item faculty.short_name, faculty_path(faculty) %>
+            <% end %>
+        <% end %>
+        <%= menu_divider %>
         <%= menu_item 'Maps', maps_path %>
+    <% end %>
+    <%= menu_group :pull => :right do %>
+        <%= menu_item "About Us" %>
+        <%= menu_divider %>
+        <%= menu_item "Sign Up", new_user_path %>
     <% end %>
 <% end %>
 
-
-
-
-<!--
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
 <div class="container">
+
   <% flash.each do |name, msg| %>
       <%= content_tag :div, :class => "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", :role => "alert" do %>
           <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

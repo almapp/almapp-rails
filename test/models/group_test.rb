@@ -14,6 +14,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  faculty_id      :integer
+#  slug            :string(255)
 #
 
 require 'test_helper'

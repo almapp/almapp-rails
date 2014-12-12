@@ -40,11 +40,11 @@
 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              places_path, :class => 'btn btn-default'  %>
+              camp_places_path(@place.camp), :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_place_path(@place), :class => 'btn btn-default' %>
+              edit_camp_place_path(@place.camp, @place), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              place_path(@place),
+              camp_place_path(@place.camp, @place),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

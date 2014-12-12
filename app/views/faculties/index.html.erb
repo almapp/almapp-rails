@@ -5,9 +5,8 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:fid) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:short_name) %></th>
       <th><%= model_class.human_attribute_name(:camp) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:url) %></th>
@@ -15,11 +14,10 @@
     </tr>
   </thead>
   <tbody>
-    <% @faculties.each do |faculty| %>
+    <% @faculties.order(:short_name).each do |faculty| %>
       <tr>
-        <td><%= link_to faculty.id, faculty %></td>
         <td><%= link_to faculty.fid, faculty %></td>
-        <td><%= link_to faculty.name, faculty %></td>
+        <td><%= link_to faculty.short_name, faculty %></td>
         <td><%= link_to faculty.camp.name, camp_path(faculty.camp) %></td>
         <td><%= faculty.address %></td>
         <td><%= link_to faculty.url, faculty.url.to_s %></td>

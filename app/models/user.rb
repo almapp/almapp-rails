@@ -5,25 +5,21 @@
 #  id              :integer          not null, primary key
 #  name            :string(255)
 #  email           :string(255)      not null
-#  privilege       :string(255)      default("default")
 #  password_digest :string(255)
 #  organization_id :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  slug            :string(255)
+#  username        :string(255)      not null
 #
 
 class User < ActiveRecord::Base
-  PRIVILEGES = [PRIVILEGE_DEFAULT = 'default', PRIVILEGE_ADMIN = 'admin']
-
-  validates :privilege, presence: true, inclusion: {in: PRIVILEGES}
   validates :organization_id, presence: true
+  validates :username, presence: true
   validates :email, presence: true, uniqueness: true, format: /\A[a-z0-9]+[a-z0-9\._-]*@[a-z0-9\.]+\.[a-z]{2,5}\z/i
   # validates :password_digest, presence: true
 
-  has_secure_password
-
   belongs_to :organization
-  has_many :posts
 
   has_many :groups_admins
   has_many :manageable_groups, through: :groups_admins, source: :group
@@ -39,9 +35,23 @@ class User < ActiveRecord::Base
   has_many :enrolled_careers
   has_many :careers, through: :enrolled_careers
 
-  private
-  def set_as_admin(is_admin)
-    self.privilege = (is_admin) ? User::PRIVILEGE_ADMIN : User::PRIVILEGE_DEFAULT
+  before_validation :create_slug
+
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :scoped, scope: :organization # you must do User.friendly.find('foo')
+
+  def create_slug
+    self.username = self.email.split('@').first
   end
+
+  # Try building a slug based on the following fields in
+  # increasing order of specificity.
+  def slug_candidates
+    [
+      :username,
+      [:username, :id]
+    ]
+  end
+
 
 end

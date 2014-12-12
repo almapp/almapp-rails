@@ -5,7 +5,6 @@
 #  id          :integer          not null, primary key
 #  fid         :string(255)      not null
 #  name        :string(255)      not null
-#  nick        :string(255)
 #  camp_id     :integer
 #  address     :string(255)
 #  url         :string(255)
@@ -23,6 +22,8 @@
 #  floor       :string(255)
 #  latitude    :float            default(0.0)
 #  longitude   :float            default(0.0)
+#  slug        :string(255)
+#  short_name  :string(255)      not null
 #
 
 class Faculty < ActiveRecord::Base
@@ -33,8 +34,12 @@ class Faculty < ActiveRecord::Base
   belongs_to :camp
   delegate :organization, :to => :camp, :allow_nil => true
 
+
   has_many :places
   has_many :teachers
   has_many :courses
   has_many :careers
+
+  extend FriendlyId
+  friendly_id :short_name, use: :scoped, scope: :camp # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 end

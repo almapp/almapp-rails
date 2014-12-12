@@ -18,6 +18,7 @@
 #  latitude    :float            default(0.0)
 #  longitude   :float            default(0.0)
 #  gmaps       :boolean          default(TRUE)
+#  slug        :string(255)
 #
 
 class Place < ActiveRecord::Base
@@ -36,6 +37,18 @@ class Place < ActiveRecord::Base
   geocoded_by :latitude  => :lat, :longitude => :lng
   reverse_geocoded_by :latitude, :longitude
   # after_validation :reverse_geocode  # auto-fetch address
+
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :scoped, scope: :camp  # you must do User.friendly.find('foo')
+
+  # Try building a slug based on the following fields in
+  # increasing order of specificity.
+  def slug_candidates
+    [
+      :pid,
+      [:pid, :id],
+    ]
+  end
 
 
 end

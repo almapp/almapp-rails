@@ -18,6 +18,7 @@
 #  latitude    :float            default(0.0)
 #  longitude   :float            default(0.0)
 #  gmaps       :boolean          default(TRUE)
+#  slug        :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
