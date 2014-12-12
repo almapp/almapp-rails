@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212134709) do
+ActiveRecord::Schema.define(version: 20141212145706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20141212134709) do
   create_table "assistantships", force: true do |t|
     t.integer  "section_id", null: false
     t.integer  "user_id",    null: false
-    t.integer  "year",       null: false
-    t.integer  "semester",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -195,8 +193,6 @@ ActiveRecord::Schema.define(version: 20141212134709) do
   create_table "schedule_items", id: false, force: true do |t|
     t.integer  "schedule_module_id", null: false
     t.integer  "section_id",         null: false
-    t.integer  "year"
-    t.integer  "semester"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "place_id"
@@ -220,6 +216,8 @@ ActiveRecord::Schema.define(version: 20141212134709) do
     t.integer  "number",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "semester",   null: false
+    t.integer  "year",       null: false
   end
 
   add_index "sections", ["course_id"], name: "index_sections_on_course_id", using: :btree

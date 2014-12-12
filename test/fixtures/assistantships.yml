@@ -5,8 +5,6 @@
 #  id         :integer          not null, primary key
 #  section_id :integer          not null
 #  user_id    :integer          not null
-#  year       :integer          not null
-#  semester   :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
 #

@@ -20,4 +20,8 @@ class ScheduleModule < ActiveRecord::Base
   has_many :schedule_items
   has_many :sections, through: :schedule_items
   has_many :places, through: :schedule_items
+
+  def courses
+    self.sections.course
+  end
 end

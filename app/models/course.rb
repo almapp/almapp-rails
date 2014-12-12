@@ -27,5 +27,9 @@ class Course < ActiveRecord::Base
   has_many :sections
   belongs_to :faculty
 
-  has_many :teachers, through: :sections # TODO Teacher on course
+  def teachers
+    self.sections.teachers
+  end
+  #has_many :teachers, through: :sections # TODO Teacher on course
+
 end

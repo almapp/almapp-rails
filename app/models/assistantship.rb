@@ -5,13 +5,25 @@
 #  id         :integer          not null, primary key
 #  section_id :integer          not null
 #  user_id    :integer          not null
-#  year       :integer          not null
-#  semester   :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
 #
 
 class Assistantship < ActiveRecord::Base
+  validates :section_id, presence: true
+
   belongs_to :section
-  belongs_to :assistant, :class_name => 'User'
+  belongs_to :user
+
+  def teachers
+    self.section.teachers
+  end
+
+  def semester
+    self.section.semester
+  end
+
+  def year
+    self.section.year
+  end
 end

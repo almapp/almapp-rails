@@ -13,6 +13,7 @@
 #  organization_id :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  faculty_id      :integer
 #
 
 require 'test_helper'
