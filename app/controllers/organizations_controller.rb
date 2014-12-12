@@ -64,7 +64,11 @@ class OrganizationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_organization
-      @organization = Organization.find(params[:id])
+      if(params[:id])
+        @organization = Organization.find(params[:id])
+      else
+        @organization = current_organization
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
