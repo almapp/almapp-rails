@@ -45,9 +45,19 @@
         <%= menu_item 'Groups', groups_path %>
     <% end %>
     <%= menu_group :pull => :right do %>
-        <%= menu_item "About Us" %>
-        <%= menu_divider %>
-        <%= menu_item "Sign Up", new_user_path %>
+        <% if user_signed_in? %>
+            <%= menu_item "Log Out", log_out_path %>
+        <% else %>
+            <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :email, :placeholder => "Email", class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <%= f.password_field :password, :placeholder => "Password", class: "form-control"  %>
+                </div>
+                <%= f.submit 'Login', class: "btn btn-default" %>
+            <% end %>
+        <% end %>
     <% end %>
 <% end %>
 
