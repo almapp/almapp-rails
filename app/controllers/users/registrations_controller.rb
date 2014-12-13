@@ -8,9 +8,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @user = User.new(user_params)
+    @user.organization = current_organization
+
+    respond_to do |format|
+      if @user.save
+        flash[:notice] = "Welcome " + @user.slug
+        format.html { redirect_to root_url }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
 
   # GET /resource/edit
   # def edit
@@ -57,4 +70,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+  def user_params
+    params.require(:user).permit(:email, :password)
+  end
 end

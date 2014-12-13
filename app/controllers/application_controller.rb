@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
 
     def get_layout
       if current_organization.present?
-        resource = current_organization.slug + '_layout'
+        resource = current_organization.slug + '/application'
         resource.to_s.downcase
       else
         'application'
