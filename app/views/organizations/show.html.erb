@@ -22,7 +22,7 @@
 <div class="list-group">
   <% @organization.camps.order('id asc').each do |camp| %>
 
-      <%= link_to camp_url(camp, subdomain: get_subdomain(@organization)), class: 'list-group-item' do %>
+      <%= link_to camp_url(camp, subdomain: get_subdomain_for_organization(@organization)), class: 'list-group-item' do %>
           <h4 class="list-group-item-heading"><%= camp.name %></h4>
           <p class="list-group-item-text"><%= camp.description %></p>
       <% end %>
