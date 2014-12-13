@@ -64,11 +64,11 @@ class EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @event = Event.find(params[:id])
+      @event = Event.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :description, :publish_date, :place_id, :from_date, :to_date, :slug, :user_id, :group_id, :facebook_url, :external_url, :private)
+      params.require(:event).permit(:title, :description, :publish_date, :place_id, :from_date, :to_date, :user_id, :group_id, :faculty_id, :organization_id, :facebook_url, :external_url, :private)
     end
 end

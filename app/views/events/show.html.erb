@@ -1,50 +1,45 @@
+<%- model_class = Event -%>
 <div class="page-header">
-  <%= link_to events_path, :class => 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
-    Back
-  <% end %>
-  <%= link_to edit_event_path(@event), :class => 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Edit
-  <% end %>
-  <h1>Show event</h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Title:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @event.title %></dd>
-
-  <dt>Description:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @event.description %></dd>
-
-  <dt>Publish date:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:publish_date) %>:</strong></dt>
   <dd><%= @event.publish_date %></dd>
-
-  <dt>Place:</dt>
-  <dd><%= @event.place %></dd>
-
-  <dt>From date:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:place_id) %>:</strong></dt>
+  <dd><%= @event.place_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:from_date) %>:</strong></dt>
   <dd><%= @event.from_date %></dd>
-
-  <dt>To date:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:to_date) %>:</strong></dt>
   <dd><%= @event.to_date %></dd>
-
-  <dt>Slug:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:slug) %>:</strong></dt>
   <dd><%= @event.slug %></dd>
-
-  <dt>User:</dt>
-  <dd><%= @event.user %></dd>
-
-  <dt>Group:</dt>
-  <dd><%= @event.group %></dd>
-
-  <dt>Facebook url:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @event.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:group_id) %>:</strong></dt>
+  <dd><%= @event.group_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:organization_id) %>:</strong></dt>
+  <dd><%= @event.organization_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:faculty_id) %>:</strong></dt>
+  <dd><%= @event.faculty_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:facebook_url) %>:</strong></dt>
   <dd><%= @event.facebook_url %></dd>
-
-  <dt>External url:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:external_url) %>:</strong></dt>
   <dd><%= @event.external_url %></dd>
-
-  <dt>Private:</dt>
+  <dt><strong><%= model_class.human_attribute_name(:private) %>:</strong></dt>
   <dd><%= @event.private %></dd>
-
 </dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              events_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_event_path(@event), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              event_path(@event),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -41,6 +41,7 @@ gem 'less-rails'
 
 gem 'nested_form'
 gem 'simple_form'
+gem 'validates_timeliness', '~> 3.0'
 gem 'cocoon'
 gem 'will_paginate'
 gem 'friendly_id', '~> 5.0.0'

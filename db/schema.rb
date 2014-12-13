@@ -97,23 +97,27 @@ ActiveRecord::Schema.define(version: 20141212232756) do
   add_index "enrolled_careers", ["user_id"], name: "index_enrolled_careers_on_user_id", using: :btree
 
   create_table "events", force: true do |t|
-    t.string   "title",                        null: false
+    t.string   "title",                           null: false
     t.text     "description"
     t.datetime "publish_date"
     t.integer  "place_id"
     t.datetime "from_date"
-    t.datetime "to_date",                      null: false
-    t.string   "slug",                         null: false
+    t.datetime "to_date",                         null: false
+    t.string   "slug",                            null: false
     t.integer  "user_id"
     t.integer  "group_id"
+    t.integer  "organization_id"
+    t.integer  "faculty_id"
     t.string   "facebook_url"
     t.string   "external_url"
-    t.boolean  "private",      default: false
+    t.boolean  "private",         default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "events", ["faculty_id"], name: "index_events_on_faculty_id", using: :btree
   add_index "events", ["group_id"], name: "index_events_on_group_id", using: :btree
+  add_index "events", ["organization_id"], name: "index_events_on_organization_id", using: :btree
   add_index "events", ["place_id"], name: "index_events_on_place_id", using: :btree
   add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
   add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree

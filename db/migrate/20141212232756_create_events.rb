@@ -10,6 +10,8 @@ class CreateEvents < ActiveRecord::Migration
       t.string :slug, null: false, uniqueness: true
       t.references :user, index: true
       t.references :group, index: true
+      t.references :organization, index: true
+      t.references :faculty, index: true
       t.string :facebook_url
       t.string :external_url
       t.boolean :private, default: false
