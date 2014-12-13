@@ -9,11 +9,15 @@ class ApplicationController < ActionController::Base
     current_organization ||= Organization.find_with_subdomain(request.subdomain)
   end
 
+  def current_subdomain
+    get_subdomain(current_organization)
+  end
+
   def get_subdomain(organization)
     organization.slug
   end
 
-  helper_method :current_organization, :get_subdomain
+  helper_method :current_organization, :get_subdomain, :current_subdomain
 
   private
     def get_layout
