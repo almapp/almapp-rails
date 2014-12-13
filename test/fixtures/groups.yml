@@ -13,6 +13,8 @@
 #  organization_id :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  faculty_id      :integer
+#  slug            :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

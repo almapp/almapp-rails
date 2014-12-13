@@ -1,15 +1,14 @@
-<%= bootstrap_form_for([@organization, @course], layout: :horizontal) do |f| %>
+<%= bootstrap_form_for(@course, url: [@faculty, @course], layout: :horizontal) do |f| %>
   <%= f.text_field :initials %>
   <%= f.text_field :name %>
-  <%= f.select :faculty_id, options_for_select(@organization.faculties.all.order('nick').map{ |c| [c.nick, c.id]}, selected_key = f.object.faculty_id), include_blank: '-- Select a Faculty --' %>
   <%= f.number_field :credits %>
   <%= f.text_area :description %>
   <%= f.number_field :capacity %>
   <%= f.number_field :enrolled %>
 
-    <%= f.form_group :availability do %>
-        <%= f.check_box :availability, label: "Available" %>
-    <% end %>
+  <%= f.form_group :availability do %>
+      <%= f.check_box :availability, label: 'Available' %>
+  <% end %>
 
   <%= f.form_group do %>
       <%= f.submit %>

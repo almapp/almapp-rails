@@ -17,9 +17,9 @@
   <tbody>
     <% @careers.each do |career| %>
       <tr>
-        <td><%= link_to career.id, organization_career_path(@organization, career) %></td>
-        <td><%= career.name %></td>
-        <td><%= career.url %></td>
+        <td><%= link_to career.id, career_path(career) %></td>
+        <td><%= link_to career.name, career_path(career) %></td>
+        <td><%= link_to career.url, career.url.to_s %></td>
         <td><%= career.information %></td>
         <td><%= career.faculty_id %></td>
         <td><%=l career.created_at %></td>
@@ -38,5 +38,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_career_path,
+            new_faculty_career_path,
             :class => 'btn btn-primary' %>

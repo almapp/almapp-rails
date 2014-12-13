@@ -1,11 +1,10 @@
 class CampsController < ApplicationController
-  before_action :set_organization
   before_action :set_camp, only: [:show, :edit, :update, :destroy]
 
   # GET /camps
   # GET /camps.json
   def index
-    @camps = @organization.camps
+    @camps = current_organization.camps
   end
 
   # GET /camps/1
@@ -15,7 +14,7 @@ class CampsController < ApplicationController
 
   # GET /camps/new
   def new
-    @camp = @organization.camps.new
+    @camp = current_organization.camps.new
   end
 
   # GET /camps/1/edit
@@ -25,11 +24,12 @@ class CampsController < ApplicationController
   # POST /camps
   # POST /camps.json
   def create
-    @camp = @organization.camps.new(camp_params)
+    @camp = Camp.new(camp_params)
+    @camp.organization = current_organization
 
     respond_to do |format|
       if @camp.save
-        format.html { redirect_to organization_camp_path(@organization, @camp), notice: 'Camp was successfully created.' }
+        format.html { redirect_to camp_path(@camp), notice: 'Camp was successfully created.' }
         format.json { render :show, status: :created, location: @camp }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CampsController < ApplicationController
   def update
     respond_to do |format|
       if @camp.update(camp_params)
-        format.html { redirect_to organization_camp_path(@organization, @camp), notice: 'Camp was successfully updated.' }
+        format.html { redirect_to camp_path(@camp), notice: 'Camp was successfully updated.' }
         format.json { render :show, status: :ok, location: @camp }
       else
         format.html { render :edit }
@@ -57,19 +57,15 @@ class CampsController < ApplicationController
   def destroy
     @camp.destroy
     respond_to do |format|
-      format.html { redirect_to organization_camp_url(@organization), notice: 'Camp was successfully destroyed.' }
+      format.html { redirect_to camps_path, notice: 'Camp was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    def set_organization
-      @organization = Organization.find(params[:organization_id])
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_camp
-      @camp = @organization.camps.find(params[:id])
+      @camp = current_organization.camps.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

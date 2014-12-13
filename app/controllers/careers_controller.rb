@@ -1,11 +1,11 @@
 class CareersController < ApplicationController
-  before_action :set_organization
+  before_action :set_faculty, only: [:index, :new, :create]
   before_action :set_career, only: [:show, :edit, :update, :destroy]
 
   # GET /careers
   # GET /careers.json
   def index
-    @careers = Career.all
+    @careers = @faculty.careers
   end
 
   # GET /careers/1
@@ -15,7 +15,7 @@ class CareersController < ApplicationController
 
   # GET /careers/new
   def new
-    @career = Career.new
+    @career = @faculty.careers.new
   end
 
   # GET /careers/1/edit
@@ -26,10 +26,11 @@ class CareersController < ApplicationController
   # POST /careers.json
   def create
     @career = Career.new(career_params)
+    @career.faculty = @faculty
 
     respond_to do |format|
       if @career.save
-        format.html { redirect_to organization_career_path(@organization, @career), notice: 'Career was successfully created.' }
+        format.html { redirect_to career_path(@career), notice: 'Career was successfully created.' }
         format.json { render :show, status: :created, location: @career }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class CareersController < ApplicationController
   def update
     respond_to do |format|
       if @career.update(career_params)
-        format.html { redirect_to organization_career_path(@organization, @career), notice: 'Career was successfully updated.' }
+        format.html { redirect_to career_path(@career), notice: 'Career was successfully updated.' }
         format.json { render :show, status: :ok, location: @career }
       else
         format.html { render :edit }
@@ -55,25 +56,27 @@ class CareersController < ApplicationController
   # DELETE /careers/1
   # DELETE /careers/1.json
   def destroy
+    redirection = faculty_careers_path(@career.faculty)
     @career.destroy
+
     respond_to do |format|
-      format.html { redirect_to organization_careers_path(@organization), notice: 'Career was successfully destroyed.' }
+      format.html { redirect_to redirection, notice: 'Career was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    def set_organization
-      @organization = Organization.find(params[:organization_id])
+    def set_faculty
+      @faculty = Faculty.friendly.find(params[:faculty_id])
     end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_career
-      @career = Career.find(params[:id])
+      @career = current_organization.careers.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def career_params
-      params.require(:career).permit(:name, :url, :information, :faculty_id)
+      params.require(:career).permit(:name, :url, :information, :curriculum_url)
     end
 end

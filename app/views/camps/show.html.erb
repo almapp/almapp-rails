@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @camp.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:organization_id) %>:</strong></dt>
-  <dd><%= link_to @camp.organization.name, organization_path(@camp.organization) %></dd>
+  <dd><%= link_to @camp.organization.name, root_path %></dd>
   <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
   <dd><%= @camp.address %></dd>
   <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
@@ -31,11 +31,11 @@
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              organization_camps_path(@organization), :class => 'btn btn-default'  %>
+              camps_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_organization_camp_path(@organization, @camp), :class => 'btn btn-default' %>
+              edit_camp_path(@camp), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              organization_camp_path(@organization, @camp),
+              camp_path(@camp),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

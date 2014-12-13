@@ -21,6 +21,7 @@
 #  email           :string(255)
 #  latitude        :float            default(0.0)
 #  longitude       :float            default(0.0)
+#  slug            :string(255)
 #
 
 class Camp < ActiveRecord::Base
@@ -30,6 +31,9 @@ class Camp < ActiveRecord::Base
 
   belongs_to :organization
   has_many :faculties
+  has_many :careers, through: :faculties
   has_many :places
 
+  extend FriendlyId
+  friendly_id :name, use: :scoped, scope: :organization # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 end

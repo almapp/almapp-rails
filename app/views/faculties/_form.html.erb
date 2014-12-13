@@ -1,7 +1,7 @@
-<%= bootstrap_form_for([@organization, @faculty], layout: :horizontal) do |f| %>
+<%= bootstrap_form_for(@faculty, layout: :horizontal) do |f| %>
     <%= f.text_field :fid %>
     <%= f.text_field :name %>
-    <%= f.collection_select :camp_id, @organization.camps, :id, :name%>
+    <%= f.text_field :short_name %>
     <%= f.text_field :address %>
     <%= f.url_field :url %>
     <%= f.url_field :facebook %>

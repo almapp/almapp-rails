@@ -11,15 +11,30 @@
 #  updated_at  :datetime
 #  facebook    :string(255)
 #  twitter     :string(255)
+#  slug        :string(255)      not null
 #
 
 class Organization < ActiveRecord::Base
   validates :name, presence: true
+  validates :slug,
+            presence: true,
+            uniqueness: true,
+            exclusion: { in: %w(www mail ftp dev help), message: '%{value} is reserved.' },
+            format: { with: /\A(?=.*[a-z])[a-z\d]+\Z/i, message: 'incorrect format' }
 
-  has_many :users
+  has_many :users, class_name: 'User'
   has_many :groups
 
   has_many :camps
   has_many :faculties, through: :camps
+
   has_many :places, through: :camps
+  has_many :careers, through: :faculties
+  has_many :courses, through: :faculties
+  has_many :teachers, through: :faculties
+
+  def self.find_with_subdomain(subdomain)
+    self.where("lower(slug) = ?", subdomain.downcase).first if (subdomain.present? && subdomain.size != 0)
+  end
+
 end

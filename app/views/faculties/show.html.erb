@@ -9,9 +9,9 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @faculty.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:organization) %>:</strong></dt>
-  <dd><%= link_to @faculty.organization.name, organization_path(@organization) %></dd>
+  <dd><%= link_to @faculty.organization.name, organization_path(@faculty.organization) if @faculty.organization.present? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:camp) %>:</strong></dt>
-  <dd><%= link_to @faculty.camp.name, organization_camp_path(@organization, @faculty.camp) %></dd>
+  <dd><%= link_to @faculty.camp.name, camp_path(@faculty.camp) if @faculty.camp.present? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
   <dd><%= @faculty.address %></dd>
   <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
@@ -41,11 +41,11 @@
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              organization_faculties_path(@organization), :class => 'btn btn-default'  %>
+              faculties_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_organization_faculty_path(@organization, @faculty), :class => 'btn btn-default' %>
+              edit_faculty_path(@faculty), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-            organization_faculty_path(@organization, @faculty),
+            faculty_path(@faculty),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>

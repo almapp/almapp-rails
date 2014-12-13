@@ -21,6 +21,7 @@
 #  email           :string(255)
 #  latitude        :float            default(0.0)
 #  longitude       :float            default(0.0)
+#  slug            :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

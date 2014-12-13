@@ -1,7 +1,8 @@
 puts('Creating organizations')
 
 @uc = Organization.create(
-    name: 'UC',
+    slug: 'UC',
+    name: 'Pontificia Universidad Católica de Chile',
     url: 'http://www.uc.cl',
     facebook: 'https://www.facebook.com/ucatolica',
     twitter: 'https://twitter.com/ucatolica',

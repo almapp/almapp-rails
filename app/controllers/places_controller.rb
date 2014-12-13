@@ -1,22 +1,27 @@
 class PlacesController < ApplicationController
-  before_filter :determine_scope
+  before_action :set_camp, except: [:maps]
   before_action :set_place, only: [:show, :edit, :update, :destroy]
   before_action :set_map_hash, only: [:show, :edit]
 
   # GET /places
   # GET /places.json
   def index
-    @places = @scope.all
+    @places = @camp.places
+  end
+
+  def maps
+    # @hash = create_map_hash(Place.first) #TODO HERE
+    @places = current_organization.places.all
   end
 
   def create_map_hash(input)
     array = input.kind_of?(Array) ? input : [input]
-    hash = Gmaps4rails.build_markers(array) do |p, marker|
-      marker.infowindow render_to_string(:partial => 'places/infowindow', :locals => { :object => p})
-      marker.lat p.latitude
-      marker.lng p.longitude
-      marker.title p.name
-      marker.json({:id => p.id, :name => p.name })
+    hash = Gmaps4rails.build_markers(array) do |place, marker|
+      marker.infowindow render_to_string(:partial => 'places/infowindow', :locals => { :place => place})
+      marker.lat place.latitude
+      marker.lng place.longitude
+      marker.title place.name
+      marker.json({:id => place.id, :name => place.name })
     end
   end
 
@@ -28,12 +33,7 @@ class PlacesController < ApplicationController
 
   # GET /places/new
   def new
-    @place = Place.new
-    if @camp
-      @place.camp = @camp
-    end
-
-    @place
+    @place = @camp.places.new
   end
 
   # GET /places/1/edit
@@ -44,10 +44,11 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.new(place_params)
+    @place.camp = @camp
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to organization_place_path(@organization, @place), notice: 'Place was successfully created.' }
+        format.html { redirect_to [@place.camp, @place], notice: 'Place was successfully created.' }
         format.json { render :show, status: :created, location: @place }
       else
         format.html { render :new }
@@ -61,7 +62,7 @@ class PlacesController < ApplicationController
   def update
     respond_to do |format|
       if @place.update(place_params)
-        format.html { redirect_to organization_place_path(@organization, @place), notice: 'Place was successfully updated.' }
+        format.html { redirect_to [@place.camp, @place], notice: 'Place was successfully updated.' }
         format.json { render :show, status: :ok, location: @place }
       else
         format.html { render :edit }
@@ -73,32 +74,22 @@ class PlacesController < ApplicationController
   # DELETE /places/1
   # DELETE /places/1.json
   def destroy
+    redirection = camp_places_path(@place.faculty)
     @place.destroy
+
     respond_to do |format|
-      format.html { redirect_to organization_places_url(@organization), notice: 'Place was successfully destroyed.' }
+      format.html { redirect_to redirection, notice: 'Place was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
-  protected
-    def determine_scope
-      set_organization
-      if params[:camp_id]
-        @camp = @organization.camps.find(params[:camp_id])
-        @scope = @camp.places
-      else
-        @scope = @organization.places
-      end
-    end
-
   private
-    def set_organization
-      @organization = Organization.find(params[:organization_id])
+    def set_camp
+      @camp = Camp.friendly.find(params[:camp_id])
     end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_place
-      @place = @organization.places.find(params[:id])
+      @place = @camp.places.friendly.find(params[:id])
     end
 
     def set_map_hash

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127105126) do
+ActiveRecord::Schema.define(version: 20141212232756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20141127105126) do
   create_table "assistantships", force: true do |t|
     t.integer  "section_id", null: false
     t.integer  "user_id",    null: false
-    t.integer  "year",       null: false
-    t.integer  "semester",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,24 +45,29 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.string   "email"
     t.float    "latitude",        default: 0.0
     t.float    "longitude",       default: 0.0
+    t.string   "slug"
   end
 
   add_index "camps", ["cid"], name: "index_camps_on_cid", unique: true, using: :btree
   add_index "camps", ["organization_id"], name: "index_camps_on_organization_id", using: :btree
+  add_index "camps", ["slug"], name: "index_camps_on_slug", unique: true, using: :btree
 
   create_table "careers", force: true do |t|
-    t.string   "name",        null: false
+    t.string   "name",           null: false
     t.string   "url"
     t.text     "information"
     t.integer  "faculty_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "curriculum_url"
+    t.string   "slug"
   end
 
   add_index "careers", ["faculty_id"], name: "index_careers_on_faculty_id", using: :btree
+  add_index "careers", ["slug"], name: "index_careers_on_slug", unique: true, using: :btree
 
   create_table "courses", force: true do |t|
-    t.string   "initials"
+    t.string   "initials",                    null: false
     t.string   "name"
     t.integer  "credits"
     t.boolean  "availability", default: true
@@ -74,10 +77,12 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "faculty_id"
+    t.string   "slug"
   end
 
   add_index "courses", ["faculty_id"], name: "index_courses_on_faculty_id", using: :btree
   add_index "courses", ["initials"], name: "index_courses_on_initials", unique: true, using: :btree
+  add_index "courses", ["slug"], name: "index_courses_on_slug", unique: true, using: :btree
 
   create_table "enrolled_careers", force: true do |t|
     t.integer  "user_id"
@@ -90,6 +95,32 @@ ActiveRecord::Schema.define(version: 20141127105126) do
 
   add_index "enrolled_careers", ["career_id"], name: "index_enrolled_careers_on_career_id", using: :btree
   add_index "enrolled_careers", ["user_id"], name: "index_enrolled_careers_on_user_id", using: :btree
+
+  create_table "events", force: true do |t|
+    t.string   "title",                           null: false
+    t.text     "description"
+    t.datetime "publish_date"
+    t.integer  "place_id"
+    t.datetime "from_date"
+    t.datetime "to_date",                         null: false
+    t.string   "slug",                            null: false
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.integer  "organization_id"
+    t.integer  "faculty_id"
+    t.string   "facebook_url"
+    t.string   "external_url"
+    t.boolean  "private",         default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["faculty_id"], name: "index_events_on_faculty_id", using: :btree
+  add_index "events", ["group_id"], name: "index_events_on_group_id", using: :btree
+  add_index "events", ["organization_id"], name: "index_events_on_organization_id", using: :btree
+  add_index "events", ["place_id"], name: "index_events_on_place_id", using: :btree
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
   create_table "faculties", force: true do |t|
     t.string   "fid",                       null: false
@@ -111,12 +142,27 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.string   "floor"
     t.float    "latitude",    default: 0.0
     t.float    "longitude",   default: 0.0
-    t.string   "nick"
+    t.string   "slug"
+    t.string   "short_name",                null: false
   end
 
   add_index "faculties", ["camp_id"], name: "index_faculties_on_camp_id", using: :btree
   add_index "faculties", ["fid"], name: "index_faculties_on_fid", unique: true, using: :btree
   add_index "faculties", ["name"], name: "index_faculties_on_name", using: :btree
+  add_index "faculties", ["slug"], name: "index_faculties_on_slug", unique: true, using: :btree
+
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "groups", force: true do |t|
     t.string   "name"
@@ -129,9 +175,13 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "faculty_id"
+    t.string   "slug"
   end
 
+  add_index "groups", ["faculty_id"], name: "index_groups_on_faculty_id", using: :btree
   add_index "groups", ["organization_id"], name: "index_groups_on_organization_id", using: :btree
+  add_index "groups", ["slug"], name: "index_groups_on_slug", unique: true, using: :btree
 
   create_table "groups_admins", force: true do |t|
     t.integer  "user_id"
@@ -164,6 +214,7 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.datetime "updated_at"
     t.string   "facebook"
     t.string   "twitter"
+    t.string   "slug",        null: false
   end
 
   create_table "places", force: true do |t|
@@ -182,27 +233,17 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.float    "latitude",    default: 0.0
     t.float    "longitude",   default: 0.0
     t.boolean  "gmaps",       default: true
+    t.string   "slug"
   end
 
   add_index "places", ["camp_id"], name: "index_places_on_camp_id", using: :btree
   add_index "places", ["faculty_id"], name: "index_places_on_faculty_id", using: :btree
   add_index "places", ["pid"], name: "index_places_on_pid", unique: true, using: :btree
-
-  create_table "posts", force: true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.string   "kind"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+  add_index "places", ["slug"], name: "index_places_on_slug", unique: true, using: :btree
 
   create_table "schedule_items", id: false, force: true do |t|
     t.integer  "schedule_module_id", null: false
     t.integer  "section_id",         null: false
-    t.integer  "year"
-    t.integer  "semester"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "place_id"
@@ -226,6 +267,8 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.integer  "number",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "semester",   null: false
+    t.integer  "year",       null: false
   end
 
   add_index "sections", ["course_id"], name: "index_sections_on_course_id", using: :btree
@@ -256,20 +299,25 @@ ActiveRecord::Schema.define(version: 20141127105126) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "faculty_id"
+    t.string   "slug"
+    t.string   "username",    null: false
   end
 
   add_index "teachers", ["faculty_id"], name: "index_teachers_on_faculty_id", using: :btree
+  add_index "teachers", ["slug"], name: "index_teachers_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "email",                               null: false
-    t.string   "privilege",       default: "default"
+    t.string   "email",           null: false
     t.string   "password_digest"
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "username",        null: false
   end
 
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree
+  add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
 
 end

@@ -1,0 +1,18 @@
+<%= bootstrap_form_for(@event, layout: :horizontal) do |f| %>
+    <%=f.text_field :title %>
+    <%=f.text_area :description %>
+    <%=f.datetime_select :publish_date %>
+    <%=f.select :place_id, options_for_select(Place.all.order('name').map{ |c| [c.name, c.id]}, selected_key = f.object.place_id), include_blank: '-- Select a Place --' %>
+    <%=f.datetime_select :from_date %>
+    <%=f.datetime_select :to_date %>
+    <%=f.url_field :facebook_url %>
+    <%=f.url_field :external_url %>
+
+    <%= f.form_group :private do %>
+        <%= f.check_box :private, label: 'Private' %>
+    <% end %>
+
+    <%= f.form_group do %>
+        <%= f.submit %>
+    <% end %>
+<% end %>

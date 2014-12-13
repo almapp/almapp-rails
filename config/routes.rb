@@ -1,13 +1,40 @@
 Rails.application.routes.draw do
 
+  resources :events
 
+  constraints subdomain: 'dev' do
+    get '/' => redirect { |params| "almapp.github.io" } #TODO redirect to github
+  end
+
+  constraints(Subdomain) do
+    get '/' => 'organizations#show'
+
+    resources :faculties, shallow: true do
+      # Shallow: [:index, :new, :create]
+      resources :careers
+      resources :courses
+      resources :teachers
+    end
+
+    resources :camps do
+      resources :places, except: [:maps]
+    end
+    resources :places, only: [:maps]
+
+    resources :users
+
+    get 'maps', controller: 'places', action: 'maps'
+  end
+
+  resources :groups
+  resources :organizations
+
+  # You can have the root of your site routed with "root"
+  root 'organizations#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'organizations#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,26 +43,11 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):  resources :groups
-  resources :organizations do
-    resources :faculties
-    resources :camps do
-      resources :places
-    end
-    resources :places
-
-    resources :teachers
-    resources :courses
-    resources :careers
-  end
-
- #  get 'organizations/:organization_id/places' => 'places#showall'
-
- # http://guides.rubyonrails.org/routing.html TODO VER ESTO
-  resources :posts
-  resources :users
-  resources :groups
-
-
+  # resources :organizations do
+  #   constraints(Subdomain) do
+  #     root 'organizations#show'
+  #   end
+  # end
 
   # Example resource route with options:
   #   resources :products do

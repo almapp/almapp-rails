@@ -1,8 +1,6 @@
 <%= bootstrap_form_for(@user, layout: :horizontal) do |f| %>
     <%=f.text_field :name %>
     <%=f.email_field :email%>
-    <%= f.collection_select :organization_id, Organization.all, :id, :name, include_blank: true %>
-
     <%= f.form_group do %>
         <%= f.submit %>
     <% end %>

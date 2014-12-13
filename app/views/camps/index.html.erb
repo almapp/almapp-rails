@@ -8,7 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:cid) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:organization_id) %></th>
+      <th><%= model_class.human_attribute_name(:organization) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:url) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
@@ -25,10 +25,10 @@
   <tbody>
     <% @camps.each do |camp| %>
       <tr>
-        <td><%= link_to camp.id, organization_camp_path(@organization, camp) %></td>
-        <td><%= link_to camp.cid, organization_camp_path(@organization, camp) %></td>
-        <td><%= link_to camp.name, organization_camp_path(@organization, camp) %></td>
-        <td><%= link_to camp.organization.name, organization_path(camp.organization) %></td>
+        <td><%= link_to camp.id, camp %></td>
+        <td><%= link_to camp.cid, camp %></td>
+        <td><%= link_to camp.name, camp %></td>
+        <td><%= link_to camp.organization.name, root_path %></td>
         <td><%= camp.address %></td>
         <td><%= camp.url %></td>
         <td><%= camp.description %></td>
@@ -41,9 +41,9 @@
         -->
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_organization_camp_path(@organization, camp), :class => 'btn btn-default btn-xs' %>
+                      edit_camp_path(camp), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      organization_camp_path(@organization, camp),
+                      camp_path(camp),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -54,5 +54,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_organization_camp_path(@organization),
+            new_camp_path,
             :class => 'btn btn-primary' %>

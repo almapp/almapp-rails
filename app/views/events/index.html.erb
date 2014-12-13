@@ -1,0 +1,62 @@
+<%- model_class = Event -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:publish_date) %></th>
+      <th><%= model_class.human_attribute_name(:place_id) %></th>
+      <th><%= model_class.human_attribute_name(:from_date) %></th>
+      <th><%= model_class.human_attribute_name(:to_date) %></th>
+      <th><%= model_class.human_attribute_name(:slug) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:group_id) %></th>
+      <th><%= model_class.human_attribute_name(:organization_id) %></th>
+      <th><%= model_class.human_attribute_name(:faculty_id) %></th>
+      <th><%= model_class.human_attribute_name(:facebook_url) %></th>
+      <th><%= model_class.human_attribute_name(:external_url) %></th>
+      <th><%= model_class.human_attribute_name(:private) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= link_to event.id, event_path(event) %></td>
+        <td><%= event.title %></td>
+        <td><%= event.description %></td>
+        <td><%= event.publish_date %></td>
+        <td><%= event.place_id %></td>
+        <td><%= event.from_date %></td>
+        <td><%= event.to_date %></td>
+        <td><%= event.slug %></td>
+        <td><%= event.user_id %></td>
+        <td><%= event.group_id %></td>
+        <td><%= event.organization_id %></td>
+        <td><%= event.faculty_id %></td>
+        <td><%= event.facebook_url %></td>
+        <td><%= event.external_url %></td>
+        <td><%= event.private %></td>
+        <td><%=l event.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_event_path(event), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      event_path(event),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_event_path,
+            :class => 'btn btn-primary' %>

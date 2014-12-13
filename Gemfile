@@ -36,20 +36,24 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 gem 'bcrypt', '~> 3.1.7'
-gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
-gem 'bootstrap_form'
-gem "nested_form"
-gem 'simple_form'
+gem 'therubyracer'
+gem 'less-rails'
 
+gem 'nested_form'
+gem 'simple_form'
+gem 'validates_timeliness', '~> 3.0'
+gem 'cocoon'
 gem 'will_paginate'
+gem 'friendly_id', '~> 5.0.0'
+
+gem 'bootstrap_form'
 gem 'bootstrap-will_paginate'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-generators', '~> 3.3.1'
+gem 'bootstrap-sass', '3.2.0.2'
 
 gem 'gmaps4rails'
 gem 'geocoder'
-
-
 
 group :development, :test do
   # gem 'debugger'

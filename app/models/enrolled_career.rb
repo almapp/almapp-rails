@@ -12,6 +12,9 @@
 #
 
 class EnrolledCareer < ActiveRecord::Base
+  validates :user_id, presence: true
+  validates :career_id, presence: true
+
   belongs_to :user
   belongs_to :career
 end

@@ -22,7 +22,8 @@
 #  floor       :string(255)
 #  latitude    :float            default(0.0)
 #  longitude   :float            default(0.0)
-#  nick        :string(255)
+#  slug        :string(255)
+#  short_name  :string(255)      not null
 #
 
 require 'test_helper'

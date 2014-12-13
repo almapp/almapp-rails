@@ -20,24 +20,20 @@
   <tbody>
   <% @places.each do |place| %>
       <tr>
-        <td><%= link_to place.id, organization_place_path(@organization, place), 'data-no-turbolink' => true %></td>
-        <td><%= link_to place.pid, organization_place_path(@organization, place), 'data-no-turbolink' => true %></td>
-        <td><%= link_to place.camp.cid, organization_camp_path(@organization, place.camp) %></td>
-        <td><%= link_to place.name, organization_place_path(@organization, place), 'data-no-turbolink' => true %></td>
-        <% if place.faculty.present? %>
-            <td><%= link_to place.faculty.fid, organization_faculty_path(@organization, place.faculty) %></td>
-        <% else %>
-            <td></td>
-        <% end %>
+        <td><%= link_to place.id, [place.camp, place], 'data-no-turbolink' => true %></td>
+        <td><%= link_to place.pid, [place.camp, place], 'data-no-turbolink' => true %></td>
+        <td><%= link_to place.camp.cid, place.camp %></td>
+        <td><%= link_to place.name, [place.camp, place], 'data-no-turbolink' => true %></td>
+        <td><%= link_to place.faculty.fid, place.faculty if place.faculty.present? %></td>
         <td><%= place.latitude %></td>
         <td><%= place.longitude %></td>
         <td><%= place.floor %></td>
         <td><%= place.description %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_organization_place_path(@organization, place), 'data-no-turbolink' => true, :class => 'btn btn-default btn-xs' %>
+                      edit_camp_place_path(place.camp, place), 'data-no-turbolink' => true, :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      organization_place_path(@organization, place),
+                      camp_place_path(place.camp, place),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
@@ -48,5 +44,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_organization_place_path(@organization),
+            new_camp_place_path(@camp),
             :class => 'btn btn-primary' %>

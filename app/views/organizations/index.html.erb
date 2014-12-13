@@ -17,8 +17,8 @@
   <tbody>
     <% @organizations.each do |organization| %>
       <tr>
-        <td><%= link_to organization.id, organization_path(organization) %></td>
-        <td><%= link_to organization.name, organization_path(organization) %></td>
+        <td><%= link_to organization.id, root_url(subdomain: get_subdomain(organization)) %></td>
+        <td><%= link_to organization.name, root_url(subdomain: get_subdomain(organization)) %></td>
         <td><%= organization.information %></td>
         <td><%= organization.image %></td>
         <td><%= organization.url %></td>
