@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212232756) do
+ActiveRecord::Schema.define(version: 20141215161741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,6 +164,17 @@ ActiveRecord::Schema.define(version: 20141212232756) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+  create_table "friendships", id: false, force: true do |t|
+    t.integer  "user_id",                    null: false
+    t.integer  "friend_id",                  null: false
+    t.boolean  "accepted",   default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friendships", ["friend_id"], name: "index_friendships_on_friend_id", using: :btree
+  add_index "friendships", ["user_id"], name: "index_friendships_on_user_id", using: :btree
+
   create_table "groups", force: true do |t|
     t.string   "name"
     t.string   "email",           null: false
@@ -308,16 +319,28 @@ ActiveRecord::Schema.define(version: 20141212232756) do
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "email",           null: false
-    t.string   "password_digest"
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.string   "username",        null: false
+    t.string   "username",                               null: false
+    t.string   "subdomain",              default: "",    null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.boolean  "admin",                  default: false
   end
 
+  add_index "users", ["email", "subdomain"], name: "index_users_on_email_and_subdomain", unique: true, using: :btree
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
 
 end

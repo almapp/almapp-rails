@@ -2,15 +2,25 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)
-#  email           :string(255)      not null
-#  password_digest :string(255)
-#  organization_id :integer
-#  created_at      :datetime
-#  updated_at      :datetime
-#  slug            :string(255)
-#  username        :string(255)      not null
+#  id                     :integer          not null, primary key
+#  name                   :string(255)
+#  organization_id        :integer
+#  created_at             :datetime
+#  updated_at             :datetime
+#  slug                   :string(255)
+#  username               :string(255)      not null
+#  subdomain              :string(255)      default(""), not null
+#  email                  :string(255)      default(""), not null
+#  encrypted_password     :string(255)      default(""), not null
+#  reset_password_token   :string(255)
+#  reset_password_sent_at :datetime
+#  remember_created_at    :datetime
+#  sign_in_count          :integer          default(0), not null
+#  current_sign_in_at     :datetime
+#  last_sign_in_at        :datetime
+#  current_sign_in_ip     :inet
+#  last_sign_in_ip        :inet
+#  admin                  :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base
@@ -20,6 +30,21 @@ class User < ActiveRecord::Base
   # validates :password_digest, presence: true
 
   belongs_to :organization
+
+  has_many :friendships
+  has_many :user_friends, -> { where(friendship: {accepted: :true}).order('name DESC') }, through: :friendships, source: :friend, class: 'User'
+  has_many :inverse_user_friends, -> { where(friendship: {accepted: :true}).order('name DESC') }, through: :friendships, source: :user, class: 'User'
+  has_many :pending_user_friends, -> { where(friendship: {accepted: :false}).order('name DESC') }, through: :friendships, source: :friend, class: 'User'
+  has_many :pending_inverse_user_friends, -> { where(friendship: {accepted: :false}).order('name DESC') }, through: :friendships, source: :user, class: 'User'
+
+
+  def friends
+    (user_friends.all + inverse_user_friends.all).uniq
+  end
+
+  def pending_friends
+    (pending_user_friends.all + pending_inverse_user_friends.all).uniq
+  end
 
   has_many :groups_admins
   has_many :manageable_groups, through: :groups_admins, source: :group
