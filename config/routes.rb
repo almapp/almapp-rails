@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
     resources :users
 
-    get 'maps', controller: 'places', action: 'maps'
+    get 'maps', controller: 'maps', action: 'index'
 
     devise_for :users, path: "",
                controllers: { sessions: "users/sessions",
