@@ -47,19 +47,33 @@ class User < ActiveRecord::Base
 
   belongs_to :organization
 
-  has_many :friendships
-  has_many :user_friends, -> { where(friendship: {accepted: :true}).order('name DESC') }, through: :friendships, source: :friend, class: 'User'
-  has_many :inverse_user_friends, -> { where(friendship: {accepted: :true}).order('name DESC') }, through: :friendships, source: :user, class: 'User'
-  has_many :pending_user_friends, -> { where(friendship: {accepted: :false}).order('name DESC') }, through: :friendships, source: :friend, class: 'User'
-  has_many :pending_inverse_user_friends, -> { where(friendship: {accepted: :false}).order('name DESC') }, through: :friendships, source: :user, class: 'User'
+  #has_many :friendships
+  #has_many :user_friends, -> { where(friendships: {accepted: :true}).order('name DESC') }, through: :friendships, source: :friend, :foreign_key => "friend_id"
+  #has_many :inverse_user_friends, -> { where(friendships: {accepted: :true}).order('name DESC') }, through: :friendships, source: :user
 
+  #has_many :pending_user_friends, -> { where(friendships: {accepted: :false}).order('name DESC') }, through: :friendships, source: :friend, :foreign_key => "user_id"
+  #has_many :pending_inverse_user_friends, -> { where(friendships: {accepted: :false}).order('name DESC') }, through: :friendships, source: :user, :foreign_key => "friend_id"
+
+
+  #def friends
+  #  User.select("users.name, users.username, users.email ").joins(:career_category).joins(:campus => :school).where("campus_programs.enabled = true and campuses.enabled = true and schools.enabled = true and career_categories.id = 2").group("schools.id").order("schools.name")
+  #  (user_friends.all + inverse_user_friends.all).uniq
+  #end
+
+  #def pending_friends
+  #  (pending_user_friends.all + pending_inverse_user_friends.all).uniq
+  #end
+
+  has_many :friendships
 
   def friends
-    (user_friends.all + inverse_user_friends.all).uniq
+    # (friends.all + inverse_friends.all).uniq
+    # User.connection.execute('SELECT * FROM users WHERE user_id IN ((SELECT friend_id FROM friendships WHERE user_id = (?)) UNION (SELECT user_id FROM friendships WHERE friend_id = (?)))') #, :skip_logging)
+    User.where('users.id IN ((SELECT friend_id FROM friendships WHERE user_id = (?) AND accepted = true) UNION (SELECT user_id FROM friendships WHERE friend_id = (?)  AND accepted = true))', self.id, self.id) #, :skip_logging)
   end
 
   def pending_friends
-    (pending_user_friends.all + pending_inverse_user_friends.all).uniq
+    User.where('users.id IN ((SELECT friend_id FROM friendships WHERE user_id = (?) AND accepted = false) UNION (SELECT user_id FROM friendships WHERE friend_id = (?)  AND accepted = false))', self.id, self.id)
   end
 
   has_many :groups_admins
