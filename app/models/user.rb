@@ -24,10 +24,26 @@
 #
 
 class User < ActiveRecord::Base
+
+  def self.find_for_authentication(warden_conditions)
+    where(:email => warden_conditions[:email], :subdomain => warden_conditions[:subdomain]).first
+  end
+
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, request_keys: [:subdomain]
+
   validates :organization_id, presence: true
   validates :username, presence: true
   validates :email, presence: true, uniqueness: true, format: /\A[a-z0-9]+[a-z0-9\._-]*@[a-z0-9\.]+\.[a-z]{2,5}\z/i
-  # validates :password_digest, presence: true
+  validates :subdomain, presence: true
+
+  before_validation :set_subdomain
+
+  def set_subdomain
+    self.subdomain = self.organization.slug.downcase
+  end
 
   belongs_to :organization
 

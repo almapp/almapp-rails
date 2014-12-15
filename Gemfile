@@ -46,6 +46,8 @@ gem 'cocoon'
 gem 'will_paginate'
 gem 'friendly_id', '~> 5.0.0'
 
+gem 'devise'
+
 gem 'bootstrap_form'
 gem 'bootstrap-will_paginate'
 gem 'twitter-bootstrap-rails'

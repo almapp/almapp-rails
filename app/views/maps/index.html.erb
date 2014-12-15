@@ -1,0 +1,38 @@
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,400,900italic' rel='stylesheet' type='text/css'>
+
+<div id="search-bar">
+  <%= bootstrap_form_for("", layout: :inline) do |f| %>
+      <%= f.select :camp_id, options_for_select(current_organization.camps.order('name').map{ |c| [c.name, c.id]}), include_blank: 'Campus' %>
+      <%= f.select :faculty_id, options_for_select(current_organization.faculties.order('short_name').map{ |c| [c.short_name, c.id]}), include_blank: 'Faculties' %>
+      <%= f.select :place_id, options_for_select(current_organization.places.order('pid').map{ |c| [c.name, c.id]}), include_blank: 'Places' %>
+      <%= f.text_field :search %>
+  <% end %>
+</div>
+
+<div id="map-canvas"></div>
+<div class="dropdown">
+  <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+    Dropdown <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+    <li><a href="#">Some action</a></li>
+    <li><a href="#">Some other action</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-submenu">
+      <a tabindex="-1" href="#">Hover me for more options</a>
+      <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">Second level</a></li>
+        <li class="dropdown-submenu">
+          <a href="#">Even More..</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">3rd level</a></li>
+            <li><a href="#">3rd level</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Second level</a></li>
+        <li><a href="#">Second level</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>

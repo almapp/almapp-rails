@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :events
+  #devise_for :users, controllers: { sessions: "users/sessions" }
+#
+  #devise_scope :user do
+  #  get "sign_in", to: "users/sessions#create"
+  #  get "log_in", to: "users/sessions#new"
+  #end
+
+
 
   constraints subdomain: 'dev' do
     get '/' => redirect { |params| "almapp.github.io" } #TODO redirect to github
@@ -23,11 +30,22 @@ Rails.application.routes.draw do
 
     resources :users
 
-    get 'maps', controller: 'places', action: 'maps'
+    get 'maps', controller: 'maps', action: 'index'
+
+    devise_for :users, path: "",
+               controllers: { sessions: "users/sessions",
+                              registrations: 'users/registrations'},
+               path_names: { sign_in: 'login',
+                             password: 'forgot',
+                             confirmation: 'confirm',
+                             unlock: 'unblock',
+                             sign_up: 'register',
+                             sign_out: 'signout'}
   end
 
   resources :groups
   resources :organizations
+  resources :events
 
   # You can have the root of your site routed with "root"
   root 'organizations#index'
