@@ -1,21 +1,22 @@
 # == Schema Information
 #
-# Table name: groups_admins
+# Table name: faculty_admins
 #
 #  id          :integer          not null, primary key
+#  faculty_id  :integer          not null
 #  user_id     :integer          not null
-#  group_id    :integer          not null
+#  appointment :string(255)      default(""), not null
+#  string      :string(255)      default(""), not null
 #  created_at  :datetime
 #  updated_at  :datetime
-#  appointment :string(255)      default(""), not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  faculty_id: 
   user_id: 
-  group_id: 
 
 two:
+  faculty_id: 
   user_id: 
-  group_id: 

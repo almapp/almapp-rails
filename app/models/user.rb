@@ -81,6 +81,15 @@ class User < ActiveRecord::Base
   has_many :groups_subscribers
   has_many :subscribed_groups, through: :groups_subscribers, source: :group
 
+  has_many :organization_admins
+  has_many :manageable_organizations, through: :organization_admins, source: :organization
+
+  has_many :camp_admins
+  has_many :manageable_camps, through: :camp_admins, source: :camp
+
+  has_many :faculty_admins
+  has_many :manageable_faculties, through: :faculty_admins, source: :faculty
+
   has_and_belongs_to_many :sections
 
   has_many :assistantships

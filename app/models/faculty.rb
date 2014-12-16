@@ -41,6 +41,9 @@ class Faculty < ActiveRecord::Base
   has_many :courses
   has_many :careers
 
+  has_many :faculty_admins
+  has_many :admins, through: :faculty_admins, source: :user
+
   extend FriendlyId
   friendly_id :short_name, use: :scoped, scope: :camp # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 end

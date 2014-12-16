@@ -30,10 +30,10 @@ class Group < ActiveRecord::Base
   has_many :published_posts, source: :poster_group, class_name: 'Post'
 
   has_many :groups_admins
-  has_many :admins, through: :groups_admins, :source => :user # class: User
+  has_many :admins, through: :groups_admins, source: :user
 
   has_many :groups_subscribers
-  has_many :subscribers, through: :groups_subscribers, :source => :user
+  has_many :subscribers, through: :groups_subscribers, source: :user
 
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged # you must do User.friendly.find('foo')

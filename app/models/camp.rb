@@ -34,6 +34,9 @@ class Camp < ActiveRecord::Base
   has_many :careers, through: :faculties
   has_many :places
 
+  has_many :camp_admins
+  has_many :admins, through: :camp_admins, source: :user
+
   has_many :published_posts, source: :poster_camp, class_name: 'Post'
 
   extend FriendlyId

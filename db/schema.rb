@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216153342) do
+ActiveRecord::Schema.define(version: 20141216160929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 20141216153342) do
 
   add_index "assistantships", ["section_id"], name: "index_assistantships_on_section_id", using: :btree
   add_index "assistantships", ["user_id"], name: "index_assistantships_on_user_id", using: :btree
+
+  create_table "camp_admins", force: true do |t|
+    t.integer  "user_id",                  null: false
+    t.integer  "camp_id",                  null: false
+    t.string   "appointment", default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "camp_admins", ["camp_id"], name: "index_camp_admins_on_camp_id", using: :btree
+  add_index "camp_admins", ["user_id"], name: "index_camp_admins_on_user_id", using: :btree
 
   create_table "camps", force: true do |t|
     t.string   "cid",                           null: false
@@ -172,6 +183,18 @@ ActiveRecord::Schema.define(version: 20141216153342) do
   add_index "faculties", ["name"], name: "index_faculties_on_name", using: :btree
   add_index "faculties", ["slug"], name: "index_faculties_on_slug", unique: true, using: :btree
 
+  create_table "faculty_admins", force: true do |t|
+    t.integer  "faculty_id",               null: false
+    t.integer  "user_id",                  null: false
+    t.string   "appointment", default: "", null: false
+    t.string   "string",      default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "faculty_admins", ["faculty_id"], name: "index_faculty_admins_on_faculty_id", using: :btree
+  add_index "faculty_admins", ["user_id"], name: "index_faculty_admins_on_user_id", using: :btree
+
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -227,11 +250,11 @@ ActiveRecord::Schema.define(version: 20141216153342) do
   add_index "groups", ["slug"], name: "index_groups_on_slug", unique: true, using: :btree
 
   create_table "groups_admins", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "group_id"
+    t.integer  "user_id",                  null: false
+    t.integer  "group_id",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "appointment"
+    t.string   "appointment", default: "", null: false
   end
 
   add_index "groups_admins", ["group_id"], name: "index_groups_admins_on_group_id", using: :btree
@@ -248,6 +271,17 @@ ActiveRecord::Schema.define(version: 20141216153342) do
 
   add_index "groups_subscribers", ["group_id"], name: "index_groups_subscribers_on_group_id", using: :btree
   add_index "groups_subscribers", ["user_id"], name: "index_groups_subscribers_on_user_id", using: :btree
+
+  create_table "organization_admins", force: true do |t|
+    t.integer  "user_id",                      null: false
+    t.integer  "organization_id",              null: false
+    t.string   "appointment",     default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "organization_admins", ["organization_id"], name: "index_organization_admins_on_organization_id", using: :btree
+  add_index "organization_admins", ["user_id"], name: "index_organization_admins_on_user_id", using: :btree
 
   create_table "organizations", force: true do |t|
     t.string   "name",        null: false
