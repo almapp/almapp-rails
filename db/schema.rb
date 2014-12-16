@@ -289,22 +289,28 @@ ActiveRecord::Schema.define(version: 20141216122541) do
     t.text     "content",                default: "", null: false
     t.integer  "user_id",                             null: false
     t.integer  "group_id"
+    t.integer  "faculty_id"
+    t.integer  "camp_id"
     t.integer  "organization_id"
-    t.integer  "target_organization_id"
-    t.integer  "target_camp_id"
+    t.integer  "target_group_id"
     t.integer  "target_faculty_id"
+    t.integer  "target_camp_id"
+    t.integer  "target_organization_id"
     t.integer  "place_id"
     t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "posts", ["camp_id"], name: "index_posts_on_camp_id", using: :btree
   add_index "posts", ["event_id"], name: "index_posts_on_event_id", using: :btree
+  add_index "posts", ["faculty_id"], name: "index_posts_on_faculty_id", using: :btree
   add_index "posts", ["group_id"], name: "index_posts_on_group_id", using: :btree
   add_index "posts", ["organization_id"], name: "index_posts_on_organization_id", using: :btree
   add_index "posts", ["place_id"], name: "index_posts_on_place_id", using: :btree
   add_index "posts", ["target_camp_id"], name: "index_posts_on_target_camp_id", using: :btree
   add_index "posts", ["target_faculty_id"], name: "index_posts_on_target_faculty_id", using: :btree
+  add_index "posts", ["target_group_id"], name: "index_posts_on_target_group_id", using: :btree
   add_index "posts", ["target_organization_id"], name: "index_posts_on_target_organization_id", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 

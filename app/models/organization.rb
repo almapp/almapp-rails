@@ -33,6 +33,8 @@ class Organization < ActiveRecord::Base
   has_many :courses, through: :faculties
   has_many :teachers, through: :faculties
 
+  has_many :published_posts, source: :poster_organization, class_name: 'Post'
+
   def self.find_with_subdomain(subdomain)
     self.where("lower(slug) = ?", subdomain.downcase).first if (subdomain.present? && subdomain.size != 0)
   end

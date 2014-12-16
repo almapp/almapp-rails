@@ -27,6 +27,7 @@ class Group < ActiveRecord::Base
   belongs_to :organization
   belongs_to :faculty
 
+  has_many :published_posts, source: :poster_group, class_name: 'Post'
 
   has_many :groups_admins
   has_many :admins, through: :groups_admins, :source => :user # class: User

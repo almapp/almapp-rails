@@ -92,6 +92,24 @@ class User < ActiveRecord::Base
   has_many :events_assistances
   has_many :events, through: :events_assistances
 
+  has_many :published_posts, source: :poster_user, class_name: 'Post'
+
+  def published_posts_as_group
+    self.published_posts.where('group_id IS NOT NULL')
+  end
+
+  def published_posts_as_faculty
+    self.published_posts.where('faculty_id IS NOT NULL')
+  end
+
+  def published_posts_as_camp
+    self.published_posts.where('camp_id IS NOT NULL')
+  end
+
+  def published_posts_as_organization
+    self.published_posts.where('organization_id IS NOT NULL')
+  end
+
   before_validation :create_slug
 
   extend FriendlyId

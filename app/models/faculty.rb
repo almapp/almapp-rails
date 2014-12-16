@@ -34,6 +34,7 @@ class Faculty < ActiveRecord::Base
   belongs_to :camp
   delegate :organization, :to => :camp, :allow_nil => true
 
+  has_many :published_posts, source: :poster_faculty, class_name: 'Post'
 
   has_many :places
   has_many :teachers

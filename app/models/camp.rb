@@ -34,6 +34,8 @@ class Camp < ActiveRecord::Base
   has_many :careers, through: :faculties
   has_many :places
 
+  has_many :published_posts, source: :poster_camp, class_name: 'Post'
+
   extend FriendlyId
   friendly_id :name, use: :scoped, scope: :organization # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 end

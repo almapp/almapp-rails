@@ -17,7 +17,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should create post" do
-    assert_difference('Post.count') do
+    assert_difference('Announcement.count') do
       post :create, post: {  }
     end
 
@@ -40,7 +40,7 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should destroy post" do
-    assert_difference('Post.count', -1) do
+    assert_difference('Announcement.count', -1) do
       delete :destroy, id: @post
     end
 

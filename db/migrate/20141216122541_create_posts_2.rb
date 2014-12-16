@@ -4,11 +4,14 @@ class CreatePosts2 < ActiveRecord::Migration
       t.text :content, default: '', null: false
       t.references :user, index: true, null: false
       t.references :group, index: true
+      t.references :faculty, index: true
+      t.references :camp, index: true
       t.references :organization, index: true
 
-      t.references :target_organization, index: true
-      t.references :target_camp, index: true
+      t.references :target_group, index: true
       t.references :target_faculty, index: true
+      t.references :target_camp, index: true
+      t.references :target_organization, index: true
 
       t.references :place, index: true
       t.references :event, index: true
