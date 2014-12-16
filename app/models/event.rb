@@ -26,8 +26,10 @@ class Event < ActiveRecord::Base
   validates :to_date, presence: true
   validate :has_owner
 
-  validates_time :publish_date, after: lambda { 5.minute.from_now }, before: :to_date
-  validates_time :to_date, after: :from_date
+  validates_datetime :publish_date, after: lambda { 5.minute.from_now }, before: :to_date, if: 'publish_date.present?'
+  validates_datetime :to_date, after: :from_date
+  validates_datetime :to_date, after: lambda { 1.minute.from_now }
+  validates_datetime :from_date, :on_or_after => lambda { 3.month.ago }, if: 'from_date.present?'
 
   def has_owner
     errors.add(:user, 'must add at least one owner') unless (self.user || self.group || self.faculty_id || self.organization)
@@ -38,6 +40,9 @@ class Event < ActiveRecord::Base
   belongs_to :user
   belongs_to :group
   belongs_to :organization
+
+  has_many :events_assistances
+  has_many :participants, through: :events_assistances, class_name: 'User'
 
   extend FriendlyId
   friendly_id :title, use: :slugged

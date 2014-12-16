@@ -90,6 +90,9 @@ class User < ActiveRecord::Base
   has_many :enrolled_careers
   has_many :careers, through: :enrolled_careers
 
+  has_many :events_assistances
+  has_many :events, through: :events_assistances
+
   before_validation :create_slug
 
   extend FriendlyId

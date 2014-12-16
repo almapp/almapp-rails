@@ -15,6 +15,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @event.user = current_user if user_signed_in?
   end
 
   # GET /events/1/edit
@@ -25,9 +26,10 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    @event.user = current_user if user_signed_in?
 
     respond_to do |format|
-      if @event.save
+      if @event.save!
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else

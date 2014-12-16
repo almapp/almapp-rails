@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: friendships
+# Table name: events_assistances
 #
 #  id         :integer          not null, primary key
+#  event_id   :integer          not null
 #  user_id    :integer          not null
-#  friend_id  :integer          not null
-#  accepted   :boolean          default(FALSE)
 #  created_at :datetime
 #  updated_at :datetime
 #
 
 require 'test_helper'
 
-class FriendshipTest < ActiveSupport::TestCase
+class EventsAssistanceTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
