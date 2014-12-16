@@ -1,20 +1,19 @@
 # == Schema Information
 #
-# Table name: event_comments
+# Table name: group_comments
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer          not null
-#  event_id   :integer          not null
+#  group_id   :integer          not null
 #  comment    :text             default(""), not null
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class EventComment < ActiveRecord::Base
-  include CommentModule
+require 'test_helper'
 
-  validates :event_id, presence: true
-  belongs_to :event
-  belongs_to :user
-
+class GroupCommentTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
