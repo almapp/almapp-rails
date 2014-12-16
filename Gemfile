@@ -39,6 +39,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'therubyracer'
 gem 'less-rails'
 
+gem 'nokogiri'
+
 gem 'nested_form'
 gem 'simple_form'
 gem 'validates_timeliness', '~> 3.0'
