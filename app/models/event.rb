@@ -44,6 +44,8 @@ class Event < ActiveRecord::Base
   has_many :events_assistances
   has_many :participants, through: :events_assistances, class_name: 'User'
 
+  has_many :comments, class_name: 'Event_comment'
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
