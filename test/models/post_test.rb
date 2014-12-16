@@ -17,6 +17,7 @@
 #  event_id               :integer
 #  created_at             :datetime
 #  updated_at             :datetime
+#  notify                 :boolean          default(FALSE), not null
 #
 
 require 'test_helper'
