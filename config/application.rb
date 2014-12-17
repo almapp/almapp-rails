@@ -21,6 +21,7 @@ module Almapp
     # config.i18n.default_locale = :de
 
     config.autoload_paths += %W(#{config.root}/lib)
-    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
+    #config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
+    config.autoload_paths += Dir["#{config.root}/lib/loaders/**/"]
   end
 end
