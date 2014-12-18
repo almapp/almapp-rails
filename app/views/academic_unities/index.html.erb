@@ -1,0 +1,43 @@
+<div class="page-header">
+  <%= link_to new_academic_unity_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Academic unity
+  <% end %>
+  <h1>Listing academic_unities</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Faculty</th>
+            <th>Url</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Information</th>
+            <th>Facebook</th>
+            <th>Twitter</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @academic_unities) do |academic_unity| %>
+            <td><%= academic_unity.name %></td>
+            <td><%= academic_unity.faculty %></td>
+            <td><%= academic_unity.url %></td>
+            <td><%= academic_unity.email %></td>
+            <td><%= academic_unity.address %></td>
+            <td><%= academic_unity.information %></td>
+            <td><%= academic_unity.facebook %></td>
+            <td><%= academic_unity.twitter %></td>
+            <td><%= link_to 'Show', academic_unity %></td>
+        <td><%= link_to 'Edit', edit_academic_unity_path(academic_unity) %></td>
+        <td><%= link_to 'Destroy', academic_unity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

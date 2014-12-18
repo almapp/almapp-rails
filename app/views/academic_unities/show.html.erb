@@ -1,0 +1,38 @@
+<div class="page-header">
+  <%= link_to academic_unities_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_academic_unity_path(@academic_unity), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show academic_unity</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @academic_unity.name %></dd>
+
+  <dt>Faculty:</dt>
+  <dd><%= @academic_unity.faculty %></dd>
+
+  <dt>Url:</dt>
+  <dd><%= @academic_unity.url %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @academic_unity.email %></dd>
+
+  <dt>Address:</dt>
+  <dd><%= @academic_unity.address %></dd>
+
+  <dt>Information:</dt>
+  <dd><%= @academic_unity.information %></dd>
+
+  <dt>Facebook:</dt>
+  <dd><%= @academic_unity.facebook %></dd>
+
+  <dt>Twitter:</dt>
+  <dd><%= @academic_unity.twitter %></dd>
+
+</dl>

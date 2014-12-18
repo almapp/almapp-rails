@@ -31,7 +31,8 @@ class Camp < ActiveRecord::Base
 
   belongs_to :organization
   has_many :faculties
-  has_many :careers, through: :faculties
+  has_many :academic_unities, through: :faculties
+  has_many :courses, through: :academic_unities
   has_many :places
 
   has_many :camp_admins

@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216160929) do
+ActiveRecord::Schema.define(version: 20141218144649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "academic_unities", force: true do |t|
+    t.string   "name"
+    t.integer  "faculty_id"
+    t.string   "slug",        null: false
+    t.string   "url"
+    t.string   "email"
+    t.string   "address"
+    t.text     "information"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "academic_unities", ["faculty_id"], name: "index_academic_unities_on_faculty_id", using: :btree
+  add_index "academic_unities", ["slug"], name: "index_academic_unities_on_slug", unique: true, using: :btree
 
   create_table "assistantships", force: true do |t|
     t.integer  "section_id", null: false
@@ -64,34 +81,34 @@ ActiveRecord::Schema.define(version: 20141216160929) do
   add_index "camps", ["slug"], name: "index_camps_on_slug", unique: true, using: :btree
 
   create_table "careers", force: true do |t|
-    t.string   "name",           null: false
+    t.string   "name",              null: false
     t.string   "url"
     t.text     "information"
-    t.integer  "faculty_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "curriculum_url"
     t.string   "slug"
+    t.integer  "academic_unity_id"
   end
 
-  add_index "careers", ["faculty_id"], name: "index_careers_on_faculty_id", using: :btree
+  add_index "careers", ["academic_unity_id"], name: "index_careers_on_academic_unity_id", using: :btree
   add_index "careers", ["slug"], name: "index_careers_on_slug", unique: true, using: :btree
 
   create_table "courses", force: true do |t|
-    t.string   "initials",                    null: false
+    t.string   "initials",                         null: false
     t.string   "name"
     t.integer  "credits"
-    t.boolean  "availability", default: true
+    t.boolean  "availability",      default: true
     t.text     "description"
     t.integer  "capacity"
     t.integer  "enrolled"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "faculty_id"
     t.string   "slug"
+    t.integer  "academic_unity_id"
   end
 
-  add_index "courses", ["faculty_id"], name: "index_courses_on_faculty_id", using: :btree
+  add_index "courses", ["academic_unity_id"], name: "index_courses_on_academic_unity_id", using: :btree
   add_index "courses", ["initials"], name: "index_courses_on_initials", unique: true, using: :btree
   add_index "courses", ["slug"], name: "index_courses_on_slug", unique: true, using: :btree
 
@@ -406,12 +423,12 @@ ActiveRecord::Schema.define(version: 20141216160929) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "faculty_id"
     t.string   "slug"
-    t.string   "username",    null: false
+    t.string   "username",          null: false
+    t.integer  "academic_unity_id"
   end
 
-  add_index "teachers", ["faculty_id"], name: "index_teachers_on_faculty_id", using: :btree
+  add_index "teachers", ["academic_unity_id"], name: "index_teachers_on_academic_unity_id", using: :btree
   add_index "teachers", ["slug"], name: "index_teachers_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
@@ -433,11 +450,22 @@ ActiveRecord::Schema.define(version: 20141216160929) do
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.boolean  "admin",                  default: false
+    t.boolean  "male",                   default: true
+    t.string   "country"
+    t.string   "student_id"
+    t.string   "provider",                               null: false
+    t.string   "uid",                    default: "",    null: false
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.text     "tokens"
   end
 
   add_index "users", ["email", "subdomain"], name: "index_users_on_email_and_subdomain", unique: true, using: :btree
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
+  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
 end

@@ -27,11 +27,12 @@ class Organization < ActiveRecord::Base
 
   has_many :camps
   has_many :faculties, through: :camps
+  has_many :academic_unities, through: :faculties
 
   has_many :places, through: :camps
-  has_many :careers, through: :faculties
-  has_many :courses, through: :faculties
-  has_many :teachers, through: :faculties
+  has_many :careers, through: :academic_unities
+  has_many :courses, through: :academic_unities
+  has_many :teachers, through: :academic_unities
 
   has_many :published_posts, source: :poster_organization, class_name: 'Post'
 

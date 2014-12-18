@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
     resources :faculties, shallow: true do
       # Shallow: [:index, :new, :create]
+      resources :academic_unities
       resources :careers
       resources :courses
       resources :teachers

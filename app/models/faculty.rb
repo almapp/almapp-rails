@@ -36,10 +36,11 @@ class Faculty < ActiveRecord::Base
 
   has_many :published_posts, source: :poster_faculty, class_name: 'Post'
 
+  has_many :academic_unities
   has_many :places
-  has_many :teachers
-  has_many :courses
-  has_many :careers
+  has_many :teachers, through: :academic_unities
+  has_many :courses, through: :academic_unities
+  has_many :careers, through: :academic_unities
 
   has_many :faculty_admins
   has_many :admins, through: :faculty_admins, source: :user

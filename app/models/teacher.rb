@@ -2,16 +2,16 @@
 #
 # Table name: teachers
 #
-#  id          :integer          not null, primary key
-#  name        :string(255)
-#  email       :string(255)
-#  information :text
-#  url         :string(255)
-#  created_at  :datetime
-#  updated_at  :datetime
-#  faculty_id  :integer
-#  slug        :string(255)
-#  username    :string(255)      not null
+#  id                :integer          not null, primary key
+#  name              :string(255)
+#  email             :string(255)
+#  information       :text
+#  url               :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#  slug              :string(255)
+#  username          :string(255)      not null
+#  academic_unity_id :integer
 #
 
 class Teacher < ActiveRecord::Base
@@ -20,7 +20,11 @@ class Teacher < ActiveRecord::Base
   validates :username, presence: true
 
   has_and_belongs_to_many :sections
-  belongs_to :faculty
+  belongs_to :academic_unity
+
+  def faculty
+    self.academic_unity.faculty
+  end
 
   def courses
     self.sections.courses
@@ -29,7 +33,7 @@ class Teacher < ActiveRecord::Base
   before_validation :create_slug
 
   extend FriendlyId
-  friendly_id :slug_candidates, use: :scoped, scope: :faculty # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
+  friendly_id :slug_candidates, use: :scoped, scope: :academic_unity # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 
   def create_slug
     self.username = self.email.split('@').first

@@ -1,0 +1,39 @@
+# == Schema Information
+#
+# Table name: academic_unities
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  faculty_id  :integer
+#  slug        :string(255)      not null
+#  url         :string(255)
+#  email       :string(255)
+#  address     :string(255)
+#  information :text
+#  facebook    :string(255)
+#  twitter     :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  faculty_id: 
+  url: MyString
+  email: MyString
+  address: MyString
+  information: MyText
+  facebook: MyString
+  twitter: MyString
+
+two:
+  name: MyString
+  faculty_id: 
+  url: MyString
+  email: MyString
+  address: MyString
+  information: MyText
+  facebook: MyString
+  twitter: MyString
