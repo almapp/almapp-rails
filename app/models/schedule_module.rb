@@ -43,6 +43,7 @@ class ScheduleModule < ActiveRecord::Base
   def self.modules_for_loader(input)
     array = Array.new
     input.gsub(' ', '').split(';').each do |statement|
+      begin
       days = statement.split(':')[0]
       blocks = statement.split(':')[1]
       days.split('-').each do |d|
@@ -58,8 +59,19 @@ class ScheduleModule < ActiveRecord::Base
           end
         end
       end
+      rescue Exception => msg
+        path = "log.txt"
+        content = "Problem with #{input}: #{msg}"
+        File.open(path, "w+") do |f|
+          f.write(content)
+        end
+      end
+
     end
-    return array.empty? ? nil : array
+    return array
+    #array.each do |a|
+    #  puts a.initials
+    #end
   end
 
   def courses

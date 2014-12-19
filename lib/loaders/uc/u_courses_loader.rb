@@ -11,7 +11,7 @@ class UCoursesLoader
   end
 
   def regex(input)
-    !!(input =~ /(^[L,M,W,J,V,S,1,2,3,4,5,6,7,8,:,a, ,\-]+$)/)
+    !!(input =~ /(^[L,M,W,J,V,S,1,2,3,4,5,6,7,8,:,;,a, ,\-]+$)/)
   end
 
   def get_camp(name)
@@ -48,6 +48,13 @@ class UCoursesLoader
       remove_shit_chars(input[0..input.length-2])
     else
       input
+    end
+  end
+
+  def log_puts(content)
+    path = "log.txt"
+    File.open(path, "w+") do |f|
+      f.write(content)
     end
   end
 
@@ -102,12 +109,16 @@ class UCoursesLoader
     relations_array = relations
     relations_array.each do |number, unity|
       keep_going = true
-      page = 0
+      page =
+      puts '====================================='
+      puts "== Unity: #{unity.short_name} (#{number})"
+      puts '====================================='
       while keep_going
         url = get_url(semester, number, page)
         web = get_website(url)
         if web.code == '200'
-          puts 'Valid URL: '.concat(url).concat(' for ').concat(unity.short_name)
+          puts '====================================='
+          puts 'Valid URL: '.concat(url)
           html = web.body
           doc = Nokogiri::HTML(html)
           title = remove_shit_chars(doc.xpath('//body/table/tr/td/font/b/font').text)
@@ -120,7 +131,8 @@ class UCoursesLoader
           table = table[2..table.size] # Remove table titles
           table.each do |cell|
             attributes = cell.xpath('td')
-            puts attributes[0].text.concat('----------------------------------')
+            puts '///////////////////////////////'
+            puts "// Number: #{attributes[0].text}"
 
             initial = attributes[1].text
             course = Course.find_by_initials(initial)
@@ -177,14 +189,15 @@ class UCoursesLoader
             schedules = attributes[9].xpath('font').children
             module_types = attributes[10].xpath('font').children
             classrooms = attributes[11].xpath('font').children
-            campus = remove_shit_chars(attributes[12].xpath('font').children.first.text) rescue nil
+            campus = remove_shit_chars(attributes[12].xpath('font').children.first.text) rescue ''
 
             for i in 0..module_types.length-1 do
               if module_types[i].text?
-                module_type = remove_shit_chars(module_types[i].text)
-                module_block = remove_shit_chars(schedules[i].text)
-                module_place = remove_shit_chars(classrooms[i].text)
+                module_type = remove_shit_chars(module_types[i].text) rescue ''
+                module_block = remove_shit_chars(schedules[i].text) rescue ''
+                module_place = remove_shit_chars(classrooms[i].text) rescue ''
 
+                puts '-------------'
                 puts 'Vars:'
                 puts 'Unity: '.concat(unity.short_name)
                 puts 'Course: '.concat(section.identifier)
@@ -201,6 +214,7 @@ class UCoursesLoader
                 end
 
                 puts 'Final Place: '.concat(module_place)
+                puts '-------------'
 
                 #if camp.present?
                 #  place = Place.find_by_insensitive_pid_and_camp_id(module_place, camp.id)
@@ -209,28 +223,29 @@ class UCoursesLoader
                 #end
 
                 if module_block.present? && regex(module_block)
-                  ScheduleModule.modules_for_loader(module_block).each do |s|
+                  matches = ScheduleModule.modules_for_loader(module_block)
+                  matches.each do |s|
                     p = ScheduleItem.create(class_type: module_type,
                                             section: section,
                                             place_name: module_place,
+                                            camp_name: campus,
                                             schedule_module: s)
-                    puts 'Created ScheduleItem: '.concat(p.inspect)
+                    puts "Created item: #{section.identifier} | #{module_type} | #{s.initials} | #{module_place} @ #{campus}"
                   end
                 else
                   p = ScheduleItem.create(class_type: module_type,
                                           section: section,
                                           place_name: module_place,
+                                          camp_name: campus,
                                           schedule_module: nil)
-                  puts 'Created ScheduleItem: '.concat(p.inspect)
+                  puts "Created item: #{section.identifier} | #{module_type} | No ModuleBlock | #{module_place} @ #{campus}"
                 end
-
               end
             end
-
           end
-
           page += 1
         else
+          puts '====================================='
           puts 'Url not valid: '.concat(url)
           keep_going = false
         end
