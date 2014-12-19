@@ -23,7 +23,7 @@ puts('Creating faculties')
 #     tilt: 0
 # )
 
-Faculty.create(
+@agro = Faculty.create(
     fid: 'AGC',
     name: 'Facultad de Agronomía e Ingeniería Forestal',
     short_name: 'Agronomía e Ingeniería Forestal',
@@ -43,7 +43,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@fadeu = Faculty.create(
     fid: 'FADEU',
     name: 'Facultad de Arquitectura, Diseño y Estudios Urbanos',
     short_name: 'Arquitectura, Diseño y Estudios Urbanos',
@@ -63,7 +63,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@artes = Faculty.create(
     fid: 'ART',
     name: 'Facultad de Artes',
     short_name: 'Artes',
@@ -83,7 +83,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@bio = Faculty.create(
     fid: 'BIO',
     name: 'Facultad de Ciencias Biológicas',
     short_name: 'Ciencias Biológicas',
@@ -103,7 +103,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@eco = Faculty.create(
     fid: 'ECO',
     name: 'Facultad de Ciencias Económicas y Administrativas',
     short_name: 'Ciencias Económicas y Administrativas',
@@ -123,7 +123,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@sociales = Faculty.create(
     fid: 'SOC',
     name: 'Facultad de Ciencias Sociales',
     short_name: 'Ciencias Sociales',
@@ -143,7 +143,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@comunicaciones = Faculty.create(
     fid: 'COM',
     name: 'Facultad de Comunicaciones',
     short_name: 'Comunicaciones',
@@ -163,7 +163,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@letras = Faculty.create(
     fid: 'LET',
     name: 'Facultad de Letras',
     short_name: 'Letras',
@@ -183,7 +183,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@derecho = Faculty.create(
     fid: 'DEC',
     name: 'Facultad de Derecho',
     short_name: 'Derecho',
@@ -203,7 +203,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@educacion = Faculty.create(
     fid: 'EDU',
     name: 'Facultad de Educación',
     short_name: 'Educación',
@@ -223,7 +223,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@filosofia = Faculty.create(
     fid: 'FIL',
     name: 'Facultad de Filosofía',
     short_name: 'Filosofía',
@@ -243,7 +243,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@fisica = Faculty.create(
     fid: 'FIS',
     name: 'Facultad de Física',
     short_name: 'Física',
@@ -263,7 +263,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@historia = Faculty.create(
     fid: 'HIS',
     name: 'Facultad de Historia, Geografía y Ciencia Política',
     short_name: 'Historia, Geografía y Ciencia Política',
@@ -283,7 +283,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@construccion = Faculty.create(
     fid: 'CCL',
     name: 'Escuela de Construcción Civil',
     short_name: 'Construcción Civil',
@@ -303,7 +303,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@ingenieria = Faculty.create(
     fid: 'ING',
     name: 'Escuela de Ingeniería',
     short_name: 'Ingeniería',
@@ -323,7 +323,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@matematica = Faculty.create(
     fid: 'MAT',
     name: 'Facultad de Matemática',
     short_name: 'Matemática',
@@ -343,7 +343,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@enfermeria = Faculty.create(
     fid: 'ENF',
     name: 'Escuela de Enfermería',
     short_name: 'Enfermería',
@@ -363,7 +363,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@medicina = Faculty.create(
     fid: 'MED',
     name: 'Escuela de Medicina',
     short_name: 'Medicina',
@@ -383,7 +383,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@quimica = Faculty.create(
     fid: 'QIM',
     name: 'Facultad de Química',
     short_name: 'Química',
@@ -403,7 +403,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@teologia = Faculty.create(
     fid: 'TTF',
     name: 'Facultad de Teología',
     short_name: 'Teología',
@@ -423,7 +423,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@villarica = Faculty.create(
     fid: 'VR',
     name: 'Campus Villarrica',
     short_name: 'Villarrica',
@@ -443,7 +443,7 @@ Faculty.create(
     tilt: 0
 )
 
-Faculty.create(
+@college = Faculty.create(
     fid: 'D',
     name: 'College',
     short_name: 'College',

@@ -26,7 +26,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_118',
@@ -40,7 +40,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_119',
@@ -54,7 +54,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_120',
@@ -68,7 +68,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_121',
@@ -82,10 +82,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'comercial_209',
+    pid: '209',
     name: '209',
     camp_id: @sj.id,
     latitude: -33.497114,
@@ -96,7 +96,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'comercial_211',
@@ -110,10 +110,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'comercial_218',
+    pid: '218',
     name: '218',
     camp_id: @sj.id,
     latitude: -33.496961,
@@ -124,7 +124,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_219',
@@ -138,10 +138,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'ENF_220',
+    pid: '220',
     name: '220',
     camp_id: @sj.id,
     latitude: -33.498912,
@@ -152,7 +152,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'comercial_220',
@@ -166,7 +166,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_221',
@@ -180,7 +180,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF_222',
@@ -194,10 +194,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'comercial_225',
+    pid: '225',
     name: '225',
     camp_id: @sj.id,
     latitude: -33.497020,
@@ -208,12 +208,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A-SALA1',
     name: 'A-SALA1',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419557,
     longitude: -70.618506,
     floor: '-1',
@@ -222,12 +222,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A-SALA17',
     name: 'A-SALA17',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: 0.0,
     longitude: 0.0,
     floor: '-1',
@@ -236,12 +236,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A-SALA2',
     name: 'A-SALA2',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419566,
     longitude: -70.618533,
     floor: '-1',
@@ -250,12 +250,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A-SALA3',
     name: 'A-SALA3',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419544,
     longitude: -70.618509,
     floor: '-1',
@@ -264,12 +264,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A-SALA4',
     name: 'A-SALA4',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419535,
     longitude: -70.618498,
     floor: '-1',
@@ -278,7 +278,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A1',
@@ -292,7 +292,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A2',
@@ -306,7 +306,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A3',
@@ -320,7 +320,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A4',
@@ -334,7 +334,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A5',
@@ -348,7 +348,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A6',
@@ -362,7 +362,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A7',
@@ -376,7 +376,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A8',
@@ -390,7 +390,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AG1',
@@ -404,7 +404,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AG2',
@@ -418,7 +418,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AG3',
@@ -432,7 +432,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AG4',
@@ -446,7 +446,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AG5',
@@ -460,7 +460,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AG6',
@@ -474,7 +474,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AGCV',
@@ -488,7 +488,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AL1',
@@ -502,7 +502,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AL2',
@@ -516,7 +516,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AL3',
@@ -530,7 +530,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AL4',
@@ -544,7 +544,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almacen_uc_cc',
@@ -558,7 +558,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almacenuc_sociales',
@@ -572,7 +572,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ALT',
@@ -586,7 +586,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AM1',
@@ -600,7 +600,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AM2',
@@ -614,7 +614,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AM3',
@@ -628,7 +628,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'administracion_cc',
@@ -642,7 +642,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AGC',
@@ -656,12 +656,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'ALFERO',
+    pid: 'S. ALFERO',
     name: 'Alfero',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: 0.0,
     longitude: 0.0,
     floor: '1',
@@ -670,7 +670,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo13',
@@ -684,7 +684,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ARQ',
@@ -698,7 +698,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ART',
@@ -712,7 +712,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Auditorio_SA',
@@ -726,7 +726,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_Y',
@@ -740,7 +740,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_acg',
@@ -754,7 +754,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_cc',
@@ -768,7 +768,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_college',
@@ -782,7 +782,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_h_1',
@@ -796,7 +796,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_h_2',
@@ -810,7 +810,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_h_fil',
@@ -824,10 +824,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_10',
+    pid: 'AUD_10',
     name: 'Auditorio 10',
     camp_id: @sj.id,
     latitude: -33.440897,
@@ -838,10 +838,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_102',
+    pid: '102',
     name: 'Auditorio 102',
     camp_id: @sj.id,
     latitude: -33.496987,
@@ -852,10 +852,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_103',
+    pid: '103',
     name: 'Auditorio 103',
     camp_id: @sj.id,
     latitude: -33.497118,
@@ -866,10 +866,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_104',
+    pid: '104',
     name: 'Auditorio 104',
     camp_id: @sj.id,
     latitude: -33.496974,
@@ -880,10 +880,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_105',
+    pid: '105',
     name: 'Auditorio 105',
     camp_id: @sj.id,
     latitude: -33.497096,
@@ -894,10 +894,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_106',
+    pid: '106',
     name: 'Auditorio 106',
     camp_id: @sj.id,
     latitude: -33.496965,
@@ -908,10 +908,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_107',
+    pid: '107',
     name: 'Auditorio 107',
     camp_id: @sj.id,
     latitude: -33.497096,
@@ -922,10 +922,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_108',
+    pid: '108',
     name: 'Auditorio 108',
     camp_id: @sj.id,
     latitude: -33.496957,
@@ -936,10 +936,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_109',
+    pid: '109',
     name: 'Auditorio 109',
     camp_id: @sj.id,
     latitude: -33.497087,
@@ -950,10 +950,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_110',
+    pid: '110',
     name: 'Auditorio 110',
     camp_id: @sj.id,
     latitude: -33.496979,
@@ -964,10 +964,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_111',
+    pid: '111',
     name: 'Auditorio 111',
     camp_id: @sj.id,
     latitude: -33.497105,
@@ -978,10 +978,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_112',
+    pid: '112',
     name: 'Auditorio 112',
     camp_id: @sj.id,
     latitude: -33.496928,
@@ -992,10 +992,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_comercial_113',
+    pid: '113',
     name: 'Auditorio 113',
     camp_id: @sj.id,
     latitude: -33.497094,
@@ -1006,10 +1006,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_21',
+    pid: 'AUD_21',
     name: 'Auditorio 21',
     camp_id: @sj.id,
     latitude: -33.441155,
@@ -1020,10 +1020,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_24',
+    pid: 'AUD_24',
     name: 'Auditorio 24',
     camp_id: @sj.id,
     latitude: -33.440707,
@@ -1034,12 +1034,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_alejo_silva',
+    pid: 'ASILVA',
     name: 'Auditorio Alejandro Silva',
-    camp_id: @sj.id,
+    camp_id: @cc.id,
     latitude: -33.441262,
     longitude: -70.640143,
     floor: '1',
@@ -1048,10 +1048,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_claro_cia',
+    pid: 'CLARO',
     name: 'Auditorio Claro y Cia.',
     camp_id: @sj.id,
     latitude: -33.441267,
@@ -1062,7 +1062,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_joaco_luco',
@@ -1076,10 +1076,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'auditorio_fd101',
+    pid: 'FD-101',
     name: 'Auditorio FD101',
     camp_id: @sj.id,
     latitude: -33.441060,
@@ -1090,7 +1090,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_luksic',
@@ -1104,7 +1104,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_astro',
@@ -1118,12 +1118,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AUD_N',
     name: 'Auditorio Norte',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419047,
     longitude: -70.617905,
     floor: '-1',
@@ -1132,12 +1132,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AUD_S',
     name: 'Auditorio Sur',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419085,
     longitude: -70.617850,
     floor: '-1',
@@ -1146,7 +1146,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'auditorio_qim',
@@ -1160,7 +1160,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AULAMAGNA',
@@ -1174,7 +1174,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'aulamagna_cc',
@@ -1188,7 +1188,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'aulamagna_comercial',
@@ -1202,11 +1202,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'B101',
-    name: 'B101',
+    pid: 'B-101',
+    name: 'B-101',
     camp_id: @sj.id,
     latitude: -33.441678,
     longitude: -70.639548,
@@ -1216,11 +1216,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'B102',
-    name: 'B102',
+    pid: 'B-102',
+    name: 'B-102',
     camp_id: @sj.id,
     latitude: -33.441571,
     longitude: -70.639651,
@@ -1230,11 +1230,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'B103',
-    name: 'B103',
+    pid: 'B-103',
+    name: 'B-103',
     camp_id: @sj.id,
     latitude: -33.441528,
     longitude: -70.639691,
@@ -1244,7 +1244,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B11',
@@ -1258,7 +1258,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B12',
@@ -1272,7 +1272,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B13',
@@ -1286,7 +1286,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B14',
@@ -1300,7 +1300,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B15',
@@ -1314,7 +1314,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B16',
@@ -1328,7 +1328,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B17',
@@ -1342,7 +1342,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B18',
@@ -1356,11 +1356,25 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'B201',
-    name: 'B201',
+    pid: 'B-101',
+    name: 'B-101',
+    camp_id: @sj.id,
+    latitude: 0.0,
+    longitude: 0.0,
+    floor: '2?',
+    icon: nil,
+    description: nil,
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
+
+Place.create(
+    pid: 'B-201',
+    name: 'B-201',
     camp_id: @sj.id,
     latitude: -33.441733,
     longitude: -70.639850,
@@ -1370,11 +1384,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'B202',
-    name: 'B202',
+    pid: 'B-202',
+    name: 'B-202',
     camp_id: @sj.id,
     latitude: -33.441733,
     longitude: -70.639850,
@@ -1384,11 +1398,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'B203',
-    name: 'B203',
+    pid: 'B-203',
+    name: 'B-203',
     camp_id: @sj.id,
     latitude: -33.441733,
     longitude: -70.639850,
@@ -1398,7 +1412,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B21',
@@ -1412,7 +1426,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B22',
@@ -1426,7 +1440,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B23',
@@ -1440,7 +1454,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B24',
@@ -1454,7 +1468,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'B25',
@@ -1468,7 +1482,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'BC21',
@@ -1482,7 +1496,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'BC22',
@@ -1496,7 +1510,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'BC23',
@@ -1510,7 +1524,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'BC24',
@@ -1524,7 +1538,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'BC25',
@@ -1538,7 +1552,21 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
+
+Place.create(
+    pid: 'BC26',
+    name: 'BC26',
+    camp_id: @sj.id,
+    latitude: 0.0,
+    longitude: 0.0,
+    floor: '2',
+    icon: nil,
+    description: nil,
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
 
 Place.create(
     pid: 'banco2',
@@ -1552,7 +1580,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'banco_cropbanca',
@@ -1566,7 +1594,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'banco1',
@@ -1580,7 +1608,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'banco_santander',
@@ -1594,7 +1622,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje1',
@@ -1608,7 +1636,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje10',
@@ -1622,7 +1650,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje11',
@@ -1636,7 +1664,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje12',
@@ -1650,7 +1678,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje13',
@@ -1664,7 +1692,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje14',
@@ -1678,7 +1706,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje15',
@@ -1692,7 +1720,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje16',
@@ -1706,7 +1734,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje18',
@@ -1720,7 +1748,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje19',
@@ -1734,7 +1762,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje2',
@@ -1748,7 +1776,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje20',
@@ -1762,7 +1790,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje21',
@@ -1776,7 +1804,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje22',
@@ -1790,7 +1818,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje23',
@@ -1804,7 +1832,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje24',
@@ -1818,7 +1846,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje25',
@@ -1832,7 +1860,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje26',
@@ -1846,7 +1874,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje27',
@@ -1860,7 +1888,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje28',
@@ -1874,7 +1902,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje29',
@@ -1888,7 +1916,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje3',
@@ -1902,7 +1930,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje30',
@@ -1916,7 +1944,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje31',
@@ -1930,7 +1958,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje32',
@@ -1944,7 +1972,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje33',
@@ -1958,7 +1986,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje34',
@@ -1972,7 +2000,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje35',
@@ -1986,7 +2014,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje4',
@@ -2000,7 +2028,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje5',
@@ -2014,7 +2042,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje6',
@@ -2028,7 +2056,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje7',
@@ -2042,7 +2070,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje8',
@@ -2056,7 +2084,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'reciclaje9',
@@ -2070,7 +2098,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano1',
@@ -2084,7 +2112,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano10',
@@ -2098,7 +2126,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano11',
@@ -2112,7 +2140,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano12',
@@ -2126,7 +2154,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano13',
@@ -2140,7 +2168,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano14',
@@ -2154,7 +2182,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano15',
@@ -2168,7 +2196,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano16',
@@ -2182,7 +2210,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano17',
@@ -2196,7 +2224,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano18',
@@ -2210,7 +2238,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano19',
@@ -2224,7 +2252,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano2',
@@ -2238,7 +2266,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano20',
@@ -2252,7 +2280,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano21',
@@ -2266,7 +2294,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano22',
@@ -2280,7 +2308,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano23',
@@ -2294,7 +2322,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano24',
@@ -2308,7 +2336,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano25',
@@ -2322,7 +2350,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano26',
@@ -2336,7 +2364,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano27',
@@ -2350,7 +2378,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano28',
@@ -2364,7 +2392,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano29',
@@ -2378,7 +2406,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano3',
@@ -2392,7 +2420,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano30',
@@ -2406,7 +2434,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano31',
@@ -2420,7 +2448,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano32',
@@ -2434,7 +2462,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano33',
@@ -2448,7 +2476,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano34',
@@ -2462,7 +2490,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano35',
@@ -2476,7 +2504,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano36',
@@ -2490,7 +2518,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano37',
@@ -2504,7 +2532,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano38',
@@ -2518,7 +2546,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano39',
@@ -2532,7 +2560,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano4',
@@ -2546,7 +2574,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano40',
@@ -2560,7 +2588,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano41',
@@ -2574,7 +2602,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano42',
@@ -2588,7 +2616,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano43',
@@ -2602,7 +2630,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano44',
@@ -2616,7 +2644,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano45',
@@ -2630,7 +2658,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano46',
@@ -2644,7 +2672,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano47',
@@ -2658,7 +2686,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano48',
@@ -2672,7 +2700,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano49',
@@ -2686,7 +2714,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano5',
@@ -2700,7 +2728,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano6',
@@ -2714,7 +2742,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano7',
@@ -2728,7 +2756,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano8',
@@ -2742,7 +2770,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bano9',
@@ -2756,7 +2784,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_biomed',
@@ -2770,7 +2798,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_der_com',
@@ -2784,7 +2812,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_contador',
@@ -2798,7 +2826,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_oriente',
@@ -2812,7 +2840,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_cs',
@@ -2826,7 +2854,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_hum',
@@ -2840,7 +2868,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_mat',
@@ -2854,7 +2882,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biblio_teo',
@@ -2868,7 +2896,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'biohuerto_acg',
@@ -2882,7 +2910,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bodega_cs',
@@ -2896,7 +2924,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CARAUC',
@@ -2910,7 +2938,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cauc',
@@ -2924,7 +2952,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC10',
@@ -2938,7 +2966,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC201',
@@ -2952,7 +2980,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC202',
@@ -2966,7 +2994,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC24',
@@ -2980,7 +3008,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC25',
@@ -2994,7 +3022,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC27',
@@ -3008,7 +3036,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC28',
@@ -3022,11 +3050,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CDI102',
-    name: 'CDI102',
+    pid: 'CDI-102',
+    name: 'CDI-102',
     camp_id: @sj.id,
     latitude: -33.497796,
     longitude: -70.615314,
@@ -3036,11 +3064,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CDI103',
-    name: 'CDI103',
+    pid: 'CDI-103',
+    name: 'CDI-103',
     camp_id: @sj.id,
     latitude: -33.497796,
     longitude: -70.615314,
@@ -3050,11 +3078,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CDI201',
-    name: 'CDI201',
+    pid: 'CDI-201',
+    name: 'CDI-201',
     camp_id: @sj.id,
     latitude: -33.497796,
     longitude: -70.615314,
@@ -3064,11 +3092,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CDI202',
-    name: 'CDI202',
+    pid: 'CDI-202',
+    name: 'CDI-202',
     camp_id: @sj.id,
     latitude: -33.497796,
     longitude: -70.615314,
@@ -3078,7 +3106,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CECOM',
@@ -3092,7 +3120,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CED',
@@ -3106,7 +3134,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ceps',
@@ -3120,7 +3148,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cequc',
@@ -3134,7 +3162,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'COM307',
@@ -3148,7 +3176,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'COM308',
@@ -3162,7 +3190,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'COM310',
@@ -3176,7 +3204,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol1',
@@ -3190,7 +3218,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol2',
@@ -3204,7 +3232,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol3',
@@ -3218,7 +3246,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol4',
@@ -3232,7 +3260,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol5',
@@ -3246,7 +3274,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol6',
@@ -3260,7 +3288,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'crisol7',
@@ -3274,11 +3302,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS101',
-    name: 'CS101',
+    pid: 'CS-101',
+    name: 'CS-101',
     camp_id: @sj.id,
     latitude: -33.500629,
     longitude: -70.610383,
@@ -3288,11 +3316,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS102',
-    name: 'CS102',
+    pid: 'CS-102',
+    name: 'CS-102',
     camp_id: @sj.id,
     latitude: -33.500645,
     longitude: -70.610194,
@@ -3302,11 +3330,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS201',
-    name: 'CS201',
+    pid: 'CS-201',
+    name: 'CS-201',
     camp_id: @sj.id,
     latitude: -33.500629,
     longitude: -70.610410,
@@ -3316,11 +3344,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS202',
-    name: 'CS202',
+    pid: 'CS-202',
+    name: 'CS-202',
     camp_id: @sj.id,
     latitude: -33.500616,
     longitude: -70.610344,
@@ -3330,11 +3358,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS203',
-    name: 'CS203',
+    pid: 'CS-203',
+    name: 'CS-203',
     camp_id: @sj.id,
     latitude: -33.500640,
     longitude: -70.610269,
@@ -3344,11 +3372,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS204',
-    name: 'CS204',
+    pid: 'CS-204',
+    name: 'CS-204',
     camp_id: @sj.id,
     latitude: -33.500640,
     longitude: -70.610192,
@@ -3358,11 +3386,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS301',
-    name: 'CS301',
+    pid: 'CS-301',
+    name: 'CS-301',
     camp_id: @sj.id,
     latitude: -33.500629,
     longitude: -70.610410,
@@ -3372,11 +3400,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS302',
-    name: 'CS302',
+    pid: 'CS-302',
+    name: 'CS-302',
     camp_id: @sj.id,
     latitude: -33.500616,
     longitude: -70.610344,
@@ -3386,11 +3414,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS303',
-    name: 'CS303',
+    pid: 'CS-303',
+    name: 'CS-303',
     camp_id: @sj.id,
     latitude: -33.500640,
     longitude: -70.610269,
@@ -3400,11 +3428,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS304',
-    name: 'CS304',
+    pid: 'CS-304',
+    name: 'CS-304',
     camp_id: @sj.id,
     latitude: -33.500640,
     longitude: -70.610192,
@@ -3414,11 +3442,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS401',
-    name: 'CS401',
+    pid: 'CS-401',
+    name: 'CS-401',
     camp_id: @sj.id,
     latitude: -33.500629,
     longitude: -70.610410,
@@ -3428,11 +3456,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS402',
-    name: 'CS402',
+    pid: 'CS-402',
+    name: 'CS-402',
     camp_id: @sj.id,
     latitude: -33.500616,
     longitude: -70.610344,
@@ -3442,11 +3470,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS403',
-    name: 'CS403',
+    pid: 'CS-403',
+    name: 'CS-403',
     camp_id: @sj.id,
     latitude: -33.500640,
     longitude: -70.610269,
@@ -3456,11 +3484,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS404',
-    name: 'CS404',
+    pid: 'CS-404',
+    name: 'CS-404',
     camp_id: @sj.id,
     latitude: -33.500640,
     longitude: -70.610192,
@@ -3470,11 +3498,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'CS405',
-    name: 'CS405',
+    pid: 'CS-405',
+    name: 'CS-405',
     camp_id: @sj.id,
     latitude: -33.500669,
     longitude: -70.610021,
@@ -3484,7 +3512,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero1',
@@ -3498,7 +3526,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero2',
@@ -3512,7 +3540,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero3',
@@ -3526,7 +3554,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero4',
@@ -3540,7 +3568,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero5',
@@ -3554,7 +3582,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero6',
@@ -3568,7 +3596,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero7',
@@ -3582,7 +3610,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cajero8',
@@ -3596,7 +3624,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'OR',
@@ -3610,7 +3638,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'campus_saludable',
@@ -3624,7 +3652,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'VIL',
@@ -3638,7 +3666,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'capellan_cc',
@@ -3652,7 +3680,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'capilla_lc',
@@ -3666,12 +3694,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CAPILLA',
     name: 'Capilla (Sala)',
-    camp_id: @sj.id,
+    camp_id: @lc.id,
     latitude: -33.419946,
     longitude: -70.618384,
     floor: '1',
@@ -3680,7 +3708,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'capilla_or',
@@ -3694,7 +3722,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CC',
@@ -3708,7 +3736,7 @@ Place.create(
     zoom: 0.0,
     angle: 150.0,
     tilt: 30.0
-)
+    )
 
 Place.create(
     pid: 'central_apuntes_enf',
@@ -3722,7 +3750,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cearq',
@@ -3736,7 +3764,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ce_college',
@@ -3750,7 +3778,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cai',
@@ -3764,7 +3792,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'centroalumnos_med',
@@ -3778,7 +3806,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ca_teo',
@@ -3792,7 +3820,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'centro_des_docente',
@@ -3806,7 +3834,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CEEP',
@@ -3820,7 +3848,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'cdi_sj',
@@ -3834,7 +3862,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'centro_prev_cancer_diges',
@@ -3848,7 +3876,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ciencias_materiales',
@@ -3862,7 +3890,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'BIO',
@@ -3876,7 +3904,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D',
@@ -3890,7 +3918,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'college_uc',
@@ -3904,7 +3932,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'luksic',
@@ -3918,7 +3946,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Computacion_SA',
@@ -3932,7 +3960,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc1',
@@ -3946,7 +3974,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc10',
@@ -3960,7 +3988,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc11',
@@ -3974,7 +4002,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc2',
@@ -3988,7 +4016,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc3',
@@ -4002,7 +4030,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc4',
@@ -4016,7 +4044,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc5',
@@ -4030,7 +4058,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc6',
@@ -4044,7 +4072,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc7',
@@ -4058,7 +4086,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc8',
@@ -4072,7 +4100,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pc9',
@@ -4086,7 +4114,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'COM',
@@ -4100,7 +4128,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'correspondencia_cc',
@@ -4114,7 +4142,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo12',
@@ -4128,7 +4156,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D101',
@@ -4142,7 +4170,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D104',
@@ -4156,7 +4184,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D201',
@@ -4170,7 +4198,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D202',
@@ -4184,7 +4212,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D203',
@@ -4198,7 +4226,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D204',
@@ -4212,7 +4240,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D301',
@@ -4226,7 +4254,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D302',
@@ -4240,7 +4268,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D303',
@@ -4254,7 +4282,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D304',
@@ -4268,7 +4296,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D305',
@@ -4282,7 +4310,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'D306',
@@ -4296,7 +4324,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DAE',
@@ -4310,7 +4338,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dae_cc',
@@ -4324,7 +4352,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DARA',
@@ -4338,7 +4366,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DASE',
@@ -4352,7 +4380,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DECON',
@@ -4366,7 +4394,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DICTUC_SA',
@@ -4380,7 +4408,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'def_solidos',
@@ -4394,7 +4422,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DCC',
@@ -4408,7 +4436,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_asist_eco_cc',
@@ -4422,7 +4450,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dpto_farmacia',
@@ -4436,7 +4464,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dpto_fisico_qim',
@@ -4450,7 +4478,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dpto_matricula_cc',
@@ -4464,7 +4492,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dpto_qim_inorganica',
@@ -4478,7 +4506,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_reg_servi_cc',
@@ -4492,7 +4520,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DPT',
@@ -4506,7 +4534,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DEC',
@@ -4520,7 +4548,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_ENF',
@@ -4534,7 +4562,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_cc',
@@ -4548,7 +4576,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_academica_qim',
@@ -4562,7 +4590,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_sist_bibliotecas',
@@ -4576,7 +4604,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_docencia_fis',
@@ -4590,7 +4618,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_informatica',
@@ -4604,7 +4632,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Direc_pregrado_ing',
@@ -4618,7 +4646,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_pregrado_cc',
@@ -4632,7 +4660,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'dir_posgrado',
@@ -4646,7 +4674,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'DIS',
@@ -4660,7 +4688,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'doc_lc',
@@ -4674,7 +4702,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'domo1',
@@ -4688,7 +4716,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'domo2',
@@ -4702,7 +4730,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'domo_ING',
@@ -4716,7 +4744,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E10',
@@ -4730,7 +4758,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E11',
@@ -4744,7 +4772,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E12',
@@ -4758,7 +4786,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E13',
@@ -4772,7 +4800,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E14',
@@ -4786,7 +4814,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E15',
@@ -4800,7 +4828,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E16',
@@ -4814,7 +4842,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'E17',
@@ -4828,7 +4856,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED109',
@@ -4842,7 +4870,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED110',
@@ -4856,7 +4884,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED111',
@@ -4870,7 +4898,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED112',
@@ -4884,7 +4912,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED113',
@@ -4898,7 +4926,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED214',
@@ -4912,7 +4940,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED215',
@@ -4926,7 +4954,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED216',
@@ -4940,7 +4968,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED217',
@@ -4954,7 +4982,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED218',
@@ -4968,7 +4996,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ED219',
@@ -4982,7 +5010,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ediciones_arq',
@@ -4996,7 +5024,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'RaulDeves',
@@ -5010,7 +5038,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'EDU',
@@ -5024,7 +5052,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'eletro_qim',
@@ -5038,7 +5066,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'EEA',
@@ -5052,7 +5080,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'escuela_arte',
@@ -5066,7 +5094,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'CCL',
@@ -5080,7 +5108,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ENF',
@@ -5094,7 +5122,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ING',
@@ -5108,7 +5136,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'MED',
@@ -5122,7 +5150,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'escuela_musica',
@@ -5136,7 +5164,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'PSI',
@@ -5150,7 +5178,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'escuela_psico',
@@ -5164,7 +5192,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'escuela_teatro',
@@ -5178,7 +5206,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'TSL',
@@ -5192,7 +5220,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'escuela_trab_social',
@@ -5206,7 +5234,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici1',
@@ -5220,7 +5248,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici19',
@@ -5234,7 +5262,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici2',
@@ -5248,7 +5276,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici3',
@@ -5262,7 +5290,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici4',
@@ -5276,7 +5304,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici5',
@@ -5290,7 +5318,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici6',
@@ -5304,7 +5332,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici7',
@@ -5318,7 +5346,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'bici8',
@@ -5332,7 +5360,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'URB',
@@ -5346,7 +5374,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'extension_cc',
@@ -5360,7 +5388,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'F1',
@@ -5374,7 +5402,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'F2',
@@ -5388,7 +5416,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'F3',
@@ -5402,7 +5430,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'FADEU',
@@ -5416,7 +5444,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'feuc_cc',
@@ -5430,7 +5458,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'feuc_lc',
@@ -5444,7 +5472,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'feuc_sociales',
@@ -5458,11 +5486,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'FT101',
-    name: 'FT101',
+    pid: 'FT-101',
+    name: 'FT-101',
     camp_id: @sj.id,
     latitude: -33.497971,
     longitude: -70.610615,
@@ -5472,11 +5500,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'FT102',
-    name: 'FT102',
+    pid: 'FT-102',
+    name: 'FT-102',
     camp_id: @sj.id,
     latitude: -33.497703,
     longitude: -70.610647,
@@ -5486,11 +5514,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'FT103',
-    name: 'FT103',
+    pid: 'FT-103',
+    name: 'FT-103',
     camp_id: @sj.id,
     latitude: -33.497656,
     longitude: -70.610762,
@@ -5500,11 +5528,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'FT104',
-    name: 'FT104',
+    pid: 'FT-104',
+    name: 'FT-104',
     camp_id: @sj.id,
     latitude: -33.497985,
     longitude: -70.610700,
@@ -5514,11 +5542,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'FT105',
-    name: 'FT105',
+    pid: 'FT-105',
+    name: 'FT-105',
     camp_id: @sj.id,
     latitude: -33.498020,
     longitude: -70.610714,
@@ -5528,7 +5556,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_bio_cel_mole',
@@ -5542,7 +5570,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_astro',
@@ -5556,7 +5584,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_comunicaciones',
@@ -5570,7 +5598,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_filosofia',
@@ -5584,7 +5612,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_fisiologia',
@@ -5598,7 +5626,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_geografia',
@@ -5612,7 +5640,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_letras',
@@ -5626,7 +5654,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_mate',
@@ -5640,7 +5668,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'facultad_quimica',
@@ -5654,7 +5682,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'TTF',
@@ -5668,7 +5696,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia18',
@@ -5682,7 +5710,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia17',
@@ -5696,7 +5724,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia15',
@@ -5710,7 +5738,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia16',
@@ -5724,7 +5752,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia1',
@@ -5738,7 +5766,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia10',
@@ -5752,7 +5780,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia11',
@@ -5766,7 +5794,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia12',
@@ -5780,7 +5808,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia13',
@@ -5794,7 +5822,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia14',
@@ -5808,7 +5836,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia2',
@@ -5822,7 +5850,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia3',
@@ -5836,7 +5864,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia4',
@@ -5850,7 +5878,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia5',
@@ -5864,7 +5892,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia6',
@@ -5878,7 +5906,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia7',
@@ -5892,7 +5920,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia8',
@@ -5906,7 +5934,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'fotocopia9',
@@ -5920,7 +5948,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'galeria_macchina',
@@ -5934,7 +5962,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'H1',
@@ -5948,7 +5976,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'H2',
@@ -5962,7 +5990,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'H3',
@@ -5976,7 +6004,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'H4',
@@ -5990,7 +6018,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'hall_cc',
@@ -6004,7 +6032,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'hall_sj',
@@ -6018,7 +6046,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'iplotuc',
@@ -6032,7 +6060,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Imprimircl',
@@ -6046,7 +6074,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'informaciones_cc',
@@ -6060,7 +6088,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'inst_confucio',
@@ -6074,7 +6102,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'AST',
@@ -6088,7 +6116,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ICP',
@@ -6102,7 +6130,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'EAE',
@@ -6116,7 +6144,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'EST',
@@ -6130,7 +6158,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'inst_estetica',
@@ -6144,7 +6172,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'FIL',
@@ -6158,7 +6186,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'FIS',
@@ -6172,7 +6200,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'GEO',
@@ -6186,7 +6214,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'HIS',
@@ -6200,7 +6228,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SOL',
@@ -6214,7 +6242,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'ins_sociologia',
@@ -6228,7 +6256,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'J1',
@@ -6242,7 +6270,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'J2',
@@ -6256,7 +6284,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'J3',
@@ -6270,7 +6298,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'J4',
@@ -6284,7 +6312,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'L MORENO',
@@ -6298,7 +6326,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB1',
@@ -6312,7 +6340,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB101',
@@ -6326,7 +6354,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB102',
@@ -6340,7 +6368,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB103',
@@ -6354,7 +6382,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB104',
@@ -6368,7 +6396,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB11',
@@ -6382,7 +6410,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB12',
@@ -6396,7 +6424,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB13',
@@ -6410,7 +6438,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB14',
@@ -6424,7 +6452,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB2',
@@ -6438,7 +6466,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB3',
@@ -6452,7 +6480,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB4A',
@@ -6466,7 +6494,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAB4B',
@@ -6480,7 +6508,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LF10',
@@ -6494,7 +6522,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'la_tala',
@@ -6508,7 +6536,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Y',
@@ -6522,7 +6550,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_analisis_mov',
@@ -6536,7 +6564,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_ciclo_basico',
@@ -6550,7 +6578,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_fis_ejercicio',
@@ -6564,7 +6592,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_fisico_qim',
@@ -6578,7 +6606,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_maxwell',
@@ -6592,10 +6620,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'lab_piwonka',
+    pid: 'Piwonka',
     name: 'Laboratorio Piwonka',
     camp_id: @sj.id,
     latitude: -33.419267,
@@ -6606,10 +6634,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'lab_qim_alimentos',
+    pid: 'Quim Alime',
     name: 'Laboratorio Química de Alimentos',
     camp_id: @sj.id,
     latitude: -33.500317,
@@ -6620,7 +6648,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_tec_alimen',
@@ -6634,7 +6662,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_fonetica_h',
@@ -6648,7 +6676,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_geomatica',
@@ -6662,10 +6690,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'lab_modelo_prot',
+    pid: 'LAB. M yP',
     name: 'Laboratorio de Modelos y Prototipos ',
     camp_id: @sj.id,
     latitude: -33.419167,
@@ -6676,7 +6704,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_qim',
@@ -6690,7 +6718,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_qim_organica',
@@ -6704,7 +6732,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_nutri',
@@ -6718,7 +6746,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_blanconegro',
@@ -6732,10 +6760,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'lab_docentes',
+    pid: 'Lab.Docenc',
     name: 'Laboratorios Docentes',
     camp_id: @sj.id,
     latitude: -33.499513,
@@ -6746,7 +6774,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lab_docentes_cc_bio',
@@ -6760,7 +6788,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LET',
@@ -6774,7 +6802,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'libreriauc_sociales',
@@ -6788,7 +6816,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'lib_tala_or',
@@ -6802,7 +6830,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LC',
@@ -6816,7 +6844,7 @@ Place.create(
     zoom: 17.5,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'LAMPARA',
@@ -6830,7 +6858,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'm',
@@ -6844,7 +6872,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'M1',
@@ -6858,7 +6886,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'M2',
@@ -6872,7 +6900,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'MAGISTER',
@@ -6886,7 +6914,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'magister_or',
@@ -6900,7 +6928,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'MAT',
@@ -6914,7 +6942,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'micro_electro_cc',
@@ -6928,10 +6956,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'moscatti',
+    pid: 'MOSCATTI',
     name: 'Moscatti',
     camp_id: @sj.id,
     latitude: -33.441369,
@@ -6942,7 +6970,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'MILTICANCH',
@@ -6956,7 +6984,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina1',
@@ -6970,7 +6998,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina10',
@@ -6984,7 +7012,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina11',
@@ -6998,7 +7026,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina12',
@@ -7012,7 +7040,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina13',
@@ -7026,7 +7054,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina14',
@@ -7040,7 +7068,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina15',
@@ -7054,7 +7082,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina16',
@@ -7068,7 +7096,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina17',
@@ -7082,7 +7110,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina18',
@@ -7096,7 +7124,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina2',
@@ -7110,7 +7138,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina3',
@@ -7124,7 +7152,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina4',
@@ -7138,7 +7166,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina5',
@@ -7152,7 +7180,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina6',
@@ -7166,7 +7194,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina7',
@@ -7180,7 +7208,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina8',
@@ -7194,7 +7222,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'maquina9',
@@ -7208,7 +7236,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'MUS',
@@ -7222,7 +7250,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N10',
@@ -7236,7 +7264,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N11',
@@ -7250,7 +7278,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N12',
@@ -7264,11 +7292,11 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'N13',
-    name: 'N13',
+    pid: 'N13-A',
+    name: 'N13-A',
     camp_id: @sj.id,
     latitude: -33.497590,
     longitude: -70.610101,
@@ -7278,7 +7306,21 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
+
+Place.create(
+    pid: 'N13-B',
+    name: 'N13-B',
+    camp_id: @sj.id,
+    latitude: -33.497591,
+    longitude: -70.610100,
+    floor: '1',
+    icon: nil,
+    description: nil,
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
 
 Place.create(
     pid: 'N14',
@@ -7292,7 +7334,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N15',
@@ -7306,21 +7348,35 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'N16',
-    name: 'N16',
+    pid: 'N16-A',
+    name: 'N16-A',
     camp_id: @sj.id,
-    latitude: -33.499224,
-    longitude: -70.609901,
+    latitude: 0.0,
+    longitude: 0.0,
     floor: '1',
     icon: nil,
     description: nil,
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
+
+Place.create(
+    pid: 'N16-B',
+    name: 'N16-B',
+    camp_id: @sj.id,
+    latitude: 0.0,
+    longitude: 0.0,
+    floor: '1',
+    icon: nil,
+    description: nil,
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
 
 Place.create(
     pid: 'N17',
@@ -7334,7 +7390,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N18',
@@ -7348,7 +7404,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N1A',
@@ -7362,7 +7418,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N1B',
@@ -7376,7 +7432,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N2',
@@ -7390,7 +7446,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N25',
@@ -7404,7 +7460,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N26',
@@ -7418,7 +7474,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N27',
@@ -7432,7 +7488,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N28',
@@ -7446,7 +7502,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N29',
@@ -7460,7 +7516,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N3',
@@ -7474,7 +7530,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N30',
@@ -7488,7 +7544,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N31',
@@ -7502,7 +7558,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N32',
@@ -7516,7 +7572,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N33',
@@ -7530,7 +7586,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N34',
@@ -7544,7 +7600,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N35',
@@ -7558,7 +7614,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N36',
@@ -7572,7 +7628,21 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
+
+Place.create(
+    pid: 'N37',
+    name: 'N37',
+    camp_id: @sj.id,
+    latitude: 0.0,
+    longitude: 0.0,
+    floor: '?',
+    icon: nil,
+    description: nil,
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
 
 Place.create(
     pid: 'N4',
@@ -7586,7 +7656,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N5',
@@ -7600,7 +7670,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N6',
@@ -7614,7 +7684,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N7',
@@ -7628,7 +7698,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'N8',
@@ -7642,7 +7712,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'nutri_human',
@@ -7656,7 +7726,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'oficina_uda',
@@ -7670,7 +7740,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'preuc_cc',
@@ -7684,7 +7754,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'preuuc_sociales',
@@ -7698,7 +7768,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'pastoral_cc',
@@ -7712,7 +7782,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'PatioSub_SA',
@@ -7726,7 +7796,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'politiic_pub_lc',
@@ -7740,7 +7810,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'postgrado_lc',
@@ -7754,7 +7824,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Preu_social_ING',
@@ -7768,7 +7838,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'prac_cs_1',
@@ -7782,7 +7852,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'prac_cs_2',
@@ -7796,7 +7866,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto1',
@@ -7810,7 +7880,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto10',
@@ -7824,7 +7894,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto11',
@@ -7838,7 +7908,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto12',
@@ -7852,7 +7922,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto13',
@@ -7866,7 +7936,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto14',
@@ -7880,7 +7950,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto15',
@@ -7894,7 +7964,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto16',
@@ -7908,7 +7978,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto17',
@@ -7922,7 +7992,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto18',
@@ -7936,7 +8006,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto2',
@@ -7950,7 +8020,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto3',
@@ -7964,7 +8034,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto4',
@@ -7978,7 +8048,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto5',
@@ -7992,7 +8062,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto6',
@@ -8006,7 +8076,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto7',
@@ -8020,7 +8090,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto8',
@@ -8034,7 +8104,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'puesto9',
@@ -8048,7 +8118,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Break_hall',
@@ -8062,7 +8132,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'quick_deli_cc',
@@ -8076,7 +8146,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'QIM',
@@ -8090,7 +8160,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'qim_biologica',
@@ -8104,7 +8174,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'qim_computacional',
@@ -8118,7 +8188,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'R1',
@@ -8132,7 +8202,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'R2',
@@ -8146,7 +8216,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'R3',
@@ -8160,7 +8230,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'R4',
@@ -8174,7 +8244,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'R5',
@@ -8188,7 +8258,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'R6',
@@ -8202,7 +8272,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'rayos_X',
@@ -8216,7 +8286,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'recepcion_cc',
@@ -8230,7 +8300,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'recepcion_ed',
@@ -8244,7 +8314,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'rectoria_cc',
@@ -8258,7 +8328,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'recursos_aprendiz_ed',
@@ -8272,7 +8342,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'REFECTORIO',
@@ -8286,7 +8356,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S. Alfero',
@@ -8300,7 +8370,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S11',
@@ -8314,7 +8384,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S12',
@@ -8328,7 +8398,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S13',
@@ -8342,7 +8412,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S14',
@@ -8356,7 +8426,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S15',
@@ -8370,7 +8440,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S16',
@@ -8384,7 +8454,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S18',
@@ -8398,7 +8468,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S19',
@@ -8412,7 +8482,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S2',
@@ -8426,7 +8496,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S20',
@@ -8440,7 +8510,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S3',
@@ -8454,7 +8524,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S4',
@@ -8468,7 +8538,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S5',
@@ -8482,7 +8552,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S6',
@@ -8496,7 +8566,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S7',
@@ -8510,7 +8580,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S8',
@@ -8524,7 +8594,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'S9',
@@ -8538,7 +8608,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA PC',
@@ -8552,7 +8622,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA101',
@@ -8566,7 +8636,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA102',
@@ -8580,7 +8650,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA103',
@@ -8594,7 +8664,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA104',
@@ -8608,7 +8678,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA11',
@@ -8622,7 +8692,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALON SLGM',
@@ -8636,12 +8706,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 10',
-    name: 'Sala 10',
-    camp_id: @sj.id,
+    pid: 'SALA 10',
+    name: 'SALA 10',
+    camp_id: @lc.id,
     latitude: 0.0,
     longitude: 0.0,
     floor: '1',
@@ -8650,12 +8720,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 12',
-    name: 'Sala 12',
-    camp_id: @sj.id,
+    pid: 'SALA 12',
+    name: 'SALA 12',
+    camp_id: @lc.id,
     latitude: 0.0,
     longitude: 0.0,
     floor: '1',
@@ -8664,12 +8734,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'sala_cc_12',
-    name: 'Sala 12',
-    camp_id: @sj.id,
+    pid: 'SALA 12',
+    name: 'SALA 12',
+    camp_id: @cc.id,
     latitude: -33.440914,
     longitude: -70.640452,
     floor: '?',
@@ -8678,12 +8748,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'sala_cc_13',
-    name: 'Sala 13',
-    camp_id: @sj.id,
+    pid: 'SALA 13',
+    name: 'SALA 13',
+    camp_id: @cc.id,
     latitude: -33.440893,
     longitude: -70.640419,
     floor: '?',
@@ -8692,12 +8762,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'sala_cc_16',
-    name: 'Sala 16',
-    camp_id: @sj.id,
+    pid: 'SALA 16',
+    name: 'SALA 16',
+    camp_id: @cc.id,
     latitude: -33.440707,
     longitude: -70.640220,
     floor: '?',
@@ -8706,12 +8776,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'sala_cc_17',
-    name: 'Sala 17',
-    camp_id: @sj.id,
+    pid: 'SALA 17',
+    name: 'SALA 17',
+    camp_id: @cc.id,
     latitude: -33.440563,
     longitude: -70.640322,
     floor: '?',
@@ -8720,7 +8790,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SALA2_3',
@@ -8734,12 +8804,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 20',
-    name: 'Sala 20',
-    camp_id: @sj.id,
+    pid: 'SALA 20',
+    name: 'SALA 20',
+    camp_id: @lc.id,
     latitude: -33.419571,
     longitude: -70.618607,
     floor: '1',
@@ -8748,12 +8818,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 21',
-    name: 'Sala 21',
-    camp_id: @sj.id,
+    pid: 'SALA 21',
+    name: 'SALA 21',
+    camp_id: @lc.id,
     latitude: -33.419548,
     longitude: -70.618573,
     floor: '1',
@@ -8762,12 +8832,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 22',
-    name: 'Sala 22',
-    camp_id: @sj.id,
+    pid: 'SALA 22',
+    name: 'SALA 22',
+    camp_id: @lc.id,
     latitude: -33.419525,
     longitude: -70.618548,
     floor: '1',
@@ -8776,12 +8846,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 23',
-    name: 'Sala 23',
-    camp_id: @sj.id,
+    pid: 'SALA 23',
+    name: 'SALA 23',
+    camp_id: @lc.id,
     latitude: -33.419499,
     longitude: -70.618520,
     floor: '1',
@@ -8790,12 +8860,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 24',
-    name: 'Sala 24',
-    camp_id: @sj.id,
+    pid: 'SALA 24',
+    name: 'SALA 24',
+    camp_id: @lc.id,
     latitude: -33.419473,
     longitude: -70.618496,
     floor: '1',
@@ -8804,12 +8874,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 25',
-    name: 'Sala 25',
-    camp_id: @sj.id,
+    pid: 'SALA 25',
+    name: 'SALA 25',
+    camp_id: @lc.id,
     latitude: -33.419452,
     longitude: -70.618480,
     floor: '1',
@@ -8818,12 +8888,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 26',
-    name: 'Sala 26',
-    camp_id: @sj.id,
+    pid: 'SALA 26',
+    name: 'SALA 26',
+    camp_id: @lc.id,
     latitude: -33.419424,
     longitude: -70.618443,
     floor: '1',
@@ -8832,12 +8902,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 30',
-    name: 'Sala 30',
-    camp_id: @sj.id,
+    pid: 'SALA 30',
+    name: 'SALA 30',
+    camp_id: @lc.id,
     latitude: -33.419602,
     longitude: -70.618646,
     floor: '1',
@@ -8846,12 +8916,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 31',
-    name: 'Sala 31',
-    camp_id: @sj.id,
+    pid: 'SALA 31',
+    name: 'SALA 31',
+    camp_id: @lc.id,
     latitude: -33.419571,
     longitude: -70.618607,
     floor: '1',
@@ -8860,12 +8930,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 32',
-    name: 'Sala 32',
-    camp_id: @sj.id,
+    pid: 'SALA 32',
+    name: 'SALA 32',
+    camp_id: @lc.id,
     latitude: -33.419548,
     longitude: -70.618573,
     floor: '1',
@@ -8874,12 +8944,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 33',
-    name: 'Sala 33',
-    camp_id: @sj.id,
+    pid: 'SALA 33',
+    name: 'SALA 33',
+    camp_id: @lc.id,
     latitude: -33.419525,
     longitude: -70.618548,
     floor: '1',
@@ -8888,12 +8958,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 34',
-    name: 'Sala 34',
-    camp_id: @sj.id,
+    pid: 'SALA 34',
+    name: 'SALA 34',
+    camp_id: @lc.id,
     latitude: -33.419499,
     longitude: -70.618520,
     floor: '1',
@@ -8902,12 +8972,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 35',
-    name: 'Sala 35',
-    camp_id: @sj.id,
+    pid: 'SALA 35',
+    name: 'SALA 35',
+    camp_id: @lc.id,
     latitude: -33.419473,
     longitude: -70.618496,
     floor: '1',
@@ -8916,12 +8986,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 36',
-    name: 'Sala 36',
-    camp_id: @sj.id,
+    pid: 'SALA 36',
+    name: 'SALA 36',
+    camp_id: @lc.id,
     latitude: -33.419452,
     longitude: -70.618480,
     floor: '1',
@@ -8930,12 +9000,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 37',
-    name: 'Sala 37',
-    camp_id: @sj.id,
+    pid: 'SALA 37',
+    name: 'SALA 37',
+    camp_id: @lc.id,
     latitude: -33.419424,
     longitude: -70.618443,
     floor: '1',
@@ -8944,12 +9014,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 38',
-    name: 'Sala 38',
-    camp_id: @sj.id,
+    pid: 'SALA 38',
+    name: 'SALA 38',
+    camp_id: @lc.id,
     latitude: -33.419393,
     longitude: -70.618427,
     floor: '1',
@@ -8958,12 +9028,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 39',
-    name: 'Sala 39',
-    camp_id: @sj.id,
+    pid: 'SALA 39',
+    name: 'SALA 39',
+    camp_id: @lc.id,
     latitude: -33.419398,
     longitude: -70.618452,
     floor: '1',
@@ -8972,12 +9042,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 7',
-    name: 'Sala 7',
-    camp_id: @sj.id,
+    pid: 'SALA 7',
+    name: 'SALA 7',
+    camp_id: @lc.id,
     latitude: -33.419801,
     longitude: -70.617692,
     floor: '?',
@@ -8986,12 +9056,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'Sala 8+9',
-    name: 'Sala 8+9',
-    camp_id: @sj.id,
+    pid: 'SALA 8+9',
+    name: 'SALA 8+9',
+    camp_id: @lc.id,
     latitude: -33.419745,
     longitude: -70.617717,
     floor: '1',
@@ -9000,7 +9070,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sala_a_neco',
@@ -9014,7 +9084,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SalaAyudantes_SA',
@@ -9028,7 +9098,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sala_crivera',
@@ -9042,12 +9112,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'JGUZMAN1',
     name: 'Sala Jaime Guzmán 1',
-    camp_id: @sj.id,
+    camp_id: @cc.id,
     latitude: -33.440486,
     longitude: -70.640420,
     floor: '1',
@@ -9056,12 +9126,12 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'JGUZMAN2',
     name: 'Sala Jaime Guzmán 2',
-    camp_id: @sj.id,
+    camp_id: @cc.id,
     latitude: -33.440633,
     longitude: -70.640274,
     floor: '1',
@@ -9070,7 +9140,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sala_luco',
@@ -9084,10 +9154,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'sala_pedro_lira',
+    pid: 'PLIRA',
     name: 'Sala Pedro Lira Urquieta',
     camp_id: @sj.id,
     latitude: -33.440707,
@@ -9098,7 +9168,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio1',
@@ -9112,7 +9182,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio10',
@@ -9126,7 +9196,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio11',
@@ -9140,7 +9210,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio12',
@@ -9154,7 +9224,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio13',
@@ -9168,7 +9238,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio14',
@@ -9182,7 +9252,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio15',
@@ -9196,7 +9266,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio16',
@@ -9210,7 +9280,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio2',
@@ -9224,7 +9294,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio3',
@@ -9238,7 +9308,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio4',
@@ -9252,7 +9322,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio5',
@@ -9266,7 +9336,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio6',
@@ -9280,7 +9350,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio7',
@@ -9294,7 +9364,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio8',
@@ -9308,7 +9378,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio9',
@@ -9322,7 +9392,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sala_profe_enf',
@@ -9336,7 +9406,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sala_trab_prac_cc_bio',
@@ -9350,7 +9420,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio17',
@@ -9364,7 +9434,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio18',
@@ -9378,7 +9448,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio19',
@@ -9392,7 +9462,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio20',
@@ -9406,7 +9476,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'salaestudio21',
@@ -9420,7 +9490,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Multisala_ING',
@@ -9434,7 +9504,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'multisala_sociales',
@@ -9448,10 +9518,10 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'seminario_cs',
+    pid: 'CS.SEM1',
     name: 'Salas Seminario',
     camp_id: @sj.id,
     latitude: -33.500335,
@@ -9462,7 +9532,21 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
+
+Place.create(
+    pid: 'CS.SEM2',
+    name: 'Salas Seminario',
+    camp_id: @sj.id,
+    latitude: -33.500335,
+    longitude: -70.610305,
+    floor: '2?',
+    icon: nil,
+    description: nil,
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
 
 Place.create(
     pid: 'SaludEstudiantil_Hall',
@@ -9476,7 +9560,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'SJ',
@@ -9490,7 +9574,7 @@ Place.create(
     zoom: 17.0,
     angle: 90.0,
     tilt: 30.0
-)
+    )
 
 Place.create(
     pid: 'secret_academica',
@@ -9504,7 +9588,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'seminario_h',
@@ -9518,7 +9602,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'simulacion_h',
@@ -9532,7 +9616,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Sodexo_hall',
@@ -9546,7 +9630,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo1',
@@ -9560,7 +9644,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo10',
@@ -9574,7 +9658,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo11',
@@ -9588,7 +9672,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo2',
@@ -9602,7 +9686,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo3',
@@ -9616,7 +9700,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo4',
@@ -9630,7 +9714,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo5',
@@ -9644,7 +9728,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo6',
@@ -9658,7 +9742,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo7',
@@ -9672,7 +9756,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo8',
@@ -9686,7 +9770,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'almuerzo9',
@@ -9700,7 +9784,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sodexo_cc',
@@ -9714,7 +9798,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'Sodexo_dpt',
@@ -9728,7 +9812,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'starbucks_sociales',
@@ -9742,7 +9826,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sub_dir_admin',
@@ -9756,7 +9840,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'sub_dir_asuntos_estudiantiles',
@@ -9770,7 +9854,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'subdir_pregrado_sociales',
@@ -9784,7 +9868,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'banco3',
@@ -9798,7 +9882,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'T1220',
@@ -9812,7 +9896,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'T1221',
@@ -9826,7 +9910,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'T2222',
@@ -9840,7 +9924,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'T2223',
@@ -9854,7 +9938,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'T3224',
@@ -9868,7 +9952,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'T3225',
@@ -9882,7 +9966,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'taller_vidrio',
@@ -9896,7 +9980,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'TEA',
@@ -9910,7 +9994,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'teleduc_or',
@@ -9924,7 +10008,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'templo_or',
@@ -9938,21 +10022,35 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
-    pid: 'TUNEL',
-    name: 'Túneles',
+    pid: 'TUNEL_ORIE',
+    name: 'Túnel Oriente',
     camp_id: @sj.id,
     latitude: -33.419707,
     longitude: -70.618311,
     floor: '1',
     icon: nil,
-    description: 'Tunel oriente y tunel poniente.',
+    description: 'Túnel oriente',
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
+
+Place.create(
+    pid: 'TUNEL_PONI',
+    name: 'Túnel Poniente',
+    camp_id: @sj.id,
+    latitude: -33.419707,
+    longitude: -70.618311,
+    floor: '1',
+    icon: nil,
+    description: 'Túnel Poniente.',
+    zoom: 0.0,
+    angle: 0.0,
+    tilt: 0.0
+    )
 
 Place.create(
     pid: 'VR',
@@ -9966,7 +10064,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'A.VERDES',
@@ -9980,7 +10078,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.create(
     pid: 'optica_plasma',
@@ -9994,7 +10092,7 @@ Place.create(
     zoom: 0.0,
     angle: 0.0,
     tilt: 0.0
-)
+    )
 
 Place.all.each do |p|
   puts('Created place: ' +p.name)

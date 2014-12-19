@@ -14,6 +14,7 @@
 #  twitter     :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  short_name  :string(255)      not null
 #
 
 require 'test_helper'

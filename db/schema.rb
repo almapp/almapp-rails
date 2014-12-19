@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218144649) do
+ActiveRecord::Schema.define(version: 20141219194942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,11 @@ ActiveRecord::Schema.define(version: 20141218144649) do
     t.string   "twitter"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "short_name",  null: false
   end
 
   add_index "academic_unities", ["faculty_id"], name: "index_academic_unities_on_faculty_id", using: :btree
-  add_index "academic_unities", ["slug"], name: "index_academic_unities_on_slug", unique: true, using: :btree
+  add_index "academic_unities", ["slug", "faculty_id"], name: "index_academic_unities_on_slug_and_faculty_id", unique: true, using: :btree
 
   create_table "assistantships", force: true do |t|
     t.integer  "section_id", null: false
@@ -78,7 +79,7 @@ ActiveRecord::Schema.define(version: 20141218144649) do
 
   add_index "camps", ["cid"], name: "index_camps_on_cid", unique: true, using: :btree
   add_index "camps", ["organization_id"], name: "index_camps_on_organization_id", using: :btree
-  add_index "camps", ["slug"], name: "index_camps_on_slug", unique: true, using: :btree
+  add_index "camps", ["slug", "organization_id"], name: "index_camps_on_slug_and_organization_id", unique: true, using: :btree
 
   create_table "careers", force: true do |t|
     t.string   "name",              null: false
@@ -92,7 +93,7 @@ ActiveRecord::Schema.define(version: 20141218144649) do
   end
 
   add_index "careers", ["academic_unity_id"], name: "index_careers_on_academic_unity_id", using: :btree
-  add_index "careers", ["slug"], name: "index_careers_on_slug", unique: true, using: :btree
+  add_index "careers", ["slug", "academic_unity_id"], name: "index_careers_on_slug_and_academic_unity_id", unique: true, using: :btree
 
   create_table "courses", force: true do |t|
     t.string   "initials",                         null: false
@@ -110,7 +111,7 @@ ActiveRecord::Schema.define(version: 20141218144649) do
 
   add_index "courses", ["academic_unity_id"], name: "index_courses_on_academic_unity_id", using: :btree
   add_index "courses", ["initials"], name: "index_courses_on_initials", unique: true, using: :btree
-  add_index "courses", ["slug"], name: "index_courses_on_slug", unique: true, using: :btree
+  add_index "courses", ["slug", "academic_unity_id"], name: "index_courses_on_slug_and_academic_unity_id", unique: true, using: :btree
 
   create_table "enrolled_careers", force: true do |t|
     t.integer  "user_id"
@@ -198,7 +199,7 @@ ActiveRecord::Schema.define(version: 20141218144649) do
   add_index "faculties", ["camp_id"], name: "index_faculties_on_camp_id", using: :btree
   add_index "faculties", ["fid"], name: "index_faculties_on_fid", unique: true, using: :btree
   add_index "faculties", ["name"], name: "index_faculties_on_name", using: :btree
-  add_index "faculties", ["slug"], name: "index_faculties_on_slug", unique: true, using: :btree
+  add_index "faculties", ["slug", "camp_id"], name: "index_faculties_on_slug_and_camp_id", unique: true, using: :btree
 
   create_table "faculty_admins", force: true do |t|
     t.integer  "faculty_id",               null: false
@@ -334,7 +335,7 @@ ActiveRecord::Schema.define(version: 20141218144649) do
   add_index "places", ["camp_id"], name: "index_places_on_camp_id", using: :btree
   add_index "places", ["faculty_id"], name: "index_places_on_faculty_id", using: :btree
   add_index "places", ["pid"], name: "index_places_on_pid", unique: true, using: :btree
-  add_index "places", ["slug"], name: "index_places_on_slug", unique: true, using: :btree
+  add_index "places", ["slug", "camp_id"], name: "index_places_on_slug_and_camp_id", unique: true, using: :btree
 
   create_table "posts", force: true do |t|
     t.text     "content",                default: "",    null: false
@@ -366,16 +367,16 @@ ActiveRecord::Schema.define(version: 20141218144649) do
   add_index "posts", ["target_organization_id"], name: "index_posts_on_target_organization_id", using: :btree
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
-  create_table "schedule_items", id: false, force: true do |t|
-    t.integer  "schedule_module_id", null: false
-    t.integer  "section_id",         null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "place_id"
-    t.string   "class_type"
+  create_table "schedule_items", force: true do |t|
+    t.integer "schedule_module_id"
+    t.integer "section_id"
+    t.string  "place_name"
+    t.string  "class_type"
+    t.string  "camp_name"
   end
 
-  add_index "schedule_items", ["place_id"], name: "index_schedule_items_on_place_id", using: :btree
+  add_index "schedule_items", ["schedule_module_id"], name: "index_schedule_items_on_schedule_module_id", using: :btree
+  add_index "schedule_items", ["section_id"], name: "index_schedule_items_on_section_id", using: :btree
 
   create_table "schedule_modules", force: true do |t|
     t.string  "initials",   null: false
@@ -424,12 +425,11 @@ ActiveRecord::Schema.define(version: 20141218144649) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.string   "username",          null: false
     t.integer  "academic_unity_id"
   end
 
   add_index "teachers", ["academic_unity_id"], name: "index_teachers_on_academic_unity_id", using: :btree
-  add_index "teachers", ["slug"], name: "index_teachers_on_slug", unique: true, using: :btree
+  add_index "teachers", ["slug", "academic_unity_id"], name: "index_teachers_on_slug_and_academic_unity_id", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -465,7 +465,7 @@ ActiveRecord::Schema.define(version: 20141218144649) do
   add_index "users", ["email", "subdomain"], name: "index_users_on_email_and_subdomain", unique: true, using: :btree
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
+  add_index "users", ["slug", "organization_id"], name: "index_users_on_slug_and_organization_id", unique: true, using: :btree
   add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
 end

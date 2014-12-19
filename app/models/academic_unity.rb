@@ -14,10 +14,11 @@
 #  twitter     :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  short_name  :string(255)      not null
 #
 
 class AcademicUnity < ActiveRecord::Base
-  validates :name, presence: true
+  validates :short_name, presence: true
   validates :faculty_id, presence: true
 
   belongs_to :faculty
@@ -27,6 +28,6 @@ class AcademicUnity < ActiveRecord::Base
   has_many :careers
 
   extend FriendlyId
-  friendly_id :name, use: :scoped, scope: :faculty # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
+  friendly_id :short_name, use: :scoped, scope: :faculty # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 
 end
