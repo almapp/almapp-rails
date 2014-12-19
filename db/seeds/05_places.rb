@@ -1359,20 +1359,6 @@ Place.create(
     )
 
 Place.create(
-    pid: 'B-101',
-    name: 'B-101',
-    camp_id: @sj.id,
-    latitude: 0.0,
-    longitude: 0.0,
-    floor: '2?',
-    icon: nil,
-    description: nil,
-    zoom: 0.0,
-    angle: 0.0,
-    tilt: 0.0
-    )
-
-Place.create(
     pid: 'B-201',
     name: 'B-201',
     camp_id: @sj.id,

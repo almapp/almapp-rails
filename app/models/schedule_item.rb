@@ -7,6 +7,7 @@
 #  section_id         :integer
 #  place_name         :string(255)
 #  class_type         :string(255)
+#  camp_name          :string(255)
 #
 
 class ScheduleItem < ActiveRecord::Base
