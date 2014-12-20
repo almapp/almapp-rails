@@ -1,5 +1,5 @@
 class UCCoursesLoader < CoursesLoader
-require 'net/http'
+  require 'net/http'
   require 'nokogiri'
 
   def initialize
@@ -48,13 +48,6 @@ require 'net/http'
       remove_shit_chars(input[0..input.length-2])
     else
       input
-    end
-  end
-
-  def log_puts(content)
-    path = "log.txt"
-    File.open(path, "w+") do |f|
-      f.write(content)
     end
   end
 
@@ -109,7 +102,7 @@ require 'net/http'
     relations_array = relations
     relations_array.each do |number, unity|
       keep_going = true
-      page =
+      page = 0
       puts '====================================='
       puts "== Unity: #{unity.short_name} (#{number})"
       puts '====================================='
