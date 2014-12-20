@@ -1,5 +1,5 @@
-class UCoursesLoader
-  require 'net/http'
+class UCCoursesLoader < CoursesLoader
+require 'net/http'
   require 'nokogiri'
 
   def initialize

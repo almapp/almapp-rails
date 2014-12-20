@@ -453,19 +453,11 @@ ActiveRecord::Schema.define(version: 20141219200613) do
     t.boolean  "male",                   default: true
     t.string   "country"
     t.string   "student_id"
-    t.string   "provider",                               null: false
-    t.string   "uid",                    default: "",    null: false
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.text     "tokens"
   end
 
   add_index "users", ["email", "subdomain"], name: "index_users_on_email_and_subdomain", unique: true, using: :btree
   add_index "users", ["organization_id"], name: "index_users_on_organization_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["slug", "organization_id"], name: "index_users_on_slug_and_organization_id", unique: true, using: :btree
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
 end
