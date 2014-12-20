@@ -10,7 +10,6 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #  slug              :string(255)
-#  username          :string(255)      not null
 #  academic_unity_id :integer
 #
 

@@ -15,6 +15,7 @@ class Section < ActiveRecord::Base
   validates :course_id, presence: true
   validates :semester, presence: true, numericality: {greater_than_or_equal_to: 0}
   validates :year, presence: true, numericality: {greater_than_or_equal_to: 0}
+  validates_uniqueness_of :course_id, scope: [:number, :year, :semester]
 
   belongs_to :course
   has_many :schedule_items
@@ -27,5 +28,9 @@ class Section < ActiveRecord::Base
 
   has_many :assistantships
   has_many :assistant, through: :assistantships, class_name: 'User'
+
+  def identifier
+    "#{self.course.initials}-#{self.number}"
+  end
 
 end

@@ -36,4 +36,8 @@ class Course < ActiveRecord::Base
   extend FriendlyId
   friendly_id :initials, use: :scoped, scope: :academic_unity # http://www.rubydoc.info/github/norman/friendly_id/FriendlyId/Scoped
 
+  def normalize_friendly_id(string)
+    super.upcase
+  end
+
 end

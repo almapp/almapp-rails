@@ -22,17 +22,25 @@
 #
 
 class Place < ActiveRecord::Base
-  validates :pid, uniqueness: true, presence: true
+  validates :pid, presence: true
   validates :camp_id, presence: true
 
   belongs_to :faculty
   belongs_to :camp
 
-  has_many :schedule_items
-  has_many :sections, through: :schedule_items
-  has_many :schedule_modules, through: :schedule_items
+  # has_many :schedule_items
+  # has_many :sections, through: :schedule_items
+  # has_many :schedule_modules, through: :schedule_items
 
   delegate :organization, :to => :camp, :allow_nil => true
+
+  def self.normalize_pid(pid)
+    return pid.gsub(' ','').gsub('.','').gsub('_','').gsub('-','').upcase
+  end
+
+  def normalized_pid
+    return Place.normalize_pid(self.pid)
+  end
 
   geocoded_by :latitude  => :lat, :longitude => :lng
   reverse_geocoded_by :latitude, :longitude
@@ -41,6 +49,10 @@ class Place < ActiveRecord::Base
   extend FriendlyId
   friendly_id :slug_candidates, use: :scoped, scope: :camp  # you must do User.friendly.find('foo')
 
+  def normalize_friendly_id(string)
+    super.upcase
+  end
+
   # Try building a slug based on the following fields in
   # increasing order of specificity.
   def slug_candidates
@@ -48,6 +60,14 @@ class Place < ActiveRecord::Base
       :pid,
       [:pid, :id],
     ]
+  end
+
+  def self.search_by_pid(pid)
+    Place.where("lower(pid) = ?", pid.downcase).first
+  end
+
+  def self.search_by_pid_and_camp_id(pid, camp_id)
+    Place.where("lower(pid) = ? AND camp_id = ?", pid.downcase, camp_id).first
   end
 
 

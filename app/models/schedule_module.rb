@@ -21,6 +21,59 @@ class ScheduleModule < ActiveRecord::Base
   has_many :sections, through: :schedule_items
   has_many :places, through: :schedule_items
 
+  def self.day_for_char(c)
+    case c
+      when 'L'
+        1
+      when 'M'
+        2
+      when 'W'
+        3
+      when 'J'
+        4
+      when 'V'
+        5
+      when 'S'
+        6
+      else
+        7
+    end
+  end
+
+  def self.modules_for_loader(input)
+    array = Array.new
+    input.gsub(' ', '').split(';').each do |statement|
+      begin
+      days = statement.split(':')[0]
+      blocks = statement.split(':')[1]
+      days.split('-').each do |d|
+        blocks.split(',').each do |b|
+          if b.include? 'a'
+            for t in b.split('a')[0]..b.split('a')[1] do
+              result = ScheduleModule.find_by_day_and_block(day_for_char(d), t)
+              array.push(result)
+            end
+          else
+            result = ScheduleModule.find_by_day_and_block(day_for_char(d), b)
+            array.push(result)
+          end
+        end
+      end
+      rescue Exception => msg
+        path = "log.txt"
+        content = "Problem with #{input}: #{msg}"
+        File.open(path, "w+") do |f|
+          f.write(content)
+        end
+      end
+
+    end
+    return array
+    #array.each do |a|
+    #  puts a.initials
+    #end
+  end
+
   def courses
     self.sections.course
   end
